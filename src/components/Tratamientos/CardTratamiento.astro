@@ -1,0 +1,22 @@
+---
+const props = { ...Astro.props };
+const { title, description, image, link } = props;
+---
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+  <a href="#">
+    <img class="rounded-t-lg" src={image} alt="imagen del producto" />
+  </a>
+  <div class="p-5">
+    <a href={link} class="">
+      <h5
+        class="mb-2 lg:text-2xl md:text-lg sm:text-base text-center font-bold tracking-tight text-zeniaMarronOscuro hover:text-zeniaRosaOscuro"
+      >
+        {title}
+      </h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      {description}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+---
+const images = [
+  "/carousel/carousel1.webp",
+  "/carousel/carousel2.webp",
+  "/carousel/carousel3.webp",
+  "/carousel/carousel4.webp",
+];
+---
+
+<div class="relative w-full overflow-hidden">
+  <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+    {
+      images.map((image, index) => (
+        <div id={`slide-${index}`} class="flex-shrink-0 w-full">
+          <img src={image} alt={`Slide ${index + 1}`} class="block w-full" />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const totalSlides = carousel ? carousel.children.length : 0;
+
+    function updateCarousel() {
+      if (carousel) {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    setInterval(autoSlide, 4000);
+  });
+</script>

@@ -1,0 +1,21 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <div class="px-4 mx-auto max-w-screen-xl text-center lg:py-2">
+    <h1
+      class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-zeniaMarronOscuro md:text-5xl lg:text-6xl dark:text-white"
+    >
+      {t("jumbotron.title")}
+    </h1>
+    <p
+      class="text-lg font-normal text-zeniaMarronClaro lg:text-xl sm:px-16 lg:px-12 dark:text-gray-400"
+    >
+      {t("jumbotron.subtitle")}
+    </p>
+  </div>
+</section>

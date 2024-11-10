@@ -1,0 +1,12 @@
+---
+import SectionFullX from "./SectionFullX.astro";
+const { class: className, id } = Astro.props;
+---
+
+<SectionFullX
+  id={id}
+  data-section={id}
+  class={`${className} mx-auto lg:max-w-4xl md:max-w-2xl container`}
+>
+  <slot />
+</SectionFullX>

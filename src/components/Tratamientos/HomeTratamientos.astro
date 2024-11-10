@@ -1,0 +1,66 @@
+---
+import CardProduct from "./CardTratamiento.astro";
+// const { title, description, image, link } = props;
+const PRODUCTS = [
+  {
+    title: "Medicina estética facial",
+    description: "",
+    image: "/tratamientos/categorias/medicina-estetica-facial.webp",
+    link: "#",
+  },
+  {
+    title: "Medicina estética corporal",
+    description: "",
+    image: "/tratamientos/categorias/medicina-estetica-corporal.webp",
+    link: "#",
+  },
+  {
+    title: "Medicina estética capilar",
+    description: "",
+    image: "/tratamientos/categorias/medicina-estetica-capilar.webp",
+    link: "#",
+  },
+  {
+    title: "Tratamientos de estética",
+    description: "",
+    image: "/tratamientos/categorias/terapias-complementarias.webp",
+    link: "#",
+  },
+  {
+    title: "Consulta de medicina integrativa",
+    description: "",
+    image: "/tratamientos/categorias/medicina-integrativa.webp",
+    link: "#",
+  },
+  {
+    title: "Unidad de medicina regenerativa",
+    description: "",
+    image: "/tratamientos/categorias/medicina-estetica-regenerativa.webp",
+    link: "#",
+  },
+  {
+    title: "Productos",
+    description: "",
+    image: "/tratamientos/categorias/productos.webp",
+    link: "#",
+  },
+];
+---
+
+<h2 class="my-4 text-center font-extrabold lg:text-4xl md:text-3xl sm:text-2xl">
+  Una Gama Completa de Tratamientos <br /> para tu Salud y tu Belleza
+</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {
+    PRODUCTS.map((product) => (
+      <div>
+        <CardProduct {...product} />
+        {/* <img
+          class="h-auto max-w-full rounded-lg"
+          src={product.image}
+          alt={product.name}
+        /> */}
+      </div>
+    ))
+  }
+</div>

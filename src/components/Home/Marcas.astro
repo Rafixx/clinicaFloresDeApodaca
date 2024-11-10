@@ -1,0 +1,60 @@
+---
+const MARCAS = [
+  {
+    name: "TOV MEDICAL",
+    image: "/marcas/logo01.webp",
+  },
+  {
+    name: "CARING INNOVATION",
+    image: "/marcas/logo02.webp",
+  },
+  {
+    name: "DERMIKA",
+    image: "/marcas/logo03.webp",
+  },
+  {
+    name: "MERZ AESTHETICS",
+    image: "/marcas/logo04.webp",
+  },
+  {
+    name: "NAQUA",
+    image: "/marcas/logo05.webp",
+  },
+  {
+    name: "SINCLAIR",
+    image: "/marcas/logo06.webp",
+  },
+  {
+    name: "SKI MEDIC",
+    image: "/marcas/logo07.webp",
+  },
+  {
+    name: "IT PHARMA",
+    image: "/marcas/logo08.webp",
+  },
+  {
+    name: "GALDERMA",
+    image: "/marcas/logo09.webp",
+  },
+];
+---
+
+<h2 class="mt-2 text-center font-extrabold lg:text-4xl md:text-3xl sm:text-2xl">
+  Trabajamos con las mejores marcas del mercado
+</h2>
+
+<div class="flex items-center justify-center min-h-screen">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-fit mx-auto">
+    {
+      MARCAS.map((marca) => (
+        <div class="shadow-lg rounded-lg">
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src={marca.image}
+            alt={marca.name}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

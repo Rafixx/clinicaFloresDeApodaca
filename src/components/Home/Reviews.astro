@@ -1,0 +1,110 @@
+---
+import reviews from "../../../public/reviews/reviews.json";
+import Rating from "./Rating.astro";
+import GoogleIcon from "@/components/icons/Google.astro";
+import CertifiedIcon from "@/components/icons/Certified.astro";
+import GLogoIcon from "@/components/icons/GLogo.astro";
+let MAXLENGTH = 250;
+---
+
+<div class="flex flex-col justify-center items-center">
+  <div class="font-extrabold uppercase text-3xl text-center">
+    Lee las opiniones de nuestros clientes
+  </div>
+  <div class="uppercase text-lg text-zeniaMarronClaro">
+    y entiende por qué confían en CLINICA FLORES DE APODACA
+  </div>
+  <div class="uppercase text-2xl text-black mb-1 mt-5">EXCELENTE</div>
+  <Rating stars={5} class="w-8 h-8" />
+  <div class="text-sm tex text-black/60">
+    Basadas en más de <strong>50 reseñas</strong>
+  </div>
+  <GoogleIcon class="py-0 my-5 h-auto size-40" />
+</div>
+
+<div class="w-2/4 overflow-hidden mx-auto">
+  <div
+    id="reviewSlider"
+    class="flex transition-transform duration-700 ease-in-out"
+  >
+    {
+      reviews.reviews.map((review, index) => (
+        <div id={`slide-${index}`} class="flex-shrink-0 w-full">
+          <div class="p-4 h-70 h-full bg-white rounded-lg shadow-lg mx-5">
+            <div class="flex items-center mb-3">
+              <Rating stars={review.rating} class="w-5 h-5" />{" "}
+              <CertifiedIcon class="text-white fill-blue-500 mx-2" />
+            </div>
+
+            <!-- Contenedor de la Información del Autor y el GLogoIcon -->
+            <div class="w-full flex items-start mb-5">
+              <!-- Círculo con las Iniciales del Autor -->
+              <div class="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full">
+                <span class="font-medium text-gray-600">
+                  {review.author
+                    .split(" ")
+                    .map((name) => name[0])
+                    .join("")
+                    .slice(0, 2)}
+                </span>
+              </div>
+
+              <!-- Información del Autor y Fecha -->
+              <div class="ml-3 flex-1">
+                <div class="font-semibold text-black mt-2">{review.author}</div>
+                <div class="text-xs text-zeniaMarronClaro">{review.date}</div>
+              </div>
+
+              <!-- Icono de Google Alineado a la Izquierda -->
+              <div>
+                <GLogoIcon class="w-5 h-5 ml-2" />
+              </div>
+            </div>
+
+            <p class="text-gray-600">
+              {review.review.length > MAXLENGTH ? (
+                <>
+                  {review.review.slice(0, MAXLENGTH)}
+                  <a id="myAnchor" class="mx-5 cursor-pointer text-blue-500"> [Más...]</a>
+                </>
+              ) : (
+                review.review
+              )}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const reviewSlider = document.getElementById("reviewSlider");
+    const totalSlides = reviewSlider ? reviewSlider.children.length : 0;
+
+    function updateReviewSliderl() {
+      if (reviewSlider) {
+        reviewSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateReviewSliderl();
+    }
+
+    setInterval(autoSlide, 8000);
+  });
+  
+  // const myCard = document.getElementById("myAnchor");
+  // if (myCard) {
+  //   myCard.addEventListener("click", () => {
+  //     myCard.innerHTML = " [Menos]";
+  //     myCard.addEventListener("click", () => {
+  //       myCard.innerHTML = " [Más...]";
+  //     });
+  //   });
+  // }
+</script>

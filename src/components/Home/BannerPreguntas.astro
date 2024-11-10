@@ -1,0 +1,181 @@
+---
+import Lotus from "../icons/Lotus.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// interface Props {
+//   title: string;
+//   details: string;
+// }
+
+const title = "titulo";
+const details = "detalles";
+---
+
+<div class="flex flex-row w-full bg-zeniaMarronClaro/25">
+  <!-- Imagen con texto superpuesto a la derecha -->
+  <div class="relative flex-grow">
+    <img
+      class="w-full h-[600px] object-cover opacity-20 rotate-180"
+      src="/bannerclinica/fondo.webp"
+    />
+    <div
+      class="absolute inset-0 flex items-center justify-center z-10 space-x-4"
+    >
+      <div
+        id="accordion-flush"
+        data-accordion="collapse"
+        data-active-classes="bg-transparent dark:bg-gray-900 text-gray-900 dark:text-white"
+        data-inactive-classes="text-zeniaMarronOscuro-500"
+      >
+        <div class="flex flex-row justify-center items-center w-full space-x-4">
+          <!-- Columna izquierda -->
+          <div class="flex flex-col p-5 rounded-lg">
+            <div id="Q1" class="py-8 w-96">
+              <h2 id="accordion-flush-heading-1">
+                <button
+                  type="button"
+                  class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-zeniaMarronOscuro border-b border-zeniaMarronOscuro gap-3"
+                  data-accordion-target="#accordion-flush-body-1"
+                  aria-expanded="false"
+                  aria-controls="accordion-flush-body-1"
+                >
+                  <span
+                    class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
+                    >¿Cómo puedo reservar una cita?</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="accordion-flush-body-1"
+                class="hidden"
+                aria-labelledby="accordion-flush-heading-1"
+              >
+                <div
+                  class="py-5 border-b border-zeniaMarronOscuro-200 dark:border-zeniaMarronOscuro-700"
+                >
+                  <p
+                    class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
+                  >
+                    Para reservar una cita, llama al 663 27 43 78 Si prefieres,
+                    envíanos un WhatsApp y te responderemos a la brevedad.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="Q2" class="py-8 w-96">
+              <h2 id="accordion-flush-heading-2">
+                <button
+                  type="button"
+                  class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-zeniaMarronOscuro border-b border-zeniaMarronOscuro gap-3"
+                  data-accordion-target="#accordion-flush-body-2"
+                  aria-expanded="false"
+                  aria-controls="accordion-flush-body-2"
+                >
+                  <span
+                    class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
+                    >¿Donde está Clínica Flores de Apodaca?</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="accordion-flush-body-2"
+                class="hidden"
+                aria-labelledby="accordion-flush-heading-2"
+              >
+                <div
+                  class="py-5 border-b border-zeniaMarronOscuro-200 dark:border-zeniaMarronOscuro-700"
+                >
+                  <p
+                    class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
+                  >
+                    La Clínica Flores de Apodaca, tu centro de Medicina
+                    Estética, se encuentra en Denia Alicante. Haz click aquí
+                    para ver nuestra dirección en Google Maps: <a href="#"
+                      >C/Patricio Ferrándiz, 86, 03700 Dénia, Alicante</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="flex flex-col w-flex-wrap p-5 rounded-lg">
+            <div id="Q3" class="py-8 w-96">
+              <h2 id="accordion-flush-heading-3">
+                <button
+                  type="button"
+                  class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-zeniaMarronOscuro border-b border-zeniaMarronOscuro gap-3"
+                  data-accordion-target="#accordion-flush-body-3"
+                  aria-expanded="false"
+                  aria-controls="accordion-flush-body-3"
+                >
+                  <span
+                    class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
+                    >¿Realizáis cirujía plástica?</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="accordion-flush-body-3"
+                class="hidden"
+                aria-labelledby="accordion-flush-heading-3"
+              >
+                <div
+                  class="py-5 border-b border-zeniaMarronOscuro-200 dark:border-zeniaMarronOscuro-700"
+                >
+                  <p
+                    class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
+                  >
+                    En nuestra clínica, nos distinguimos por nuestra dedicación
+                    exclusiva a los tratamientos de medicina estética no
+                    invasivos, evitando completamente la realización de cirugías
+                    plásticas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="Q4" class="py-8 w-96">
+              <h2 id="accordion-flush-heading-4">
+                <button
+                  type="button"
+                  class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-zeniaMarronOscuro border-b border-zeniaMarronOscuro gap-3"
+                  data-accordion-target="#accordion-flush-body-4"
+                  aria-expanded="false"
+                  aria-controls="accordion-flush-body-4"
+                >
+                  <span
+                    class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
+                    >¿Necesito una consulta inicial?</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="accordion-flush-body-4"
+                class="hidden"
+                aria-labelledby="accordion-flush-heading-4"
+              >
+                <div
+                  class="py-5 border-b border-zeniaMarronOscuro-200 dark:border-zeniaMarronOscuro-700"
+                >
+                  <p
+                    class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
+                  >
+                    Dependiendo del tratamiento, será necesaria una consulta
+                    inicial para evaluar tus necesidades y objetivos. Solicita
+                    una cita previa y te proporcionaremos detalles más
+                    específicos para cada tratamiento, ofreciéndote una
+                    explicación completa y personalizada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

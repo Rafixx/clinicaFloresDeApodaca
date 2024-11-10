@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
+
+const logo = "/logo/logo_dark_Rosa.webp";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { currentLocale } = Astro;
+
+const navItems = [
+  {
+    title: t("nav.home"),
+    label: "home",
+    url: currentLocale === "en" ? "/en/#home" : "/#home",
+  },
+  {
+    title: t("nav.treatments"),
+    label: "treatment",
+    url: currentLocale === "en" ? "/en/#treatment" : "/#treatment",
+  },
+  {
+    title: t("nav.clinic"),
+    label: "clinic",
+    url: currentLocale === "en" ? "/en/#clinic" : "/#clinic",
+  },
+  {
+    title: t("nav.location"),
+    label: "location",
+    url: currentLocale === "en" ? "/en/#location" : "/#location",
+  },
+  {
+    title: t("nav.appointment"),
+    label: "appointment",
+    url: currentLocale === "en" ? "/en/#appointment" : "/#appointment",
+  },
+];
+---
+
+<header
+  class="myMenu fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <img src={logo} alt="logo" class="w-auto h-12 rounded-md m-4" />
+  <nav
+    class="flex px-3 text-sm font-medium rounded-xl text-zeniaMarronOscuro items-center justify-center w-full max-w-screen-xl"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-zeniaMarronClaro"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    <LanguagePicker />
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-text-zeniaMarronClaro");
+            } else {
+              item.classList.remove("text-text-zeniaMarronClaro");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
+</script>
+
+<style>
+  .myMenu {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  .myMenu {
+    @apply bg-zeniaBlanco/70;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-zeniaBlanco;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
+  }
+</style>

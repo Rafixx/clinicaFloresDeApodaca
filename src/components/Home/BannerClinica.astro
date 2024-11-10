@@ -1,0 +1,45 @@
+---
+import Lotus from "../icons/Lotus.astro";
+import Badge from "./Badge.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="flex flex-row w-full bg-zeniaMarronClaro/25">
+  <!-- Imagen estática a la izquierda -->
+  <div>
+    <img class="w-auto h-[600px]" src="/bannerclinica/entrada.webp" />
+  </div>
+
+  <!-- Imagen con texto superpuesto a la derecha -->
+  <div class="relative flex-grow">
+    <img
+      class="w-full h-[600px] object-cover opacity-30"
+      src="/bannerclinica/fondo.webp"
+    />
+    <div
+      class="absolute ml-5 mr-40 inset-0 flex flex-col items-start justify-start z-10 p-5 space-y-4"
+    >
+      <!-- Icono en la parte superior alineado a la izquierda -->
+      <Lotus class="w-20 h-20 my-8 fill-zeniaMarronOscuro" />
+
+      <!-- Título alineado a la izquierda -->
+      <h1 class="text-4xl font-bold text-zeniaMarronOscuro">
+        {t("bannerClinica.title")}
+      </h1>
+
+      <!-- Texto debajo del título alineado a la izquierda -->
+      <!-- <p class="text-2xl text-zeniaMarronOscuro/70">
+        {t("bannerClinica.text1")}
+      </p> -->
+      <p class="text-2xl text-zeniaMarronOscuro/70">
+        {t("bannerClinica.text2")}
+      </p>
+      <div class="flex w-full justify-end">
+        <Badge>{t("bannerClinica.badge")}</Badge>
+      </div>
+    </div>
+  </div>
+</div>
