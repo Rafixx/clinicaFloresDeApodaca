@@ -1,6 +1,5 @@
 ---
 import Lotus from "../icons/Lotus.astro";
-import Badge from "./Badge.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -20,7 +19,7 @@ const t = useTranslations(lang);
       src="/bannerclinica/fondo.webp"
     />
     <div
-      class="absolute ml-5 mr-40 inset-0 flex flex-col items-start justify-start z-10 p-5 space-y-4"
+      class="absolute ml-5 mr-40 inset-0 flex flex-col items-start justify-start z-1 p-5 space-y-4"
     >
       <!-- Icono en la parte superior alineado a la izquierda -->
       <Lotus class="w-20 h-20 my-8 fill-zeniaMarronOscuro" />
@@ -38,7 +37,11 @@ const t = useTranslations(lang);
         {t("bannerClinica.text2")}
       </p>
       <div class="flex w-full justify-end">
-        <Badge>{t("bannerClinica.badge")}</Badge>
+        <a
+          href="#"
+          class="bg-zeniaBlanco py-3 px-4 rounded-xl border border-zeniaMarronOscuro uppercase font-bold hover:text-zeniaRosaOscuro"
+          >{t("bannerClinica.badge")}</a
+        >
       </div>
     </div>
   </div>

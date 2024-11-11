@@ -4,20 +4,25 @@ import Rating from "./Rating.astro";
 import GoogleIcon from "@/components/icons/Google.astro";
 import CertifiedIcon from "@/components/icons/Certified.astro";
 import GLogoIcon from "@/components/icons/GLogo.astro";
-let MAXLENGTH = 250;
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const MAXLENGTH = 250;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="flex flex-col justify-center items-center">
   <div class="font-extrabold uppercase text-3xl text-center">
-    Lee las opiniones de nuestros clientes
+    {t("reviews.title")}
   </div>
   <div class="uppercase text-lg text-zeniaMarronClaro">
-    y entiende por qué confían en CLINICA FLORES DE APODACA
+    {t("reviews.subtitle")}
   </div>
-  <div class="uppercase text-2xl text-black mb-1 mt-5">EXCELENTE</div>
+  <div class="uppercase text-2xl text-black mb-1 mt-5">{t("reviews.great")}</div>
   <Rating stars={5} class="w-8 h-8" />
   <div class="text-sm tex text-black/60">
-    Basadas en más de <strong>50 reseñas</strong>
+    {t("reviews.rating")} <strong> {t('reviews.rating.count')} </strong>
   </div>
   <GoogleIcon class="py-0 my-5 h-auto size-40" />
 </div>

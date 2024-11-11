@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="bg-white shadow-lg rounded-lg">
   <div class="py-4 px-4 mx-auto max-w-screen-xl text-center lg:py-8">
     <img
@@ -8,20 +15,16 @@
     <p
       class="mb-8 font-normal text-pretty text-black lg:text-2xl sm:px-8 lg:px-24"
     >
-      Contamos con la Unidad de Medicina Regenerativa de Dénia (UMERED), donde
-      estudiamas y tratamos a nuestros pacientes para mejorar su salud y calidad
-      de vida, ayudando a restaurar el equilibrio, aplicando diferentes
-      protocolos de medicina regenerativa.
+      {t("heroUMERED.text")}
     </p>
     <div
       class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
     >
       <a
         href="#"
-        class="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        class="bg-zeniaBlanco py-3 px-4 rounded-xl border border-green-600 text-green-500 uppercase font-bold hover:text-zeniaBlanco hover:bg-green-600"
+        >{t("heroUMERED.button")}</a
       >
-        Ver más
-      </a>
     </div>
   </div>
 </section>

@@ -1,48 +1,52 @@
 ---
 import CardProduct from "./CardTratamiento.astro";
-// const { title, description, image, link } = props;
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const PRODUCTS = [
   {
     title: "Medicina estética facial",
     description: "",
     image: "/tratamientos/categorias/medicina-estetica-facial.webp",
-    link: "#",
+    link: "/tratamientos/medicinaEsteticaFacial",
   },
   {
     title: "Medicina estética corporal",
     description: "",
     image: "/tratamientos/categorias/medicina-estetica-corporal.webp",
-    link: "#",
+    link: "/tratamientos/medicinaEsteticaCorporal",
   },
   {
     title: "Medicina estética capilar",
     description: "",
     image: "/tratamientos/categorias/medicina-estetica-capilar.webp",
-    link: "#",
+    link: "/tratamientos/medicinaEsteticaCapilar",
   },
   {
     title: "Tratamientos de estética",
     description: "",
     image: "/tratamientos/categorias/terapias-complementarias.webp",
-    link: "#",
+    link: "/tratamientos/tratamientosEstetica",
   },
   {
     title: "Consulta de medicina integrativa",
     description: "",
     image: "/tratamientos/categorias/medicina-integrativa.webp",
-    link: "#",
+    link: "/tratamientos/consultaMedicinaIntegrativa",
   },
   {
     title: "Unidad de medicina regenerativa",
     description: "",
     image: "/tratamientos/categorias/medicina-estetica-regenerativa.webp",
-    link: "#",
+    link: "/tratamientos/unidadMedicinaRegenerativa",
   },
   {
     title: "Productos",
     description: "",
     image: "/tratamientos/categorias/productos.webp",
-    link: "#",
+    link: "/tratamientos/productos",
   },
 ];
 ---

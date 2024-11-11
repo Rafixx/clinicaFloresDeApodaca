@@ -1,5 +1,4 @@
 ---
-import Lotus from "../icons/Lotus.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -22,7 +21,7 @@ const details = "detalles";
       src="/bannerclinica/fondo.webp"
     />
     <div
-      class="absolute inset-0 flex items-center justify-center z-10 space-x-4"
+      class="absolute inset-0 flex items-center justify-center z-1 space-x-4"
     >
       <div
         id="accordion-flush"
@@ -44,7 +43,7 @@ const details = "detalles";
                 >
                   <span
                     class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
-                    >¿Cómo puedo reservar una cita?</span
+                    >{t("bannerPreguntas.Q1")}</span
                   >
                 </button>
               </h2>
@@ -59,8 +58,7 @@ const details = "detalles";
                   <p
                     class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
                   >
-                    Para reservar una cita, llama al 663 27 43 78 Si prefieres,
-                    envíanos un WhatsApp y te responderemos a la brevedad.
+                    {t("bannerPreguntas.A1")}
                   </p>
                 </div>
               </div>
@@ -76,7 +74,7 @@ const details = "detalles";
                 >
                   <span
                     class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
-                    >¿Donde está Clínica Flores de Apodaca?</span
+                    >{t("bannerPreguntas.Q2")}</span
                   >
                 </button>
               </h2>
@@ -91,11 +89,7 @@ const details = "detalles";
                   <p
                     class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
                   >
-                    La Clínica Flores de Apodaca, tu centro de Medicina
-                    Estética, se encuentra en Denia Alicante. Haz click aquí
-                    para ver nuestra dirección en Google Maps: <a href="#"
-                      >C/Patricio Ferrándiz, 86, 03700 Dénia, Alicante</a
-                    >
+                    {t("bannerPreguntas.A2")}
                   </p>
                 </div>
               </div>
@@ -115,8 +109,8 @@ const details = "detalles";
                 >
                   <span
                     class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
-                    >¿Realizáis cirujía plástica?</span
-                  >
+                    >{t("bannerPreguntas.Q3")}
+                  </span>
                 </button>
               </h2>
               <div
@@ -130,10 +124,10 @@ const details = "detalles";
                   <p
                     class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
                   >
-                    En nuestra clínica, nos distinguimos por nuestra dedicación
-                    exclusiva a los tratamientos de medicina estética no
-                    invasivos, evitando completamente la realización de cirugías
-                    plásticas.
+                    {t("bannerPreguntas.A3")}
+                    <a href="/contacto" class="text-black"
+                      >{t("bannerPreguntas.A3.2")}</a
+                    >
                   </p>
                 </div>
               </div>
@@ -149,7 +143,7 @@ const details = "detalles";
                 >
                   <span
                     class="text-3xl text-zeniaMarronClaro hover:text-zeniaMarronOscuro uppercase"
-                    >¿Necesito una consulta inicial?</span
+                    >{t("bannerPreguntas.Q4")}</span
                   >
                 </button>
               </h2>
@@ -164,11 +158,7 @@ const details = "detalles";
                   <p
                     class="mb-2 text-zeniaMarronOscuro-500 dark:text-zeniaMarronOscuro-400"
                   >
-                    Dependiendo del tratamiento, será necesaria una consulta
-                    inicial para evaluar tus necesidades y objetivos. Solicita
-                    una cita previa y te proporcionaremos detalles más
-                    específicos para cada tratamiento, ofreciéndote una
-                    explicación completa y personalizada.
+                    {t("bannerPreguntas.A4")}
                   </p>
                 </div>
               </div>

@@ -1,0 +1,28 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/Home/SectionContainer.astro";
+import SectionFullX from "@/components/Home/SectionFullX.astro";
+import Corporal from "@/components/Tratamientos/Corporal/Corporal.astro";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+type tLang = (str: any) => any;
+
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+---
+
+<Layout title={t("layout.title")} description={t("layout.description")}>
+  <SectionFullX id="home" class="pt-16 md:pt-24">
+    <img
+      src="/tratamientos/Corporal/imagen-tratamientos-corporal.webp"
+      alt="Tratamientos"
+      class="w-full h-auto object-cover"
+    />
+  </SectionFullX>
+  <main class="">
+    <SectionContainer class="py-16 md:py-24">
+      <Corporal />
+    </SectionContainer>
+  </main>
+</Layout>
