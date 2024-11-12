@@ -6,7 +6,8 @@ import robotsTxt from "astro-robots-txt"
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: 'https://porfolio.dev/',
+  site: 'https://www.clinicafloresdeapodaca.com/',
+  // base: '/dist/',
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],

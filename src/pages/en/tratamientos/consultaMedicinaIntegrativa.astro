@@ -1,0 +1,28 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/Home/SectionContainer.astro";
+import SectionFullX from "@/components/Home/SectionFullX.astro";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Integrativa from "@/components/Tratamientos/Integrativa/Integrativa.astro";
+
+type tLang = (str: any) => any;
+
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+---
+
+<Layout title={t("layout.title")} description={t("layout.description")}>
+  <main class="">
+    <SectionFullX id="home" class="pt-16 md:pt-24">
+      <img
+        src="/tratamientos/Integrativa/imagen-tratamientos-medicina-integrativa.webp"
+        alt="Tratamientos"
+        class="w-full h-auto object-cover"
+      />
+    </SectionFullX>
+    <SectionContainer class="py-16 md:py-24">
+      <Integrativa />
+    </SectionContainer>
+  </main>
+</Layout>
