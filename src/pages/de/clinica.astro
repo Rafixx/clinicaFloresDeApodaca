@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/Home/SectionContainer.astro";
+import SectionFullX from "@/components/Home/SectionFullX.astro";
+import ClinicaContent from "@/components/Tratamientos/Clinica/Clinica.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+type tLang = (str: any) => any;
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+---
+
+<Layout title={t("layout.title")} description={t("layout.description")}>
+  <main>
+    <SectionFullX id="home" class="pt-16 md:pt-24">
+      <img
+        src="/tratamientos/categorias/clinica.webp"
+        alt="Clínica Flores de Apodaca en Denia"
+        class="w-full h-full object-cover"
+      />
+      <SectionContainer class="py-16 md:py-24">
+        <ClinicaContent lang={lang} />
+      </SectionContainer>
+    </SectionFullX>
+  </main>
+</Layout>

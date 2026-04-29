@@ -1,0 +1,181 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Ginecología Estética, Regenerativa y Funcional',
+    intro: 'La ginecología <strong class="font-bold underline text-zeniaRosaOscuro">estética funcional</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">regenerativa</strong> se especializa en aplicar tratamientos para mejorar la salud y la calidad de vida de la mujer a lo largo de todas sus etapas. Corrige problemas funcionales y estéticos de la <strong class="font-bold underline text-zeniaRosaOscuro">zona genital femenina</strong> que por el paso de los años, los embarazos u otras afecciones ocasionan molestias importantes.',
+    treatmentsTitle: '¿Qué tipos de tratamientos gineco-estéticos realizamos?',
+    treatments: [
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Ácido hialurónico</strong>: bioimplante para hidratación y relleno tisular (labios mayores vulvares).',
+      'Tratamiento del <strong class="font-bold underline text-zeniaRosaOscuro">vaginismo</strong>, la amplitud vaginal, la atrofia y la falta de lubricación vaginal.',
+      'Tratamientos y cuidados post <strong class="font-bold underline text-zeniaRosaOscuro">cáncer genital</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Mesoterapia, carboxiterapia</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">ozonoterapia</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Blanqueamiento</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">bótox</strong> genital.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">PRP</strong> (plasma rico en plaquetas).',
+      'Tratamiento de la incontinencia urinaria.',
+      'Tratamiento de <strong class="font-bold underline text-zeniaRosaOscuro">cicatriz</strong> de episiotomía o <strong class="font-bold underline text-zeniaRosaOscuro">desgarro</strong> genital tras el parto.',
+      'Tratamiento del <strong class="font-bold underline text-zeniaRosaOscuro">liquen vulvar</strong> escleroatrófico.',
+      'Cirugía sobre capuchón de <strong class="font-bold underline text-zeniaRosaOscuro">clítoris</strong>.',
+      'Bioplastia de <strong class="font-bold underline text-zeniaRosaOscuro">reducción</strong>.',
+      'Tratamiento del <strong class="font-bold underline text-zeniaRosaOscuro">prolapso genital</strong>: descenso uterino, cistocele, rectocele.',
+      'Aumento del <strong class="font-bold underline text-zeniaRosaOscuro">punto G</strong>.',
+    ],
+    benefitsTitle: 'Beneficios de estos tratamientos:',
+    benefits: [
+      'Corregir alteraciones funcionales y recuperar la <strong class="font-bold underline text-zeniaRosaOscuro">capacidad sensitiva</strong> vulvovaginal, mejorando la <strong class="font-bold underline text-zeniaRosaOscuro">función sexual</strong>.',
+      'Frenar el <strong class="font-bold underline text-zeniaRosaOscuro">envejecimiento</strong> celular de los genitales femeninos gracias a la bioregeneración del tejido.',
+      'Embellecer los genitales externos femeninos, mejorando la <strong class="font-bold underline text-zeniaRosaOscuro">asimetría</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">pigmentación</strong>, los <strong class="font-bold underline text-zeniaRosaOscuro">volúmenes</strong> y dando un aspecto más armónico.',
+      'Tratar patologías como la <strong class="font-bold underline text-zeniaRosaOscuro">incontinencia urinaria</strong>, el <strong class="font-bold underline text-zeniaRosaOscuro">liquen vulvar</strong> y candidiasis, entre otras.',
+    ],
+    whyTitle: '¿Por qué hemos incorporado esta especialidad en nuestra clínica?',
+    why1: 'Durante los últimos años se ha incrementado el número de mujeres que nos solicitan información sobre afecciones de sus zonas íntimas. Hemos incorporado los servicios de la <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Romaguera</strong>, especialista en <strong class="font-bold underline text-zeniaRosaOscuro">Ginecoestética</strong>, para abordar los problemas funcionales, tratar cualquier patología relacionada y ayudar a la belleza íntima de la mujer.',
+    why2: 'La atención será <strong class="font-bold underline text-zeniaRosaOscuro">personalizada</strong>, con absoluta <strong class="font-bold underline text-zeniaRosaOscuro">discreción</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">privacidad</strong>.',
+    trainingTitle: '¿Qué formación necesita el profesional?',
+    training1: 'La ginecología <strong class="font-bold underline text-zeniaRosaOscuro">estética y regenerativa</strong> es una especialidad nueva donde pocos profesionales están suficientemente cualificados. En nuestra clínica te ayudamos a conseguir los mejores resultados gracias al asesoramiento de la <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Romaguera</strong>.',
+    cta: '¡Consúltanos!',
+  },
+  en: {
+    title: 'Aesthetic, Regenerative and Functional Gynaecology',
+    intro: '<strong class="font-bold underline text-zeniaRosaOscuro">Functional aesthetic</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">regenerative</strong> gynaecology specialises in applying treatments to improve women\'s health and quality of life throughout all their stages. It corrects functional and aesthetic problems of the <strong class="font-bold underline text-zeniaRosaOscuro">female genital area</strong> that over the years, pregnancies or other conditions cause significant discomfort.',
+    treatmentsTitle: 'What types of gynaeco-aesthetic treatments do we perform?',
+    treatments: [
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronic acid</strong>: bioimplant for tissue hydration and filling (labia majora).',
+      'Treatment of <strong class="font-bold underline text-zeniaRosaOscuro">vaginismus</strong>, vaginal amplitude, atrophy and lack of vaginal lubrication.',
+      'Post <strong class="font-bold underline text-zeniaRosaOscuro">genital cancer</strong> treatments and care.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Mesotherapy, carboxytherapy</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">ozone therapy</strong>.',
+      'Genital <strong class="font-bold underline text-zeniaRosaOscuro">whitening</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">botox</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">PRP</strong> (platelet-rich plasma).',
+      'Treatment of urinary incontinence.',
+      'Treatment of episiotomy <strong class="font-bold underline text-zeniaRosaOscuro">scar</strong> or genital <strong class="font-bold underline text-zeniaRosaOscuro">tear</strong> after childbirth.',
+      'Treatment of vulvar <strong class="font-bold underline text-zeniaRosaOscuro">lichen sclerosus</strong>.',
+      'Surgery on <strong class="font-bold underline text-zeniaRosaOscuro">clitoral</strong> hood.',
+      'Reduction <strong class="font-bold underline text-zeniaRosaOscuro">bioplasty</strong>.',
+      'Treatment of <strong class="font-bold underline text-zeniaRosaOscuro">genital prolapse</strong>: uterine descent, cystocele, rectocele.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">G-spot</strong> augmentation.',
+    ],
+    benefitsTitle: 'Benefits of these treatments:',
+    benefits: [
+      'Correcting functional alterations and recovering <strong class="font-bold underline text-zeniaRosaOscuro">vulvovaginal sensitivity</strong>, improving <strong class="font-bold underline text-zeniaRosaOscuro">sexual function</strong>.',
+      'Slowing cellular <strong class="font-bold underline text-zeniaRosaOscuro">ageing</strong> of female genitals through tissue bioregeneration.',
+      'Beautifying external female genitalia, improving <strong class="font-bold underline text-zeniaRosaOscuro">asymmetry</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">pigmentation</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">volumes</strong> and giving a more harmonious appearance.',
+      'Treating conditions such as <strong class="font-bold underline text-zeniaRosaOscuro">urinary incontinence</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">vulvar lichen</strong> and candidiasis, among others.',
+    ],
+    whyTitle: 'Why have we incorporated this specialty at our clinic?',
+    why1: 'In recent years, the number of women requesting information about intimate area conditions has increased. We have incorporated the services of <strong class="font-bold underline text-zeniaRosaOscuro">Dr. Romaguera</strong>, specialist in <strong class="font-bold underline text-zeniaRosaOscuro">Gynaeco-aesthetics</strong>, to address functional problems, treat any related pathology and help with intimate feminine beauty.',
+    why2: 'Care will be <strong class="font-bold underline text-zeniaRosaOscuro">personalised</strong>, with absolute <strong class="font-bold underline text-zeniaRosaOscuro">discretion</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">privacy</strong>.',
+    trainingTitle: 'What training does the professional need?',
+    training1: '<strong class="font-bold underline text-zeniaRosaOscuro">Aesthetic and regenerative</strong> gynaecology is a new specialty where few professionals are sufficiently qualified. At our clinic we help you achieve the best results thanks to the advice of <strong class="font-bold underline text-zeniaRosaOscuro">Dr. Romaguera</strong>.',
+    cta: 'Contact us!',
+  },
+  fr: {
+    title: 'Gynécologie Esthétique, Régénérative et Fonctionnelle',
+    intro: 'La gynécologie <strong class="font-bold underline text-zeniaRosaOscuro">esthétique fonctionnelle</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">régénérative</strong> se spécialise dans l\'application de traitements pour améliorer la santé et la qualité de vie de la femme à travers toutes ses étapes. Elle corrige les problèmes fonctionnels et esthétiques de la <strong class="font-bold underline text-zeniaRosaOscuro">zone génitale féminine</strong> qui, au fil des années, des grossesses ou d\'autres affections, occasionnent des gênes importantes.',
+    treatmentsTitle: 'Quels types de traitements gynéco-esthétiques réalisons-nous ?',
+    treatments: [
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Acide hyaluronique</strong> : bioimplant pour l\'hydratation et le remplissage tissulaire (grandes lèvres vulvaires).',
+      'Traitement du <strong class="font-bold underline text-zeniaRosaOscuro">vaginisme</strong>, de l\'amplitude vaginale, de l\'atrophie et du manque de lubrification vaginale.',
+      'Traitements et soins post <strong class="font-bold underline text-zeniaRosaOscuro">cancer génital</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Mésothérapie, carbothérapie</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">ozonothérapie</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Éclaircissement</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">botox</strong> génital.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">PRP</strong> (plasma riche en plaquettes).',
+      'Traitement de l\'incontinence urinaire.',
+      'Traitement de la <strong class="font-bold underline text-zeniaRosaOscuro">cicatrice</strong> d\'épisiotomie ou de <strong class="font-bold underline text-zeniaRosaOscuro">déchirure</strong> génitale après l\'accouchement.',
+      'Traitement du <strong class="font-bold underline text-zeniaRosaOscuro">lichen vulvaire</strong> scléreux.',
+      'Chirurgie du capuchon du <strong class="font-bold underline text-zeniaRosaOscuro">clitoris</strong>.',
+      'Bioplastie de <strong class="font-bold underline text-zeniaRosaOscuro">réduction</strong>.',
+      'Traitement du <strong class="font-bold underline text-zeniaRosaOscuro">prolapsus génital</strong> : descente utérine, cystocèle, rectocèle.',
+      'Augmentation du <strong class="font-bold underline text-zeniaRosaOscuro">point G</strong>.',
+    ],
+    benefitsTitle: 'Avantages de ces traitements :',
+    benefits: [
+      'Corriger les altérations fonctionnelles et récupérer la <strong class="font-bold underline text-zeniaRosaOscuro">capacité sensitive</strong> vulvovaginale, améliorant la <strong class="font-bold underline text-zeniaRosaOscuro">fonction sexuelle</strong>.',
+      'Freiner le <strong class="font-bold underline text-zeniaRosaOscuro">vieillissement</strong> cellulaire des organes génitaux féminins grâce à la biorégénération des tissus.',
+      'Embellir les organes génitaux externes féminins, en améliorant l\'<strong class="font-bold underline text-zeniaRosaOscuro">asymétrie</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">pigmentation</strong>, les <strong class="font-bold underline text-zeniaRosaOscuro">volumes</strong> et en donnant un aspect plus harmonieux.',
+      'Traiter des pathologies telles que l\'<strong class="font-bold underline text-zeniaRosaOscuro">incontinence urinaire</strong>, le <strong class="font-bold underline text-zeniaRosaOscuro">lichen vulvaire</strong> et la candidose, entre autres.',
+    ],
+    whyTitle: 'Pourquoi avons-nous incorporé cette spécialité dans notre clinique ?',
+    why1: 'Ces dernières années, le nombre de femmes qui nous demandent des informations sur les affections de leurs zones intimes a augmenté. Nous avons intégré les services de la <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Romaguera</strong>, spécialiste en <strong class="font-bold underline text-zeniaRosaOscuro">Gynéco-esthétique</strong>, pour aborder les problèmes fonctionnels, traiter toute pathologie associée et aider à la beauté intime de la femme.',
+    why2: 'Les soins seront <strong class="font-bold underline text-zeniaRosaOscuro">personnalisés</strong>, avec une absolue <strong class="font-bold underline text-zeniaRosaOscuro">discrétion</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">confidentialité</strong>.',
+    trainingTitle: 'Quelle formation le professionnel doit-il avoir ?',
+    training1: 'La gynécologie <strong class="font-bold underline text-zeniaRosaOscuro">esthétique et régénérative</strong> est une nouvelle spécialité où peu de professionnels sont suffisamment qualifiés. Dans notre clinique, nous vous aidons à obtenir les meilleurs résultats grâce aux conseils de la <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Romaguera</strong>.',
+    cta: 'Consultez-nous !',
+  },
+  de: {
+    title: 'Ästhetische, Regenerative und Funktionelle Gynäkologie',
+    intro: 'Die <strong class="font-bold underline text-zeniaRosaOscuro">funktionale ästhetische</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">regenerative</strong> Gynäkologie ist auf die Anwendung von Behandlungen spezialisiert, um die Gesundheit und Lebensqualität der Frau in allen ihren Lebensphasen zu verbessern. Sie korrigiert funktionale und ästhetische Probleme der <strong class="font-bold underline text-zeniaRosaOscuro">weiblichen Genitalregion</strong>, die durch den Lauf der Jahre, Schwangerschaften oder andere Erkrankungen erhebliche Beschwerden verursachen.',
+    treatmentsTitle: 'Welche gynäko-ästhetischen Behandlungen führen wir durch?',
+    treatments: [
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure</strong>: Bioimplantat zur Gewebehydratation und -auffüllung (große Schamlippen).',
+      'Behandlung von <strong class="font-bold underline text-zeniaRosaOscuro">Vaginismus</strong>, vaginaler Weite, Atrophie und mangelnder vaginaler Befeuchtung.',
+      'Behandlungen und Pflege nach <strong class="font-bold underline text-zeniaRosaOscuro">Genitalkrebs</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Mesotherapie, Carbotherapie</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Ozontherapie</strong>.',
+      'Genitale <strong class="font-bold underline text-zeniaRosaOscuro">Aufhellung</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Botox</strong>.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">PRP</strong> (thrombozytenreiches Plasma).',
+      'Behandlung von Harninkontinenz.',
+      'Behandlung der <strong class="font-bold underline text-zeniaRosaOscuro">Narbe</strong> nach Episiotomie oder genitalem <strong class="font-bold underline text-zeniaRosaOscuro">Riss</strong> nach der Geburt.',
+      'Behandlung des vulvären <strong class="font-bold underline text-zeniaRosaOscuro">Lichen sclerosus</strong>.',
+      'Chirurgie der <strong class="font-bold underline text-zeniaRosaOscuro">Klitorisvorhaut</strong>.',
+      'Reduktions-<strong class="font-bold underline text-zeniaRosaOscuro">Bioplastik</strong>.',
+      'Behandlung des <strong class="font-bold underline text-zeniaRosaOscuro">Genitalprolaps</strong>: Uterussenkung, Zystozele, Rektozele.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">G-Punkt</strong>-Augmentation.',
+    ],
+    benefitsTitle: 'Vorteile dieser Behandlungen:',
+    benefits: [
+      'Funktionale Störungen korrigieren und die <strong class="font-bold underline text-zeniaRosaOscuro">vulvovaginale Sensibilität</strong> zurückgewinnen, die <strong class="font-bold underline text-zeniaRosaOscuro">Sexualfunktion</strong> verbessern.',
+      'Die zelluläre <strong class="font-bold underline text-zeniaRosaOscuro">Alterung</strong> der weiblichen Genitalien durch Gewebsbioregenerator bremsen.',
+      'Die äußeren weiblichen Genitalien verschönern, <strong class="font-bold underline text-zeniaRosaOscuro">Asymmetrie</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">Pigmentierung</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Volumina</strong> verbessern und ein harmonischeres Erscheinungsbild geben.',
+      'Erkrankungen wie <strong class="font-bold underline text-zeniaRosaOscuro">Harninkontinenz</strong>, vulvären <strong class="font-bold underline text-zeniaRosaOscuro">Lichen</strong> und Candidiasis behandeln, unter anderem.',
+    ],
+    whyTitle: 'Warum haben wir diese Spezialität in unserer Klinik eingeführt?',
+    why1: 'In den letzten Jahren hat die Zahl der Frauen zugenommen, die uns um Informationen zu Erkrankungen ihrer Intimzonen bitten. Wir haben die Dienste von <strong class="font-bold underline text-zeniaRosaOscuro">Dr. Romaguera</strong>, Spezialistin für <strong class="font-bold underline text-zeniaRosaOscuro">Gynäko-Ästhetik</strong>, integriert, um funktionale Probleme anzugehen, jede damit verbundene Erkrankung zu behandeln und der intimen Schönheit der Frau zu helfen.',
+    why2: 'Die Betreuung erfolgt <strong class="font-bold underline text-zeniaRosaOscuro">personalisiert</strong>, mit absoluter <strong class="font-bold underline text-zeniaRosaOscuro">Diskretion</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Vertraulichkeit</strong>.',
+    trainingTitle: 'Welche Ausbildung benötigt der Fachmann?',
+    training1: 'Die <strong class="font-bold underline text-zeniaRosaOscuro">ästhetische und regenerative</strong> Gynäkologie ist eine neue Spezialität, bei der nur wenige Fachleute ausreichend qualifiziert sind. In unserer Klinik helfen wir Ihnen, dank der Beratung von <strong class="font-bold underline text-zeniaRosaOscuro">Dr. Romaguera</strong> die besten Ergebnisse zu erzielen.',
+    cta: 'Fragen Sie uns!',
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-3xl lg:text-5xl font-bold text-center py-16 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<div class="text-lg leading-relaxed text-zeniaMarronOscuro space-y-4 mb-12">
+  <p set:html={c.intro} />
+
+  <div>
+    <p class="font-semibold text-zeniaMarronOscuro mb-2">{c.treatmentsTitle}</p>
+    <ul class="list-none space-y-1 pl-4">
+      {c.treatments.map((t) => (
+        <li set:html={`• ${t}`} />
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <p class="font-semibold text-zeniaMarronOscuro mb-2">{c.benefitsTitle}</p>
+    <ul class="list-none space-y-1 pl-4">
+      {c.benefits.map((b) => (
+        <li set:html={`• ${b}`} />
+      ))}
+    </ul>
+  </div>
+
+  <div>
+    <p class="font-semibold text-zeniaMarronOscuro mb-2">{c.whyTitle}</p>
+    <p set:html={c.why1} />
+    <p set:html={c.why2} />
+  </div>
+
+  <div>
+    <p class="font-semibold text-zeniaMarronOscuro mb-2">{c.trainingTitle}</p>
+    <p set:html={c.training1} />
+    <p class="font-semibold text-zeniaRosaOscuro">{c.cta}</p>
+  </div>
+</div>

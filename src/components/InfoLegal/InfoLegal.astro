@@ -1,0 +1,225 @@
+---
+interface Props { lang?: string; }
+const { lang = 'es' } = Astro.props;
+
+const c = {
+  es: {
+    legalTitle: 'Aviso Legal',
+    condTitle: 'Condiciones de Uso',
+    privTitle: 'Política de Privacidad',
+    cookieTitle: 'Política de Cookies',
+    condSubtitle: 'www.clinicafloresdeapodaca.com',
+    identity: 'IDENTIDAD', cif: 'C.I.F / N.I.F.', address: 'DOMICILIO', phone: 'TELÉFONO',
+    college: 'COLEGIO PROFESIONAL', collegeNum: 'NÚMERO DE COLEGIADO', degree: 'TÍTULO ACADÉMICO', state: 'ESTADO DE EXPEDICIÓN', code: 'CÓDIGO DEONTOLÓGICO',
+    legalIntro: 'En cumplimiento del art. 10 de Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, le informamos que el responsable de este sitio web es:',
+    cond: [
+      { title: '1. OBJETO', text: 'Las presentes condiciones generales de uso (CGU) regulan el acceso y el uso del Website bajo el dominio WWW.CLINICAFLORESDEAPODACA.COM, titularidad de "ZENIA FLORES DE APODACA" (<strong class="font-semibold">CLINICA FLORES DE APODACA</strong>), puesto a disposición de los usuarios.' },
+      { title: '2. CONFORMIDAD CON LAS PRESENTES CONDICIONES', text: 'La utilización del Website supone la aceptación plena de las CGU vigentes. <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> se reserva el derecho de modificar, sin previo aviso, las CGU en cualquier momento.' },
+      { title: '3. CONDICIONES DE ACCESO Y USO', text: 'El acceso al Website es gratuito. El usuario reconoce ser mayor de dieciocho años y acepta que su uso se realiza bajo su única y exclusiva responsabilidad.' },
+      { title: '4. DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL', text: 'Queda expresamente prohibida la reproducción, transformación, distribución o comunicación pública de cualquiera de sus elementos, salvo en los casos legalmente permitidos.' },
+      { title: '5. EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> no garantiza la disponibilidad y continuidad del funcionamiento del Website ni la exactitud o actualidad de sus contenidos.' },
+      { title: '6. HIPERENLACES', text: 'Cualquier forma de hiperenlace distinta del acceso a la página de inicio requerirá autorización expresa por escrito de <strong class="font-semibold">CLINICA FLORES DE APODACA</strong>.' },
+      { title: '7. ACCIONES EN CASO DE INCUMPLIMIENTO', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> se reserva el derecho a ejercer cuantas acciones legales estén disponibles para exigir responsabilidades.' },
+      { title: '8. NULIDAD PARCIAL', text: 'La declaración de nulidad de cualquiera de las cláusulas no afectará a la validez o eficacia de las restantes.' },
+      { title: '9. LEY APLICABLE Y JURISDICCIÓN', text: 'Las presentes CGU se regirán por la legislación española. Las partes se someten a los Juzgados de Denia.' },
+      { title: '10. NOTIFICACIONES', text: 'Las notificaciones a <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> se dirigirán al domicilio especificado en el Aviso Legal.' },
+    ],
+    privIntro: 'La presente política de privacidad es conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD). Nuestra organización está comprometida con la privacidad de sus datos personales.',
+    privSections: [
+      { title: 'I. RESPONSABLE DEL TRATAMIENTO', items: ['<strong class="font-semibold">IDENTIDAD:</strong> ZENIA FLORES DE APODACA', '<strong class="font-semibold">C.I.F. / N.I.F.:</strong> X7946640W', '<strong class="font-semibold">DOMICILIO:</strong> Patricio Ferrándiz 86 Bajo, 03700 Denia (Alicante)', '<strong class="font-semibold">TELÉFONO:</strong> 865 77 37 88', '<strong class="font-semibold">E-MAIL:</strong> <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>'] },
+      { title: 'II. DESTINATARIOS DE LOS DATOS', text: 'Los datos personales facilitados no serán objeto de cesión alguna salvo disposición específica o requerimiento legal.' },
+      { title: 'III. BASE LEGAL', text: 'En cada tratamiento específico de datos personales le informaremos de la base legal que lo legitima.' },
+      { title: 'IV. DERECHOS DEL INTERESADO', text: 'El interesado tiene derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición. Puede ejercerlos en <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>.' },
+      { title: 'V. FORMULARIO DE CONTACTO', text: 'Los datos serán tratados para canalizar solicitudes de información. La base legal es el consentimiento expreso. Los datos se conservarán por dos años.' },
+    ],
+    cookieIntro: 'Este Website utiliza cookies y/o tecnologías similares propias que almacenan y recuperan información cuando navegas.',
+    cookieSections: [
+      { title: 'COOKIES PROPIAS — Técnicas o necesarias', text: 'Las cookies técnicas permiten al usuario la navegación a través del Website y la utilización de sus diferentes opciones o servicios. La base legal es la ejecución del servicio solicitado.' },
+      { title: 'MÁS INFORMACIÓN', text: 'Puede consultar más información sobre el tratamiento de sus datos en nuestra <a href="#politica" class="text-zeniaRosaOscuro underline">Política de Privacidad</a>.' },
+    ],
+    collegeVal: 'Colegio de Médicos de Alicante',
+    collegeNumVal: '03/09992-5',
+    degreeVal: 'Licenciatura en Medicina',
+    stateVal: 'España',
+  },
+  en: {
+    legalTitle: 'Legal Notice',
+    condTitle: 'Terms of Use',
+    privTitle: 'Privacy Policy',
+    cookieTitle: 'Cookie Policy',
+    condSubtitle: 'www.clinicafloresdeapodaca.com',
+    identity: 'IDENTITY', cif: 'TAX ID', address: 'ADDRESS', phone: 'PHONE',
+    college: 'PROFESSIONAL ASSOCIATION', collegeNum: 'MEMBER NUMBER', degree: 'ACADEMIC DEGREE', state: 'ISSUING COUNTRY', code: 'CODE OF ETHICS',
+    legalIntro: 'In compliance with applicable law on information society services, we inform you that the responsible party for this website is:',
+    cond: [
+      { title: '1. PURPOSE', text: 'These general terms of use govern access to and use of the Website at WWW.CLINICAFLORESDEAPODACA.COM, owned by "ZENIA FLORES DE APODACA" (<strong class="font-semibold">CLINICA FLORES DE APODACA</strong>).' },
+      { title: '2. ACCEPTANCE', text: 'Use of the Website implies full acceptance of these terms. <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> reserves the right to modify these terms at any time without prior notice.' },
+      { title: '3. CONDITIONS OF ACCESS AND USE', text: 'Access to the Website is free. The user acknowledges being over eighteen years of age and agrees that use is at their sole responsibility.' },
+      { title: '4. INTELLECTUAL AND INDUSTRIAL PROPERTY RIGHTS', text: 'Reproduction, transformation, distribution or public communication of any elements is expressly prohibited, except where legally permitted.' },
+      { title: '5. DISCLAIMER OF WARRANTIES', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> does not guarantee the availability or continuity of the Website or the accuracy of its content.' },
+      { title: '6. HYPERLINKS', text: 'Any form of hyperlink other than access to the home page requires express written authorisation from <strong class="font-semibold">CLINICA FLORES DE APODACA</strong>.' },
+      { title: '7. ACTIONS IN CASE OF NON-COMPLIANCE', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> reserves the right to take any available legal action to enforce liability.' },
+      { title: '8. PARTIAL INVALIDITY', text: 'The invalidity of any clause shall not affect the validity or effectiveness of the remaining clauses.' },
+      { title: '9. APPLICABLE LAW AND JURISDICTION', text: 'These terms are governed by Spanish law. The parties submit to the Courts of Denia.' },
+      { title: '10. NOTIFICATIONS', text: 'Notifications to <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> shall be sent to the address specified in the Legal Notice.' },
+    ],
+    privIntro: 'This privacy policy complies with EU Regulation 2016/679 (GDPR) and applicable Spanish data protection legislation. Our organisation is committed to the privacy of your personal data.',
+    privSections: [
+      { title: 'I. DATA CONTROLLER', items: ['<strong class="font-semibold">IDENTITY:</strong> ZENIA FLORES DE APODACA', '<strong class="font-semibold">TAX ID:</strong> X7946640W', '<strong class="font-semibold">ADDRESS:</strong> Patricio Ferrándiz 86 Bajo, 03700 Denia (Alicante)', '<strong class="font-semibold">PHONE:</strong> 865 77 37 88', '<strong class="font-semibold">E-MAIL:</strong> <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>'] },
+      { title: 'II. DATA RECIPIENTS', text: 'Personal data provided will not be transferred unless specifically required by law.' },
+      { title: 'III. LEGAL BASIS', text: 'We will inform you of the legal basis for each specific processing of personal data.' },
+      { title: 'IV. DATA SUBJECT RIGHTS', text: 'You have rights of access, rectification, erasure, restriction, portability and objection. Exercise them at <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>.' },
+      { title: 'V. CONTACT FORM', text: 'Data will be processed to handle information requests. The legal basis is express consent. Data will be retained for two years.' },
+    ],
+    cookieIntro: 'This Website uses its own cookies and/or similar technologies that store and retrieve information when you browse.',
+    cookieSections: [
+      { title: 'OWN COOKIES — Technical or necessary', text: 'Technical cookies enable the user to navigate the Website and use its various options or services. The legal basis is the execution of the requested service.' },
+      { title: 'MORE INFORMATION', text: 'You can find more information about the processing of your data in our <a href="#politica" class="text-zeniaRosaOscuro underline">Privacy Policy</a>.' },
+    ],
+    collegeVal: 'College of Physicians of Alicante',
+    collegeNumVal: '03/09992-5',
+    degreeVal: 'Degree in Medicine',
+    stateVal: 'Spain',
+  },
+  fr: {
+    legalTitle: 'Mentions Légales',
+    condTitle: 'Conditions d\'Utilisation',
+    privTitle: 'Politique de Confidentialité',
+    cookieTitle: 'Politique de Cookies',
+    condSubtitle: 'www.clinicafloresdeapodaca.com',
+    identity: 'IDENTITÉ', cif: 'N° FISCAL', address: 'ADRESSE', phone: 'TÉLÉPHONE',
+    college: 'ORDRE PROFESSIONNEL', collegeNum: 'NUMÉRO DE MEMBRE', degree: 'DIPLÔME', state: 'PAYS DE DÉLIVRANCE', code: 'CODE DÉONTOLOGIQUE',
+    legalIntro: 'Conformément à la législation applicable, nous vous informons que le responsable de ce site web est :',
+    cond: [
+      { title: '1. OBJET', text: 'Les présentes conditions générales d\'utilisation (CGU) régissent l\'accès et l\'utilisation du site web à l\'adresse WWW.CLINICAFLORESDEAPODACA.COM, propriété de "ZENIA FLORES DE APODACA" (<strong class="font-semibold">CLINICA FLORES DE APODACA</strong>).' },
+      { title: '2. ACCEPTATION', text: 'L\'utilisation du site implique l\'acceptation pleine et entière des CGU en vigueur. <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> se réserve le droit de modifier les CGU à tout moment sans préavis.' },
+      { title: '3. CONDITIONS D\'ACCÈS ET D\'UTILISATION', text: 'L\'accès au site est gratuit. L\'utilisateur reconnaît avoir plus de dix-huit ans et accepte que l\'utilisation est effectuée sous sa seule et exclusive responsabilité.' },
+      { title: '4. DROITS DE PROPRIÉTÉ INTELLECTUELLE', text: 'La reproduction, transformation, distribution ou communication publique de tout élément est expressément interdite, sauf dans les cas légalement autorisés.' },
+      { title: '5. EXCLUSION DE GARANTIES', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> ne garantit pas la disponibilité ou la continuité du site ni l\'exactitude de son contenu.' },
+      { title: '6. HYPERLIENS', text: 'Toute forme d\'hyperlien autre que l\'accès à la page d\'accueil nécessite une autorisation écrite expresse de <strong class="font-semibold">CLINICA FLORES DE APODACA</strong>.' },
+      { title: '7. ACTIONS EN CAS DE NON-CONFORMITÉ', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> se réserve le droit d\'exercer toutes les actions légales disponibles.' },
+      { title: '8. NULLITÉ PARTIELLE', text: 'La nullité de toute clause n\'affectera pas la validité des clauses restantes.' },
+      { title: '9. DROIT APPLICABLE ET JURIDICTION', text: 'Les présentes CGU sont régies par le droit espagnol. Les parties se soumettent aux tribunaux de Dénia.' },
+      { title: '10. NOTIFICATIONS', text: 'Les notifications à <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> seront adressées au domicile précisé dans les Mentions Légales.' },
+    ],
+    privIntro: 'La présente politique de confidentialité est conforme au Règlement (UE) 2016/679 (RGPD). Notre organisation s\'engage à protéger vos données personnelles.',
+    privSections: [
+      { title: 'I. RESPONSABLE DU TRAITEMENT', items: ['<strong class="font-semibold">IDENTITÉ :</strong> ZENIA FLORES DE APODACA', '<strong class="font-semibold">N° FISCAL :</strong> X7946640W', '<strong class="font-semibold">ADRESSE :</strong> Patricio Ferrándiz 86 Bajo, 03700 Denia (Alicante)', '<strong class="font-semibold">TÉLÉPHONE :</strong> 865 77 37 88', '<strong class="font-semibold">E-MAIL :</strong> <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>'] },
+      { title: 'II. DESTINATAIRES DES DONNÉES', text: 'Les données personnelles fournies ne feront l\'objet d\'aucune cession sauf disposition légale spécifique.' },
+      { title: 'III. BASE LÉGALE', text: 'Nous vous informerons de la base légale pour chaque traitement spécifique de données personnelles.' },
+      { title: 'IV. DROITS DE LA PERSONNE CONCERNÉE', text: 'Vous disposez des droits d\'accès, rectification, effacement, limitation, portabilité et opposition. Exercez-les à <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>.' },
+      { title: 'V. FORMULAIRE DE CONTACT', text: 'Les données seront traitées pour gérer les demandes d\'information. La base légale est le consentement exprès. Les données seront conservées deux ans.' },
+    ],
+    cookieIntro: 'Ce site utilise des cookies et/ou technologies similaires qui stockent et récupèrent des informations lors de votre navigation.',
+    cookieSections: [
+      { title: 'COOKIES PROPRES — Techniques ou nécessaires', text: 'Les cookies techniques permettent à l\'utilisateur de naviguer sur le site et d\'utiliser ses différentes options ou services. La base légale est l\'exécution du service demandé.' },
+      { title: 'PLUS D\'INFORMATIONS', text: 'Vous pouvez consulter plus d\'informations sur le traitement de vos données dans notre <a href="#politica" class="text-zeniaRosaOscuro underline">Politique de Confidentialité</a>.' },
+    ],
+    collegeVal: 'Conseil des Médecins d\'Alicante',
+    collegeNumVal: '03/09992-5',
+    degreeVal: 'Licence en Médecine',
+    stateVal: 'Espagne',
+  },
+  de: {
+    legalTitle: 'Impressum',
+    condTitle: 'Nutzungsbedingungen',
+    privTitle: 'Datenschutzrichtlinie',
+    cookieTitle: 'Cookie-Richtlinie',
+    condSubtitle: 'www.clinicafloresdeapodaca.com',
+    identity: 'IDENTITÄT', cif: 'STEUER-ID', address: 'ADRESSE', phone: 'TELEFON',
+    college: 'BERUFSVERBAND', collegeNum: 'MITGLIEDSNUMMER', degree: 'AKADEMISCHER GRAD', state: 'AUSSTELLUNGSLAND', code: 'BERUFSORDNUNG',
+    legalIntro: 'Gemäß den geltenden Rechtsvorschriften informieren wir Sie, dass der Verantwortliche für diese Website ist:',
+    cond: [
+      { title: '1. GEGENSTAND', text: 'Diese allgemeinen Nutzungsbedingungen (AGB) regeln den Zugang zur und die Nutzung der Website unter WWW.CLINICAFLORESDEAPODACA.COM, Eigentum von "ZENIA FLORES DE APODACA" (<strong class="font-semibold">CLINICA FLORES DE APODACA</strong>).' },
+      { title: '2. ZUSTIMMUNG', text: 'Die Nutzung der Website setzt die vollständige Akzeptanz der geltenden AGB voraus. <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> behält sich das Recht vor, die AGB jederzeit ohne Vorankündigung zu ändern.' },
+      { title: '3. ZUGANGSBEDINGUNGEN', text: 'Der Zugang zur Website ist kostenlos. Der Nutzer erkennt an, über achtzehn Jahre alt zu sein und akzeptiert, dass die Nutzung auf seine alleinige Verantwortung erfolgt.' },
+      { title: '4. GEISTIGE EIGENTUMSRECHTE', text: 'Die Vervielfältigung, Umgestaltung, Verbreitung oder öffentliche Zugänglichmachung von Elementen ist ausdrücklich verboten, außer in gesetzlich zulässigen Fällen.' },
+      { title: '5. HAFTUNGSAUSSCHLUSS', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> garantiert nicht die Verfügbarkeit oder Kontinuität der Website noch die Richtigkeit ihrer Inhalte.' },
+      { title: '6. HYPERLINKS', text: 'Jede Form von Hyperlink, die nicht der Startseite entspricht, bedarf der ausdrücklichen schriftlichen Genehmigung von <strong class="font-semibold">CLINICA FLORES DE APODACA</strong>.' },
+      { title: '7. MASSNAHMEN BEI NICHTEINHALTUNG', text: '<strong class="font-semibold">CLINICA FLORES DE APODACA</strong> behält sich das Recht vor, alle verfügbaren rechtlichen Schritte einzuleiten.' },
+      { title: '8. TEILNICHTIGKEIT', text: 'Die Nichtigkeit einer Klausel berührt nicht die Gültigkeit oder Wirksamkeit der übrigen Klauseln.' },
+      { title: '9. ANWENDBARES RECHT UND GERICHTSSTAND', text: 'Diese AGB unterliegen spanischem Recht. Die Parteien unterwerfen sich den Gerichten von Dénia.' },
+      { title: '10. MITTEILUNGEN', text: 'Mitteilungen an <strong class="font-semibold">CLINICA FLORES DE APODACA</strong> sind an die im Impressum angegebene Adresse zu richten.' },
+    ],
+    privIntro: 'Diese Datenschutzrichtlinie entspricht der EU-Verordnung 2016/679 (DSGVO). Unsere Organisation verpflichtet sich zum Schutz Ihrer personenbezogenen Daten.',
+    privSections: [
+      { title: 'I. VERANTWORTLICHER', items: ['<strong class="font-semibold">IDENTITÄT:</strong> ZENIA FLORES DE APODACA', '<strong class="font-semibold">STEUER-ID:</strong> X7946640W', '<strong class="font-semibold">ADRESSE:</strong> Patricio Ferrándiz 86 Bajo, 03700 Denia (Alicante)', '<strong class="font-semibold">TELEFON:</strong> 865 77 37 88', '<strong class="font-semibold">E-MAIL:</strong> <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>'] },
+      { title: 'II. EMPFÄNGER DER DATEN', text: 'Bereitgestellte personenbezogene Daten werden nicht weitergegeben, außer bei gesetzlicher Verpflichtung.' },
+      { title: 'III. RECHTSGRUNDLAGE', text: 'Wir werden Sie über die Rechtsgrundlage für jede spezifische Datenverarbeitung informieren.' },
+      { title: 'IV. RECHTE DER BETROFFENEN', text: 'Sie haben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Nutzen Sie diese unter <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a>.' },
+      { title: 'V. KONTAKTFORMULAR', text: 'Daten werden zur Bearbeitung von Informationsanfragen verarbeitet. Rechtsgrundlage ist die ausdrückliche Einwilligung. Daten werden zwei Jahre aufbewahrt.' },
+    ],
+    cookieIntro: 'Diese Website verwendet eigene Cookies und/oder ähnliche Technologien, die beim Surfen Informationen speichern und abrufen.',
+    cookieSections: [
+      { title: 'EIGENE COOKIES — Technisch oder notwendig', text: 'Technische Cookies ermöglichen dem Nutzer die Navigation auf der Website und die Nutzung ihrer verschiedenen Optionen oder Dienste. Rechtsgrundlage ist die Erbringung des angeforderten Dienstes.' },
+      { title: 'WEITERE INFORMATIONEN', text: 'Weitere Informationen zur Verarbeitung Ihrer Daten finden Sie in unserer <a href="#politica" class="text-zeniaRosaOscuro underline">Datenschutzrichtlinie</a>.' },
+    ],
+    collegeVal: 'Ärztekammer Alicante',
+    collegeNumVal: '03/09992-5',
+    degreeVal: 'Studium der Medizin',
+    stateVal: 'Spanien',
+  },
+}[lang as 'es'|'en'|'fr'|'de'] ?? {} as any;
+---
+
+<div class="space-y-20">
+  <section id="aviso" class="scroll-mt-28">
+    <h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">{c.legalTitle}</h1>
+    <div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-3 mt-8 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6">
+      <p>{c.legalIntro}</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.identity}:</strong> ZENIA FLORES DE APODACA</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.cif}:</strong> X7946640W</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.address}:</strong> Patricio Ferrándiz 86 Bajo, 03700 Denia (Alicante)</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.phone}:</strong> 663 27 43 78</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">E-MAIL:</strong> <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro underline">info@clinicafloresdeapodaca.com</a></p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.college}:</strong> {c.collegeVal}</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.collegeNum}:</strong> {c.collegeNumVal}</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.degree}:</strong> {c.degreeVal}</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.state}:</strong> {c.stateVal}</p>
+      <p><strong class="font-semibold text-zeniaMarronOscuro">{c.code}:</strong> <a href="https://www.seme.org/" target="_blank" rel="noopener noreferrer" class="text-zeniaRosaOscuro underline">www.seme.org</a></p>
+    </div>
+  </section>
+
+  <section id="condiciones" class="scroll-mt-28">
+    <h2 class="text-2xl lg:text-3xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">{c.condTitle}</h2>
+    <p class="text-center text-sm text-zeniaMarronOscuro/50 mt-1 mb-8">{c.condSubtitle}</p>
+    <div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-5 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6">
+      {c.cond.map((item: {title: string; text: string}) => (
+        <div>
+          <p class="font-semibold text-zeniaMarronOscuro">{item.title}</p>
+          <p set:html={item.text} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="politica" class="scroll-mt-28">
+    <h2 class="text-2xl lg:text-3xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">{c.privTitle}</h2>
+    <div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-5 mt-8 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6">
+      <p>{c.privIntro}</p>
+      {c.privSections.map((s: {title: string; text?: string; items?: string[]}) => (
+        <div>
+          <p class="font-semibold text-zeniaMarronOscuro">{s.title}</p>
+          {s.items ? (
+            <ul class="list-none space-y-1 mt-2">{s.items.map((i: string) => <li set:html={i} />)}</ul>
+          ) : (
+            <p set:html={s.text} />
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="cookies" class="scroll-mt-28">
+    <h2 class="text-2xl lg:text-3xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">{c.cookieTitle}</h2>
+    <div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-5 mt-8 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6">
+      <p>{c.cookieIntro}</p>
+      {c.cookieSections.map((s: {title: string; text: string}) => (
+        <div>
+          <p class="font-semibold text-zeniaMarronOscuro">{s.title}</p>
+          <p set:html={s.text} />
+        </div>
+      ))}
+    </div>
+  </section>
+</div>

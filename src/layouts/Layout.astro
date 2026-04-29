@@ -25,13 +25,35 @@ const { currentLocale } = Astro;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
-    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      import { initAccordions, initDropdowns, initCollapses } from "flowbite";
+
+      function initFlowbite() {
+        initAccordions();
+        initDropdowns();
+        initCollapses();
+      }
+
+      // Run immediately (module scripts execute after DOM is ready)
+      initFlowbite();
+      // Re-run after each View Transition navigation
+      document.addEventListener("astro:page-load", initFlowbite);
+    </script>
   </head>
 
   <body class="relative text-zeniaMarronOscuro bg-zeniaBlanco">
     <Header />
     <slot />
     <Footer />
+    <a
+      href="https://api.whatsapp.com/send?phone=34663274378&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+      class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#25d366] flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200"
+    >
+      <img src="/wa.png" alt="WhatsApp" width="30" height="30" />
+    </a>
     <style is:global>
       :root {
         /* color-scheme: light dark; */

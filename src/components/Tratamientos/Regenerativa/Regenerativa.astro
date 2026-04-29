@@ -1,0 +1,168 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Unidad de Medicina Regenerativa de Dénia (UMERED)',
+    intro: `<p>En esta Unidad hemos centrado los tratamientos médicos y estéticos con fines Regenerativos.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Medicina Estética:</strong></p>
+<ul class="list-none space-y-2">
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Plasma Rico en Plaquetas</strong>, para la regeneración facial, del cuello y del escote, así como para mejorar cicatrices, queloides y marcas o inesteticismos.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Exosomas:</strong> son nanopartículas producidas por las células, que actúan como mensajeros intercelulares, ya que contienen <strong class="font-bold underline text-zeniaRosaOscuro">ADR y ARN</strong> y se utilizan para facilitar la comunicación entre las células. Su objetivo en medicina estética es <strong class="font-bold underline text-zeniaRosaOscuro">mejorar la calidad de la piel y los tejidos</strong>, porque promueve la regeneración de estos.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Polinucleótidos (PDRN):</strong> son fragmentos de DNA que inducen una respuesta no inflamatoria de <strong class="font-bold underline text-zeniaRosaOscuro">regeneración tisular</strong> y promueven la <strong class="font-bold underline text-zeniaRosaOscuro">síntesis de ácido hialurónico, colágeno y elastina</strong>, que logran rejuvenecer la piel. Tienen un <strong class="font-bold underline text-zeniaRosaOscuro">efecto antioxidante</strong> que contrarresta los efectos dañinos de los radicales libres en la piel. Tienen aplicación tanto facial como corporal.</li>
+</ul>
+<p><strong class="font-bold text-zeniaMarronOscuro">Medicina General y Traumatología:</strong> En <strong class="font-bold underline text-zeniaRosaOscuro">UMERED</strong> llevamos a cabo un <strong class="font-bold underline text-zeniaRosaOscuro">protocolo dirigido a regenerar las lesiones tendinosas y osteoarticulares</strong>, con infiltraciones <strong class="font-bold underline text-zeniaRosaOscuro">ecoguiadas</strong>, con el objetivo de regenerar las lesiones y mejorar el dolor.</p>`,
+    treatments: [
+      {
+        summary: 'Infiltración Ecoguiada con PRP',
+        title: 'INFILTRACIÓN ECOGUIADA CON PRP',
+        body: `<p>Una de las especialidades de nuestra <strong class="font-bold underline text-zeniaRosaOscuro">Unidad de Medicina Regenerativa de Denia (UMERED)</strong> es ayudar a la rápida recuperación de pacientes con dolor agudo, subagudo o crónico, por <strong class="font-bold underline text-zeniaRosaOscuro">lesiones osteoarticulares</strong>, que no han conseguido resultados totalmente satisfactorios con los tratamientos convencionales.</p>
+<p>El <strong class="font-bold underline text-zeniaRosaOscuro">PRP (Plasma rico en plaquetas)</strong> es un tratamiento indicado para un gran número de <strong class="font-bold underline text-zeniaRosaOscuro">lesiones degenerativas, tendinitis aguda o crónica, osteoartrosis, desgarros ligamentosos</strong> y todo tipo de lesión en la que se necesite <strong class="font-bold underline text-zeniaRosaOscuro">regenerar el tejido</strong>. Consiste en la infiltración en el área dañada del plasma procesado, una vez obtenido de la sangre del paciente.</p>
+<p>En nuestra clínica este procedimiento se realiza supervisado con <strong class="font-bold underline text-zeniaRosaOscuro">imagen ecográfica</strong>, porque de esta forma aseguramos infiltrar en el sitio correcto y no tocar con la aguja otras estructuras, evitando dañar a los tejidos.</p>
+<p>Usamos <strong class="font-bold underline text-zeniaRosaOscuro">tecnología de alta gama</strong> que asegura mejores resultados para conseguir regenerar las estructuras dañadas en un corto espacio de tiempo y con las máximas garantías. Precisamente por este motivo, el paciente puede retomar su rutina tras el tratamiento.</p>
+<p>El número de sesiones dependerá de cada lesión en concreto. Para ello, hacemos en todos los casos una valoración continua para obtener resultados satisfactorios.</p>
+<p class="font-semibold text-zeniaRosaOscuro">No renuncies a una vida sin dolor. Pregúntanos cómo te podemos ayudar.</p>`,
+      },
+      {
+        summary: 'Infiltración con Ácido Hialurónico de Alto Peso Molecular',
+        title: 'INFILTRACIÓN CON ÁCIDO HIALURÓNICO',
+        body: `<p>Infiltración ecoguiada con <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico de alto peso molecular y condroitina sódica</strong> para reducir la inflamación y restablecer el entorno extracelular a un estado más saludable. Indicada en patologías osteoarticulares. La valoración médica determinará el número de sesiones necesarias.</p>`,
+      },
+    ],
+  },
+  en: {
+    title: 'Regenerative Medicine Unit of Dénia (UMERED)',
+    intro: `<p>In this Unit we have focused medical and aesthetic treatments for Regenerative purposes.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Aesthetic Medicine:</strong></p>
+<ul class="list-none space-y-2">
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Platelet-Rich Plasma</strong>, for facial, neck and décolleté regeneration, as well as to improve scars, keloids and blemishes.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Exosomes:</strong> nanoparticles produced by cells that act as intercellular messengers, containing <strong class="font-bold underline text-zeniaRosaOscuro">DNA and RNA</strong> and used to facilitate communication between cells. Their goal in aesthetic medicine is to <strong class="font-bold underline text-zeniaRosaOscuro">improve skin and tissue quality</strong> by promoting their regeneration.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Polynucleotides (PDRN):</strong> DNA fragments that induce a non-inflammatory <strong class="font-bold underline text-zeniaRosaOscuro">tissue regeneration</strong> response and promote the <strong class="font-bold underline text-zeniaRosaOscuro">synthesis of hyaluronic acid, collagen and elastin</strong>, achieving skin rejuvenation. They have an <strong class="font-bold underline text-zeniaRosaOscuro">antioxidant effect</strong> that counteracts the harmful effects of free radicals on the skin. They have both facial and body applications.</li>
+</ul>
+<p><strong class="font-bold text-zeniaMarronOscuro">General Medicine and Traumatology:</strong> At <strong class="font-bold underline text-zeniaRosaOscuro">UMERED</strong> we carry out a <strong class="font-bold underline text-zeniaRosaOscuro">protocol aimed at regenerating tendon and osteoarticular injuries</strong>, with <strong class="font-bold underline text-zeniaRosaOscuro">ultrasound-guided</strong> injections, with the aim of regenerating injuries and improving pain.</p>`,
+    treatments: [
+      {
+        summary: 'Ultrasound-Guided PRP Injection',
+        title: 'ULTRASOUND-GUIDED PRP INJECTION',
+        body: `<p>One of the specialties of our <strong class="font-bold underline text-zeniaRosaOscuro">Regenerative Medicine Unit of Denia (UMERED)</strong> is to help the rapid recovery of patients with acute, subacute or chronic pain due to <strong class="font-bold underline text-zeniaRosaOscuro">osteoarticular injuries</strong> who have not achieved fully satisfactory results with conventional treatments.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">PRP (Platelet-Rich Plasma)</strong> is a treatment indicated for a large number of <strong class="font-bold underline text-zeniaRosaOscuro">degenerative injuries, acute or chronic tendinitis, osteoarthritis, ligament tears</strong> and all types of injuries where <strong class="font-bold underline text-zeniaRosaOscuro">tissue regeneration</strong> is needed.</p>
+<p>At our clinic this procedure is performed supervised with <strong class="font-bold underline text-zeniaRosaOscuro">ultrasound imaging</strong>, ensuring we inject in the correct location without touching other structures with the needle.</p>
+<p>We use <strong class="font-bold underline text-zeniaRosaOscuro">high-end technology</strong> that ensures better results to regenerate damaged structures in a short time with maximum guarantees.</p>
+<p>The number of sessions will depend on each specific injury. For this, we carry out continuous assessment in all cases to obtain satisfactory results.</p>
+<p class="font-semibold text-zeniaRosaOscuro">Don't give up on a pain-free life. Ask us how we can help you.</p>`,
+      },
+      {
+        summary: 'High Molecular Weight Hyaluronic Acid Injection',
+        title: 'HYALURONIC ACID INJECTION',
+        body: `<p>Ultrasound-guided injection with <strong class="font-bold underline text-zeniaRosaOscuro">high molecular weight hyaluronic acid and sodium chondroitin</strong> to reduce inflammation and restore the extracellular environment to a healthier state. Indicated for osteoarticular pathologies. Medical assessment will determine the number of sessions required.</p>`,
+      },
+    ],
+  },
+  fr: {
+    title: 'Unité de Médecine Régénérative de Dénia (UMERED)',
+    intro: `<p>Dans cette Unité, nous avons centré les traitements médicaux et esthétiques à des fins régénératives.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Médecine Esthétique :</strong></p>
+<ul class="list-none space-y-2">
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Plasma Riche en Plaquettes</strong>, pour la régénération du visage, du cou et du décolleté, ainsi que pour améliorer les cicatrices, chéloïdes et inesthétismes.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Exosomes :</strong> nanoparticules produites par les cellules, agissant comme messagers intercellulaires, contenant <strong class="font-bold underline text-zeniaRosaOscuro">ADN et ARN</strong> et utilisés pour faciliter la communication entre cellules. Leur objectif en médecine esthétique est d'<strong class="font-bold underline text-zeniaRosaOscuro">améliorer la qualité de la peau et des tissus</strong> en promouvant leur régénération.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Polynucléotides (PDRN) :</strong> fragments d'ADN qui induisent une réponse non inflammatoire de <strong class="font-bold underline text-zeniaRosaOscuro">régénération tissulaire</strong> et promeuvent la <strong class="font-bold underline text-zeniaRosaOscuro">synthèse d'acide hyaluronique, de collagène et d'élastine</strong>, permettant de rajeunir la peau. Ils ont un <strong class="font-bold underline text-zeniaRosaOscuro">effet antioxydant</strong> qui contrebalance les effets nocifs des radicaux libres sur la peau. Ils s'appliquent aussi bien au visage qu'au corps.</li>
+</ul>
+<p><strong class="font-bold text-zeniaMarronOscuro">Médecine Générale et Traumatologie :</strong> À l'<strong class="font-bold underline text-zeniaRosaOscuro">UMERED</strong> nous mettons en œuvre un <strong class="font-bold underline text-zeniaRosaOscuro">protocole visant à régénérer les lésions tendineuses et ostéo-articulaires</strong>, avec des infiltrations <strong class="font-bold underline text-zeniaRosaOscuro">écho-guidées</strong>, dans le but de régénérer les lésions et améliorer la douleur.</p>`,
+    treatments: [
+      {
+        summary: 'Infiltration Écho-guidée au PRP',
+        title: 'INFILTRATION ÉCHO-GUIDÉE AU PRP',
+        body: `<p>L'une des spécialités de notre <strong class="font-bold underline text-zeniaRosaOscuro">Unité de Médecine Régénérative de Dénia (UMERED)</strong> est d'aider à la récupération rapide des patients souffrant de douleurs aiguës, subaiguës ou chroniques dues à des <strong class="font-bold underline text-zeniaRosaOscuro">lésions ostéo-articulaires</strong> qui n'ont pas obtenu de résultats entièrement satisfaisants avec les traitements conventionnels.</p>
+<p>Le <strong class="font-bold underline text-zeniaRosaOscuro">PRP (Plasma Riche en Plaquettes)</strong> est un traitement indiqué pour un grand nombre de <strong class="font-bold underline text-zeniaRosaOscuro">lésions dégénératives, tendinites aiguës ou chroniques, arthrose, déchirures ligamentaires</strong> et tout type de lésion nécessitant une <strong class="font-bold underline text-zeniaRosaOscuro">régénération tissulaire</strong>.</p>
+<p>Dans notre clinique, cette procédure est réalisée sous contrôle d'<strong class="font-bold underline text-zeniaRosaOscuro">imagerie échographique</strong>, assurant l'injection au bon endroit sans toucher d'autres structures.</p>
+<p>Nous utilisons une <strong class="font-bold underline text-zeniaRosaOscuro">technologie haut de gamme</strong> qui garantit de meilleurs résultats pour régénérer les structures endommagées rapidement et avec le maximum de garanties.</p>
+<p>Le nombre de séances dépendra de chaque lésion spécifique. Pour cela, nous effectuons une évaluation continue dans tous les cas pour obtenir des résultats satisfaisants.</p>
+<p class="font-semibold text-zeniaRosaOscuro">Ne renoncez pas à une vie sans douleur. Demandez-nous comment nous pouvons vous aider.</p>`,
+      },
+      {
+        summary: "Infiltration d'Acide Hyaluronique de Haut Poids Moléculaire",
+        title: "INFILTRATION D'ACIDE HYALURONIQUE",
+        body: `<p>Infiltration écho-guidée avec de l'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique de haut poids moléculaire et du chondroïtine sodique</strong> pour réduire l'inflammation et rétablir l'environnement extracellulaire dans un état plus sain. Indiquée dans les pathologies ostéo-articulaires. L'évaluation médicale déterminera le nombre de séances nécessaires.</p>`,
+      },
+    ],
+  },
+  de: {
+    title: 'Regenerative Medizineinheit Dénia (UMERED)',
+    intro: `<p>In dieser Einheit haben wir medizinische und ästhetische Behandlungen für Regenerationszwecke konzentriert.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Ästhetische Medizin:</strong></p>
+<ul class="list-none space-y-2">
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Thrombozytenreiches Plasma</strong>, für die Regeneration von Gesicht, Hals und Dekolleté sowie zur Verbesserung von Narben, Keloiden und Schönheitsfehlern.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Exosomen:</strong> von Zellen produzierte Nanopartikel, die als interzelluläre Botenstoffe fungieren, da sie <strong class="font-bold underline text-zeniaRosaOscuro">DNA und RNA</strong> enthalten und zur Erleichterung der Kommunikation zwischen Zellen eingesetzt werden. Ihr Ziel in der ästhetischen Medizin ist es, die <strong class="font-bold underline text-zeniaRosaOscuro">Qualität von Haut und Geweben zu verbessern</strong>, indem sie deren Regeneration fördern.</li>
+  <li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Polynukleotide (PDRN):</strong> DNA-Fragmente, die eine nicht-entzündliche <strong class="font-bold underline text-zeniaRosaOscuro">Geweberegeneration</strong> induzieren und die <strong class="font-bold underline text-zeniaRosaOscuro">Synthese von Hyaluronsäure, Kollagen und Elastin</strong> fördern, die die Haut verjüngen. Sie haben eine <strong class="font-bold underline text-zeniaRosaOscuro">antioxidative Wirkung</strong>, die den schädlichen Einfluss von freien Radikalen auf die Haut neutralisiert. Sie sind sowohl facial als auch körperlich anwendbar.</li>
+</ul>
+<p><strong class="font-bold text-zeniaMarronOscuro">Allgemeinmedizin und Traumatologie:</strong> Bei <strong class="font-bold underline text-zeniaRosaOscuro">UMERED</strong> führen wir ein <strong class="font-bold underline text-zeniaRosaOscuro">Protokoll zur Regeneration von Sehnen- und Gelenksverletzungen</strong> mit <strong class="font-bold underline text-zeniaRosaOscuro">ultraschallgeführten</strong> Injektionen durch, mit dem Ziel, Verletzungen zu regenerieren und Schmerzen zu verbessern.</p>`,
+    treatments: [
+      {
+        summary: 'Ultraschallgeführte PRP-Injektion',
+        title: 'ULTRASCHALLGEFÜHRTE PRP-INJEKTION',
+        body: `<p>Eine der Spezialitäten unserer <strong class="font-bold underline text-zeniaRosaOscuro">Regenerativen Medizineinheit Denia (UMERED)</strong> ist die Unterstützung der schnellen Erholung von Patienten mit akuten, subakuten oder chronischen Schmerzen aufgrund von <strong class="font-bold underline text-zeniaRosaOscuro">Gelenksverletzungen</strong>, die mit konventionellen Behandlungen keine vollständig befriedigenden Ergebnisse erzielt haben.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">PRP (Thrombozytenreiches Plasma)</strong> ist eine Behandlung, die für eine Vielzahl von <strong class="font-bold underline text-zeniaRosaOscuro">degenerativen Verletzungen, akuter oder chronischer Tendinitis, Arthrose, Bandrisssen</strong> und allen Verletzungsarten indiziert ist, bei denen eine <strong class="font-bold underline text-zeniaRosaOscuro">Geweberegeneration</strong> erforderlich ist.</p>
+<p>In unserer Klinik wird dieses Verfahren unter <strong class="font-bold underline text-zeniaRosaOscuro">Ultraschallbildgebung</strong> durchgeführt, um sicherzustellen, dass an der richtigen Stelle injiziert wird ohne andere Strukturen zu berühren.</p>
+<p>Wir verwenden <strong class="font-bold underline text-zeniaRosaOscuro">Hochtechnologie</strong>, die bessere Ergebnisse bei der Regeneration geschädigter Strukturen in kurzer Zeit und mit maximalen Garantien sicherstellt.</p>
+<p>Die Anzahl der Sitzungen hängt von jeder spezifischen Verletzung ab. Dafür führen wir in allen Fällen eine kontinuierliche Bewertung durch, um zufriedenstellende Ergebnisse zu erzielen.</p>
+<p class="font-semibold text-zeniaRosaOscuro">Verzichten Sie nicht auf ein schmerzfreies Leben. Fragen Sie uns, wie wir Ihnen helfen können.</p>`,
+      },
+      {
+        summary: 'Injektion mit Hochmolekularer Hyaluronsäure',
+        title: 'HYALURONSÄURE-INJEKTION',
+        body: `<p>Ultraschallgeführte Injektion mit <strong class="font-bold underline text-zeniaRosaOscuro">hochmolekularer Hyaluronsäure und Natriumchondroitin</strong> zur Entzündungsreduktion und Wiederherstellung der extrazellulären Umgebung in einen gesünderen Zustand. Indiziert bei osteoartikulären Erkrankungen. Die medizinische Bewertung bestimmt die Anzahl der erforderlichen Sitzungen.</p>`,
+      },
+    ],
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-5 mt-8 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6 mb-10" set:html={c.intro} />
+
+<div>
+  {c.treatments.map((t) => (
+    <details class="border-b border-zeniaMarronClaro/30">
+      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+        {t.summary}
+      </summary>
+      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-4 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
+        <div set:html={t.body} />
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .tratamiento-summary::after {
+    content: '';
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f68ea2' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  details[open] .tratamiento-summary::after {
+    transform: rotate(180deg);
+  }
+  details[open] .tratamiento-body {
+    animation: revealPanel 0.25s ease-out;
+  }
+  @keyframes revealPanel {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

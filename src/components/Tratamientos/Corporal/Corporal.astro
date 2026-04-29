@@ -1,0 +1,295 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Medicina Estética Corporal',
+    intro: 'En nuestra clínica encontrará tratamientos corporales indicados principalmente para reducir la <strong class="font-bold underline text-zeniaRosaOscuro">grasa localizada</strong>, combatir la <strong class="font-bold underline text-zeniaRosaOscuro">flacidez</strong>, tratar las <strong class="font-bold underline text-zeniaRosaOscuro">estrías</strong> y mejorar la <strong class="font-bold underline text-zeniaRosaOscuro">tonicidad</strong> y luminosidad de la <strong class="font-bold underline text-zeniaRosaOscuro">piel</strong>.<br /><br />La mayoría de nuestros tratamientos se pueden aplicar en <strong class="font-bold underline text-zeniaRosaOscuro">abdomen, piernas, brazos</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">glúteos</strong>. Diseñamos <strong class="font-bold underline text-zeniaRosaOscuro">Packs de tratamientos</strong> combinando diferentes técnicas para obtener excelentes resultados.',
+    treatments: [
+      {
+        summary: 'Esclerosis de Varices',
+        title: 'ESCLEROSIS DE VARICES',
+        body: `<p>Las <strong class="font-bold underline text-zeniaRosaOscuro">varices</strong>, también llamadas venas varicosas, son venas inflamadas que se pueden percibir de manera superficial y son consecuencia en la mayoría de los casos de la conocida insuficiencia venosa crónica. Por otro lado, las <strong class="font-bold underline text-zeniaRosaOscuro">venas de araña</strong> son vasos sanguíneos, de color rojo o azulado, de pequeño tamaño, que son visibles tanto en los miembros inferiores como en la cara, cuello o escote.</p>
+<p>Las varices <strong class="font-bold underline text-zeniaRosaOscuro">se pueden tratar con diferentes procedimientos</strong> según cuáles sean sus características. El profesional realizará un análisis y evaluación y decidirá cuál es el más adecuado para cada caso concreto.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">ESCLEROSIS QUÍMICA</h4>
+<p>La escleroterapia química es un tratamiento mínimamente invasivo usado para tratar las venas varicosas y de araña. En el procedimiento se inyecta una solución directamente en las <strong class="font-bold underline text-zeniaRosaOscuro">venas</strong> afectadas que hace que se esclerosen, es decir, se encojan, y a la larga desaparecen.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">ESCLEROSIS CON LÁSER VASCULAR</h4>
+<p>La esclerosis vascular suele estar más indicada para el tratamiento de las telangiectasias —vasos muy pequeñitos— capilares. Este tipo de tratamiento se puede realizar no solo en las <strong class="font-bold underline text-zeniaRosaOscuro">arañas vasculares</strong> visibles en los miembros inferiores sino también en esas antiestéticas venitas que pueden aparecer en cuello, escote o cara, según las características del paciente.</p>`,
+      },
+      {
+        summary: 'Tratamiento para las Estrías',
+        title: 'MESOTERAPIA CORPORAL',
+        body: `<p><strong class="font-bold text-zeniaMarronOscuro">¿Qué es la mesoterapia corporal?</strong><br/>Es un <strong class="font-bold underline text-zeniaRosaOscuro">tratamiento estético no invasivo</strong> que consiste en aplicar pequeñas cantidades de vitaminas, minerales y aminoácidos debajo de la superficie de la piel, en las zonas donde hay grasa acumulada, flacidez, estrías o cicatrices que necesitamos corregir.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿En qué consiste el tratamiento?</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Se realizan micro-infiltraciones con <strong class="font-bold underline text-zeniaRosaOscuro">agujas muy finas</strong> y cortas (milimétricas).</li><li>&#9679; Se utiliza <strong class="font-bold underline text-zeniaRosaOscuro">anestesia en crema</strong> previo al tratamiento.</li><li>&#9679; Es <strong class="font-bold underline text-zeniaRosaOscuro">indoloro</strong>.</li><li>&#9679; Tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">ambulatorio</strong>, que permite continuar con la rutina de manera inmediata.</li></ul>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Cuándo se ven los resultados?</strong><br/>Los resultados no son inmediatos sino que se irán viendo de <strong class="font-bold underline text-zeniaRosaOscuro">manera progresiva</strong> ya que los productos inyectados tienen que ir haciendo efecto. Se reduce la llamada <strong class="font-bold underline text-zeniaRosaOscuro">"piel de naranja"</strong>, se <strong class="font-bold underline text-zeniaRosaOscuro">reafirma</strong> la piel, se <strong class="font-bold underline text-zeniaRosaOscuro">pierde</strong> el volumen de las zonas tratadas y aumenta la <strong class="font-bold underline text-zeniaRosaOscuro">tonicidad y firmeza</strong> de la piel.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CAVITACIÓN Y RADIOFRECUENCIA</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">cavitación</strong> y la <strong class="font-bold underline text-zeniaRosaOscuro">radiofrecuencia</strong> se presentan como una combinación ideal: la primera trata la grasa localizada y la segunda actúa como reafirmante una vez eliminada la grasa.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Qué es la cavitación?</strong><br/>La <strong class="font-bold underline text-zeniaRosaOscuro">cavitación</strong> es un procedimiento no quirúrgico que consiste en la aplicación de <strong class="font-bold underline text-zeniaRosaOscuro">ultrasonidos de baja frecuencia</strong> sobre la zona que se quiera tratar. El ultrasonido provoca que las células adiposas se disuelvan y el paciente puede eliminarlas de manera natural.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿En qué consiste la radiofrecuencia?</strong><br/>La radiofrecuencia es un tratamiento estético muy eficaz, seguro y con efectos duraderos que sirve para corregir la flacidez. Consiste en la aplicación de <strong class="font-bold underline text-zeniaRosaOscuro">ondas electromagnéticas de alta frecuencia</strong> sobre zonas concretas del cuerpo, provocando el calentamiento de las diferentes capas y promoviendo la formación de nuevo colágeno.</p>`,
+      },
+      {
+        summary: 'Flacidez de Abdomen, Brazos o Muslos',
+        title: 'REDENSIFICACIÓN CORPORAL',
+        body: `<p>Cuando hablamos de <strong class="font-bold underline text-zeniaRosaOscuro">redensificación corporal</strong> nos referimos al uso de técnicas y productos que redensifican las <strong class="font-bold underline text-zeniaRosaOscuro">estructuras de soporte de la piel</strong> y, por tanto, reducen la flacidez produciendo un notable efecto de <strong class="font-bold underline text-zeniaRosaOscuro">tensado</strong>. Se trata de un procedimiento que se realiza principalmente en <strong class="font-bold underline text-zeniaRosaOscuro">brazos, muslos y abdomen</strong>.</p>
+<p>En la Clínica Flores de Apodaca cada caso se valora de manera individual. En líneas generales los casos de flacidez se tratan mediante la infiltración de <strong class="font-bold underline text-zeniaRosaOscuro">ácido poliláctico</strong>, un potente <strong class="font-bold underline text-zeniaRosaOscuro">inductor de colágeno</strong>. En algunos casos también se puede trabajar con <strong class="font-bold underline text-zeniaRosaOscuro">Profhilo</strong>, un bioremodelante natural a base de ácido hialurónico.</p>`,
+      },
+      {
+        summary: 'Tratamiento de la Grasa Localizada',
+        title: 'ONDAS DE CHOQUE',
+        body: `<p>Las ondas acústicas son pulsos no focalizados extremadamente fuertes que introducen vibraciones en el cuerpo. La poderosa energía de las ondas acústicas <strong class="font-bold underline text-zeniaRosaOscuro">BTL X-WAVE</strong> logra tener los mejores resultados en los tratamientos no invasivos de celulitis, cicatrices y estrías.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CRIOLIPOLISIS</h3>
+<p>Es un procedimiento médico no invasivo para la eliminación de la grasa corporal, mediante la aplicación de <strong class="font-bold underline text-zeniaRosaOscuro">enfriamiento intenso controlado</strong>. Los adipocitos son las <strong class="font-bold underline text-zeniaRosaOscuro">células más susceptibles al frío</strong>. <strong class="font-bold underline text-zeniaRosaOscuro">Reduce del 30%-40%</strong> del volumen de grasa en cada sesión.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CARBOXITERAPIA CORPORAL</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">carboxiterapia</strong> es la inyección a través de la piel de <strong class="font-bold underline text-zeniaRosaOscuro">dióxido de carbono con fines terapéuticos</strong>. El CO2 restablece la microcirculación, provoca una ruptura mecánica en las células grasas y estimula la <strong class="font-bold underline text-zeniaRosaOscuro">formación de nuevos vasos sanguíneos y de colágeno</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">PRESOTERAPIA</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">presoterapia</strong> es un tratamiento no quirúrgico que consiste en <strong class="font-bold underline text-zeniaRosaOscuro">sesiones de drenaje linfático</strong>. Sirve de soporte en tratamientos de <strong class="font-bold underline text-zeniaRosaOscuro">celulitis, grasa localizada, edemas y varices</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">INTRALIPOTERAPIA</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">intralipoterapia</strong> es una de las técnicas más novedosas para <strong class="font-bold underline text-zeniaRosaOscuro">eliminar la grasa</strong> localizada. Se inyecta una solución de ácido deoxicólico que provoca que la <strong class="font-bold underline text-zeniaRosaOscuro">grasa se destruya y se licúe</strong>, disolviendo los adipocitos.</p>`,
+      },
+      {
+        summary: 'Aumento de Glúteos sin Cirugía',
+        title: 'REMODELACIÓN DE GLÚTEOS SIN CIRUGÍA',
+        body: `<p>Como <strong class="font-bold underline text-zeniaRosaOscuro">alternativa no quirúrgica</strong> se presenta la <strong class="font-bold underline text-zeniaRosaOscuro">remodelación de glúteos con ácido poliláctico (PLLA)</strong>. Se trata de un procedimiento totalmente ambulatorio con el que se consigue <strong class="font-bold underline text-zeniaRosaOscuro">mejorar el contorno del glúteo</strong>, rellenar zonas asimétricas, reducir celulitis, proyectar y <strong class="font-bold underline text-zeniaRosaOscuro">aumentar el volumen</strong>.</p>
+<p>El <strong class="font-bold underline text-zeniaRosaOscuro">ácido poliláctico</strong> es un tratamiento inyectable que regenera <strong class="font-bold underline text-zeniaRosaOscuro">nuevo colágeno</strong> de forma lenta y progresiva. Para obtener unos resultados satisfactorios suelen ser necesarias dos sesiones. El <strong class="font-bold underline text-zeniaRosaOscuro">tratamiento es totalmente ambulatorio</strong>.</p>`,
+      },
+      {
+        summary: 'Relleno e Hidratación de Manos',
+        title: 'REJUVENECIMIENTO DE MANOS',
+        body: `<p>Las manos también sufren el paso del tiempo. En la clínica realizamos diferentes tratamientos de relleno e hidratación de la mano, así como tratamientos despigmentantes.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">RELLENOS CON ÁCIDO HIALURÓNICO</h4>
+<p>Consiste en microinyecciones de <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico (AH)</strong> que aportan hidratación y aumentan el grosor y la densidad del tejido.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">REDENSIFICACIÓN</h4>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">hidroxiapatita cálcica</strong> es una formulación de microesferas de fosfato de calcio totalmente biocompatible y reabsorbible. La redensificación con <strong class="font-bold underline text-zeniaRosaOscuro">ácido poliláctico</strong> también bioestimula la formación de colágeno y aporta volumen al dorso de las manos.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Duración del tratamiento:</strong> entre 18 y 24 meses.</p>`,
+      },
+    ],
+  },
+  en: {
+    title: 'Body Aesthetic Medicine',
+    intro: 'At our clinic you will find body treatments indicated mainly to reduce <strong class="font-bold underline text-zeniaRosaOscuro">localised fat</strong>, combat <strong class="font-bold underline text-zeniaRosaOscuro">sagging</strong>, treat <strong class="font-bold underline text-zeniaRosaOscuro">stretch marks</strong> and improve <strong class="font-bold underline text-zeniaRosaOscuro">skin tone</strong> and luminosity.<br /><br />Most of our treatments can be applied to the <strong class="font-bold underline text-zeniaRosaOscuro">abdomen, legs, arms</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">buttocks</strong>. We design <strong class="font-bold underline text-zeniaRosaOscuro">treatment packs</strong> combining different techniques for excellent results.',
+    treatments: [
+      {
+        summary: 'Varicose Vein Sclerosis',
+        title: 'VARICOSE VEIN SCLEROSIS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Varicose veins</strong> are swollen veins that can be perceived superficially and are a consequence in most cases of chronic venous insufficiency. <strong class="font-bold underline text-zeniaRosaOscuro">Spider veins</strong> are small red or bluish blood vessels visible on the lower limbs or face, neck and décolleté.</p>
+<p>Varicose veins <strong class="font-bold underline text-zeniaRosaOscuro">can be treated with different procedures</strong> depending on their characteristics.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CHEMICAL SCLEROTHERAPY</h4>
+<p>Chemical sclerotherapy is a minimally invasive treatment used to treat varicose and spider veins. A solution is injected directly into the affected <strong class="font-bold underline text-zeniaRosaOscuro">veins</strong> causing them to sclerose and eventually disappear.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">VASCULAR LASER SCLEROSIS</h4>
+<p>Vascular sclerosis is more indicated for the treatment of telangiectasias — very small capillary vessels. It can be performed not only on <strong class="font-bold underline text-zeniaRosaOscuro">spider veins</strong> on the lower limbs but also on unaesthetic small veins on the neck, décolleté or face.</p>`,
+      },
+      {
+        summary: 'Stretch Mark Treatment',
+        title: 'BODY MESOTHERAPY',
+        body: `<p><strong class="font-bold text-zeniaMarronOscuro">What is body mesotherapy?</strong><br/>It is a <strong class="font-bold underline text-zeniaRosaOscuro">non-invasive aesthetic treatment</strong> consisting of applying small amounts of vitamins, minerals and amino acids under the skin surface in areas with accumulated fat, sagging, stretch marks or scars.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">What does the treatment consist of?</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Micro-infiltrations with <strong class="font-bold underline text-zeniaRosaOscuro">very fine</strong> millimetric needles.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Topical anaesthetic cream</strong> prior to treatment.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Painless</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Outpatient</strong> treatment allowing immediate return to routine.</li></ul>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CAVITATION AND RADIOFREQUENCY</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Cavitation</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">radiofrequency</strong> are an ideal combination: the former treats localised fat and the latter acts as a firming agent once the fat is eliminated.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">What is cavitation?</strong><br/><strong class="font-bold underline text-zeniaRosaOscuro">Cavitation</strong> is a non-surgical procedure that applies <strong class="font-bold underline text-zeniaRosaOscuro">low-frequency ultrasound</strong> to the target area, causing fat cells to dissolve and be eliminated naturally.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">What is radiofrequency?</strong><br/>Radiofrequency is a very effective, safe aesthetic treatment that corrects sagging by applying <strong class="font-bold underline text-zeniaRosaOscuro">high-frequency electromagnetic waves</strong> to specific body areas, heating the layers and promoting new collagen formation.</p>`,
+      },
+      {
+        summary: 'Abdominal, Arm or Thigh Sagging',
+        title: 'BODY REDENSIFICATION',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Body redensification</strong> refers to the use of techniques and products that redensify the <strong class="font-bold underline text-zeniaRosaOscuro">skin support structures</strong>, reducing sagging and producing a notable <strong class="font-bold underline text-zeniaRosaOscuro">tightening effect</strong>. It is performed mainly on <strong class="font-bold underline text-zeniaRosaOscuro">arms, thighs and abdomen</strong>.</p>
+<p>Cases of sagging are generally treated by infiltrating <strong class="font-bold underline text-zeniaRosaOscuro">polylactic acid</strong>, a potent <strong class="font-bold underline text-zeniaRosaOscuro">collagen inducer</strong>. In some cases, <strong class="font-bold underline text-zeniaRosaOscuro">Profhilo</strong>, a natural hyaluronic acid-based bioremodeller, can also be used.</p>`,
+      },
+      {
+        summary: 'Localised Fat Treatment',
+        title: 'SHOCK WAVES',
+        body: `<p>Acoustic waves are extremely strong unfocused pulses that introduce vibrations into the body. The powerful energy of <strong class="font-bold underline text-zeniaRosaOscuro">BTL X-WAVE</strong> acoustic waves achieves the best results in non-invasive treatments of cellulite, scars and stretch marks.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CRYOLIPOLYSIS</h3>
+<p>A non-invasive medical procedure for body fat elimination using <strong class="font-bold underline text-zeniaRosaOscuro">controlled intense cooling</strong>. Fat cells are the <strong class="font-bold underline text-zeniaRosaOscuro">most susceptible cells to cold</strong>. <strong class="font-bold underline text-zeniaRosaOscuro">Reduces 30%-40%</strong> of fat volume per session.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">BODY CARBOXYTHERAPY</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Carboxytherapy</strong> is the subcutaneous injection of <strong class="font-bold underline text-zeniaRosaOscuro">carbon dioxide for therapeutic purposes</strong>. CO2 restores microcirculation, causes mechanical rupture of fat cells and stimulates the <strong class="font-bold underline text-zeniaRosaOscuro">formation of new blood vessels and collagen</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">PRESSOTHERAPY</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Pressotherapy</strong> is a non-surgical treatment consisting of <strong class="font-bold underline text-zeniaRosaOscuro">lymphatic drainage sessions</strong>. It supports treatments for <strong class="font-bold underline text-zeniaRosaOscuro">cellulite, localised fat, oedema and varicose veins</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">INTRALIPOTHERAPY</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Intralipotherapy</strong> is one of the most innovative techniques for <strong class="font-bold underline text-zeniaRosaOscuro">eliminating localised fat</strong>. A deoxycholic acid solution is injected causing <strong class="font-bold underline text-zeniaRosaOscuro">fat to be destroyed and liquefied</strong>, dissolving adipocytes.</p>`,
+      },
+      {
+        summary: 'Non-Surgical Buttock Enhancement',
+        title: 'NON-SURGICAL BUTTOCK RESHAPING',
+        body: `<p>As a <strong class="font-bold underline text-zeniaRosaOscuro">non-surgical alternative</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">buttock reshaping with polylactic acid (PLLA)</strong> is available. It is a fully outpatient procedure that achieves <strong class="font-bold underline text-zeniaRosaOscuro">improved buttock contour</strong>, filling asymmetric areas, reducing cellulite, and <strong class="font-bold underline text-zeniaRosaOscuro">increasing volume</strong>.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Polylactic acid</strong> is an injectable treatment that slowly and progressively regenerates <strong class="font-bold underline text-zeniaRosaOscuro">new collagen</strong>. Typically two sessions are needed for satisfactory results.</p>`,
+      },
+      {
+        summary: 'Hand Filling and Hydration',
+        title: 'HAND REJUVENATION',
+        body: `<p>Hands also show signs of ageing over time. At our clinic we perform different hand filling and hydration treatments, as well as depigmenting treatments.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">HYALURONIC ACID FILLERS</h4>
+<p>Consists of microinjections of <strong class="font-bold underline text-zeniaRosaOscuro">hyaluronic acid (HA)</strong> providing hydration and increasing tissue thickness and density.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">REDENSIFICATION</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Calcium hydroxyapatite</strong> is a formulation of calcium phosphate microspheres, fully biocompatible and resorbable. Redensification with <strong class="font-bold underline text-zeniaRosaOscuro">polylactic acid</strong> also biostimulates collagen formation and adds volume to the back of the hands.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Treatment duration:</strong> 18 to 24 months.</p>`,
+      },
+    ],
+  },
+  fr: {
+    title: 'Médecine Esthétique Corporelle',
+    intro: 'Dans notre clinique vous trouverez des traitements corporels indiqués principalement pour réduire la <strong class="font-bold underline text-zeniaRosaOscuro">graisse localisée</strong>, combattre le <strong class="font-bold underline text-zeniaRosaOscuro">relâchement</strong>, traiter les <strong class="font-bold underline text-zeniaRosaOscuro">vergetures</strong> et améliorer le <strong class="font-bold underline text-zeniaRosaOscuro">tonus</strong> et la luminosité de la <strong class="font-bold underline text-zeniaRosaOscuro">peau</strong>.<br /><br />La plupart de nos traitements peuvent être appliqués sur l\'<strong class="font-bold underline text-zeniaRosaOscuro">abdomen, les jambes, les bras</strong> et les <strong class="font-bold underline text-zeniaRosaOscuro">fessiers</strong>. Nous concevons des <strong class="font-bold underline text-zeniaRosaOscuro">packs de traitements</strong> combinant différentes techniques pour d\'excellents résultats.',
+    treatments: [
+      {
+        summary: 'Sclérothérapie des Varices',
+        title: 'SCLÉROTHÉRAPIE DES VARICES',
+        body: `<p>Les <strong class="font-bold underline text-zeniaRosaOscuro">varices</strong> sont des veines enflées que l'on peut percevoir de manière superficielle. Les <strong class="font-bold underline text-zeniaRosaOscuro">télangiectasies</strong> sont de petits vaisseaux sanguins rouges ou bleutés visibles sur les membres inférieurs, le visage, le cou ou le décolleté.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SCLÉROTHÉRAPIE CHIMIQUE</h4>
+<p>La sclérothérapie chimique est un traitement mini-invasif utilisé pour traiter les varices et télangiectasies. Une solution est injectée directement dans les <strong class="font-bold underline text-zeniaRosaOscuro">veines</strong> affectées, les faisant scléroser et disparaître progressivement.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SCLÉROTHÉRAPIE AU LASER VASCULAIRE</h4>
+<p>La sclérothérapie vasculaire est plus indiquée pour le traitement des télangiectasies capillaires. Elle peut être réalisée non seulement sur les <strong class="font-bold underline text-zeniaRosaOscuro">araignées vasculaires</strong> des membres inférieurs mais aussi sur les petites veines inesthétiques du cou, décolleté ou visage.</p>`,
+      },
+      {
+        summary: 'Traitement des Vergetures',
+        title: 'MÉSOTHÉRAPIE CORPORELLE',
+        body: `<p><strong class="font-bold text-zeniaMarronOscuro">Qu'est-ce que la mésothérapie corporelle ?</strong><br/>C'est un <strong class="font-bold underline text-zeniaRosaOscuro">traitement esthétique non invasif</strong> consistant à appliquer de petites quantités de vitamines, minéraux et acides aminés sous la surface cutanée dans les zones à corriger.</p>
+<ul class="space-y-1 list-none"><li>&#9679; Micro-infiltrations avec des <strong class="font-bold underline text-zeniaRosaOscuro">aiguilles très fines</strong> millimétriques.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Anesthésie en crème</strong> préalable.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Indolore</strong>.</li><li>&#9679; Traitement <strong class="font-bold underline text-zeniaRosaOscuro">ambulatoire</strong>.</li></ul>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CAVITATION ET RADIOFRÉQUENCE</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">cavitation</strong> et la <strong class="font-bold underline text-zeniaRosaOscuro">radiofréquence</strong> forment une combinaison idéale. La cavitation traite la graisse localisée par des <strong class="font-bold underline text-zeniaRosaOscuro">ultrasons basse fréquence</strong>. La radiofréquence applique des <strong class="font-bold underline text-zeniaRosaOscuro">ondes électromagnétiques haute fréquence</strong> pour corriger le relâchement et stimuler la formation de collagène.</p>`,
+      },
+      {
+        summary: 'Relâchement de l\'Abdomen, des Bras ou des Cuisses',
+        title: 'REDENSIFICATION CORPORELLE',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">redensification corporelle</strong> utilise des techniques et produits qui redensifient les <strong class="font-bold underline text-zeniaRosaOscuro">structures de soutien cutané</strong>, réduisant le relâchement et produisant un notable <strong class="font-bold underline text-zeniaRosaOscuro">effet tenseur</strong>. Elle est réalisée principalement sur les <strong class="font-bold underline text-zeniaRosaOscuro">bras, cuisses et abdomen</strong>.</p>
+<p>Les cas de relâchement sont généralement traités par infiltration d\'<strong class="font-bold underline text-zeniaRosaOscuro">acide polylactique</strong>, un puissant <strong class="font-bold underline text-zeniaRosaOscuro">inducteur de collagène</strong>. Dans certains cas, on peut également utiliser le <strong class="font-bold underline text-zeniaRosaOscuro">Profhilo</strong>.</p>`,
+      },
+      {
+        summary: 'Traitement de la Graisse Localisée',
+        title: 'ONDES DE CHOC',
+        body: `<p>Les ondes acoustiques <strong class="font-bold underline text-zeniaRosaOscuro">BTL X-WAVE</strong> obtiennent les meilleurs résultats dans les traitements non invasifs de la cellulite, des cicatrices et des vergetures.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CRYOLIPOLYSE</h3>
+<p>Procédure médicale non invasive d\'élimination de la graisse corporelle par <strong class="font-bold underline text-zeniaRosaOscuro">refroidissement intense contrôlé</strong>. <strong class="font-bold underline text-zeniaRosaOscuro">Réduit de 30%-40%</strong> le volume graisseux par séance.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CARBOTHÉRAPIE CORPORELLE</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">carbothérapie</strong> est l\'injection sous-cutanée de <strong class="font-bold underline text-zeniaRosaOscuro">dioxyde de carbone à des fins thérapeutiques</strong>. Le CO2 rétablit la microcirculation et stimule la <strong class="font-bold underline text-zeniaRosaOscuro">formation de nouveaux vaisseaux et de collagène</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">PRESSOTHÉRAPIE</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">pressothérapie</strong> est un traitement non chirurgical de <strong class="font-bold underline text-zeniaRosaOscuro">drainage lymphatique</strong>. Elle est indiquée pour la <strong class="font-bold underline text-zeniaRosaOscuro">cellulite, la graisse localisée, les œdèmes et les varices</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">INTRALIPOTHÉRAPIE</h3>
+<p>L\'<strong class="font-bold underline text-zeniaRosaOscuro">intralipothérapie</strong> est l\'une des techniques les plus innovantes pour <strong class="font-bold underline text-zeniaRosaOscuro">éliminer la graisse localisée</strong> par injection d\'acide déoxycholique.</p>`,
+      },
+      {
+        summary: 'Augmentation Fessière sans Chirurgie',
+        title: 'REMODELAGE FESSIER SANS CHIRURGIE',
+        body: `<p>Le <strong class="font-bold underline text-zeniaRosaOscuro">remodelage fessier à l\'acide polylactique (PLLA)</strong> est une alternative non chirurgicale permettant d\'<strong class="font-bold underline text-zeniaRosaOscuro">améliorer le contour des fesses</strong>, de combler les zones asymétriques, de réduire la cellulite et d\'<strong class="font-bold underline text-zeniaRosaOscuro">augmenter le volume</strong>. Deux séances sont généralement nécessaires.</p>`,
+      },
+      {
+        summary: 'Remplissage et Hydratation des Mains',
+        title: 'RAJEUNISSEMENT DES MAINS',
+        body: `<p>Les mains montrent aussi les signes du vieillissement. Nous réalisons différents traitements de remplissage et d\'hydratation des mains, ainsi que des traitements dépigmentants.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">REMPLISSAGE À L'ACIDE HYALURONIQUE</h4>
+<p>Micro-injections d\'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique (AH)</strong> apportant hydratation et augmentant l\'épaisseur et la densité des tissus.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">REDENSIFICATION</h4>
+<p>L\'<strong class="font-bold underline text-zeniaRosaOscuro">hydroxyapatite calcique</strong> et l\'<strong class="font-bold underline text-zeniaRosaOscuro">acide polylactique</strong> biostimulent la formation de collagène et apportent du volume au dos des mains.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Durée du traitement :</strong> 18 à 24 mois.</p>`,
+      },
+    ],
+  },
+  de: {
+    title: 'Körperliche Ästhetische Medizin',
+    intro: 'In unserer Klinik finden Sie Körperbehandlungen, die hauptsächlich zur Reduzierung von <strong class="font-bold underline text-zeniaRosaOscuro">lokalisiertem Fett</strong>, zur Bekämpfung von <strong class="font-bold underline text-zeniaRosaOscuro">Schlaffheit</strong>, zur Behandlung von <strong class="font-bold underline text-zeniaRosaOscuro">Dehnungsstreifen</strong> und zur Verbesserung des <strong class="font-bold underline text-zeniaRosaOscuro">Hauttonus</strong> und der Leuchtkraft der <strong class="font-bold underline text-zeniaRosaOscuro">Haut</strong> indiziert sind.<br /><br />Die meisten unserer Behandlungen können auf <strong class="font-bold underline text-zeniaRosaOscuro">Bauch, Beine, Arme</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Gesäß</strong> angewendet werden. Wir entwickeln <strong class="font-bold underline text-zeniaRosaOscuro">Behandlungspakete</strong>, die verschiedene Techniken für ausgezeichnete Ergebnisse kombinieren.',
+    treatments: [
+      {
+        summary: 'Krampfaderverödung',
+        title: 'KRAMPFADERVERÖDUNG',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Krampfadern</strong> sind entzündete Venen, die oberflächlich wahrnehmbar sind. <strong class="font-bold underline text-zeniaRosaOscuro">Besenreiser</strong> sind kleine rote oder bläuliche Blutgefäße, die an den Unterschenkeln, im Gesicht, am Hals oder am Dekolleté sichtbar sind.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CHEMISCHE SKLEROTHERAPIE</h4>
+<p>Die chemische Sklerotherapie ist eine minimal-invasive Behandlung zur Behandlung von Krampfadern und Besenreisern. Eine Lösung wird direkt in die betroffenen <strong class="font-bold underline text-zeniaRosaOscuro">Venen</strong> injiziert, die diese zur Sklerosierung bringt und sie langfristig verschwinden lässt.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">VASKULÄRE LASERVERÖDUNG</h4>
+<p>Die vaskuläre Sklerotherapie ist eher für die Behandlung von Teleangiektasien indiziert. Diese Behandlung kann nicht nur an den <strong class="font-bold underline text-zeniaRosaOscuro">Gefäßspinnen</strong> an den Unterschenkeln, sondern auch an unschönen kleinen Äderchen am Hals, Dekolleté oder Gesicht durchgeführt werden.</p>`,
+      },
+      {
+        summary: 'Behandlung von Dehnungsstreifen',
+        title: 'KÖRPER-MESOTHERAPIE',
+        body: `<p><strong class="font-bold text-zeniaMarronOscuro">Was ist Körper-Mesotherapie?</strong><br/>Es ist eine <strong class="font-bold underline text-zeniaRosaOscuro">nicht-invasive ästhetische Behandlung</strong>, bei der kleine Mengen Vitamine, Mineralstoffe und Aminosäuren unter die Hautoberfläche in Bereichen mit angesammeltem Fett, Schlaffheit, Dehnungsstreifen oder Narben injiziert werden.</p>
+<ul class="space-y-1 list-none"><li>&#9679; Mikroinjektionen mit <strong class="font-bold underline text-zeniaRosaOscuro">sehr feinen</strong> Millimeternadeln.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Betäubungscreme</strong> vor der Behandlung.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Schmerzlos</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Ambulante</strong> Behandlung.</li></ul>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">KAVITATION UND RADIOFREQUENZ</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Kavitation</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Radiofrequenz</strong> sind eine ideale Kombination. Kavitation behandelt lokalisiertes Fett durch <strong class="font-bold underline text-zeniaRosaOscuro">Niederfrequenz-Ultraschall</strong>. Radiofrequenz wendet <strong class="font-bold underline text-zeniaRosaOscuro">hochfrequente elektromagnetische Wellen</strong> an, um Schlaffheit zu korrigieren und neue Kollagenbildung zu fördern.</p>`,
+      },
+      {
+        summary: 'Schlaffheit von Bauch, Armen oder Oberschenkeln',
+        title: 'KÖRPER-REDENSIFIKATION',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Körper-Redensifikation</strong> bezieht sich auf Techniken und Produkte, die die <strong class="font-bold underline text-zeniaRosaOscuro">Hauttruksturen</strong> redensifizieren und Schlaffheit reduzieren, mit einem deutlichen <strong class="font-bold underline text-zeniaRosaOscuro">Straffungseffekt</strong>. Sie wird hauptsächlich an <strong class="font-bold underline text-zeniaRosaOscuro">Armen, Oberschenkeln und Bauch</strong> durchgeführt.</p>
+<p>Schlaffheitsfälle werden im Allgemeinen durch Infiltration von <strong class="font-bold underline text-zeniaRosaOscuro">Polymilchsäure</strong>, einem starken <strong class="font-bold underline text-zeniaRosaOscuro">Kollagen-Induktor</strong>, behandelt. In einigen Fällen kann auch <strong class="font-bold underline text-zeniaRosaOscuro">Profhilo</strong> eingesetzt werden.</p>`,
+      },
+      {
+        summary: 'Behandlung von Lokalem Fett',
+        title: 'STOSSWELLEN',
+        body: `<p>Die akustischen Wellen der <strong class="font-bold underline text-zeniaRosaOscuro">BTL X-WAVE</strong> erzielen die besten Ergebnisse bei nicht-invasiven Behandlungen von Cellulite, Narben und Dehnungsstreifen.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">KRYOLIPOLYSE</h3>
+<p>Ein nicht-invasives medizinisches Verfahren zur Körperfettelimination durch <strong class="font-bold underline text-zeniaRosaOscuro">kontrolliertes intensives Kühlen</strong>. <strong class="font-bold underline text-zeniaRosaOscuro">Reduziert 30%-40%</strong> des Fettvolumens pro Sitzung.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">KÖRPER-KARBOTHERAPIE</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Karbotherapie</strong> ist die subkutane Injektion von <strong class="font-bold underline text-zeniaRosaOscuro">Kohlendioxid zu therapeutischen Zwecken</strong>. CO2 stellt die Mikrozirkulation wieder her und stimuliert die <strong class="font-bold underline text-zeniaRosaOscuro">Bildung neuer Blutgefäße und Kollagen</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">PRESSOTHERAPIE</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Pressotherapie</strong> ist eine nicht-chirurgische Behandlung mit <strong class="font-bold underline text-zeniaRosaOscuro">Lymphdrainage-Sitzungen</strong>. Sie unterstützt Behandlungen bei <strong class="font-bold underline text-zeniaRosaOscuro">Cellulite, lokalisiertem Fett, Ödemen und Krampfadern</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">INTRALIPOTHERAPIE</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Intralipotherapie</strong> ist eine der innovativsten Techniken zur <strong class="font-bold underline text-zeniaRosaOscuro">Beseitigung von lokalisiertem Fett</strong> durch Injektion von Deoxycholsäure.</p>`,
+      },
+      {
+        summary: 'Gesäßvergrößerung ohne Chirurgie',
+        title: 'GESÄSSUMFORMUNG OHNE CHIRURGIE',
+        body: `<p>Als <strong class="font-bold underline text-zeniaRosaOscuro">nicht-chirurgische Alternative</strong> bietet sich die <strong class="font-bold underline text-zeniaRosaOscuro">Gesäßumformung mit Polymilchsäure (PLLA)</strong> an, um <strong class="font-bold underline text-zeniaRosaOscuro">Gesäßkontur zu verbessern</strong>, asymmetrische Bereiche aufzufüllen, Cellulite zu reduzieren und das <strong class="font-bold underline text-zeniaRosaOscuro">Volumen zu erhöhen</strong>. In der Regel werden zwei Sitzungen benötigt.</p>`,
+      },
+      {
+        summary: 'Hände Auffüllung und Hydratation',
+        title: 'HANDVERJÜNGUNG',
+        body: `<p>Auch Hände zeigen Zeichen der Alterung. Wir führen verschiedene Füllungs- und Hydratationsbehandlungen für die Hände sowie depigmentierende Behandlungen durch.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">HYALURONSÄURE-FÜLLER</h4>
+<p>Mikroinjektionen von <strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure (HA)</strong> zur Hydratation und Erhöhung der Gewebedicke und -dichte.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">REDENSIFIKATION</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Kalziumhydroxyapatit</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Polymilchsäure</strong> biostimulieren die Kollagenbildung und verleihen dem Handrücken Volumen.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Behandlungsdauer:</strong> 18 bis 24 Monate.</p>`,
+      },
+    ],
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<p class="text-base leading-relaxed text-zeniaMarronOscuro/80 mb-8 text-center max-w-2xl mx-auto pt-4" set:html={c.intro} />
+
+<div>
+  {c.treatments.map((t) => (
+    <details class="border-b border-zeniaMarronClaro/30">
+      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+        {t.summary}
+      </summary>
+      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-4 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
+        <div set:html={t.body} />
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .tratamiento-summary::after {
+    content: '';
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f68ea2' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  details[open] .tratamiento-summary::after {
+    transform: rotate(180deg);
+  }
+  details[open] .tratamiento-body {
+    animation: revealPanel 0.25s ease-out;
+  }
+  @keyframes revealPanel {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

@@ -1,0 +1,155 @@
+---
+interface Props { lang?: string; }
+const { lang = 'es' } = Astro.props;
+
+const c = {
+  es: {
+    title: 'Concertar una cita',
+    contactTitle: 'Horario y Contacto',
+    scheduleLabel: 'Horario',
+    schedule1: 'Lunes y miércoles de 15:00 a 21:00',
+    schedule2: 'Martes, jueves y viernes de 9:00 a 15:00',
+    phoneLabel: 'Teléfono',
+    emailLabel: 'Email',
+    addressLabel: 'Dirección',
+    address1: 'Calle Patricio Ferrándiz 86, local 2',
+    address2: 'Denia, 03700, Alicante',
+    formTitle: 'Formulario de Contacto',
+    nameLabel: 'Nombre', namePlaceholder: 'Tu nombre',
+    phoneFormLabel: 'Teléfono', phonePlaceholder: 'Número de teléfono',
+    emailFormLabel: 'Email', emailPlaceholder: 'Tu correo electrónico',
+    messageLabel: 'Mensaje', messagePlaceholder: '¿En qué podemos ayudarte?',
+    privacyText: 'He leído y acepto la',
+    privacyLink: 'Política de Privacidad',
+    submit: 'Enviar mensaje',
+    maps: 'Ver en Google Maps →',
+  },
+  en: {
+    title: 'Book an Appointment',
+    contactTitle: 'Schedule and Contact',
+    scheduleLabel: 'Schedule',
+    schedule1: 'Monday and Wednesday: 3:00 pm – 9:00 pm',
+    schedule2: 'Tuesday, Thursday and Friday: 9:00 am – 3:00 pm',
+    phoneLabel: 'Phone',
+    emailLabel: 'Email',
+    addressLabel: 'Address',
+    address1: 'Calle Patricio Ferrándiz 86, local 2',
+    address2: 'Denia, 03700, Alicante',
+    formTitle: 'Contact Form',
+    nameLabel: 'Name', namePlaceholder: 'Your name',
+    phoneFormLabel: 'Phone', phonePlaceholder: 'Phone number',
+    emailFormLabel: 'Email', emailPlaceholder: 'Your email address',
+    messageLabel: 'Message', messagePlaceholder: 'How can we help you?',
+    privacyText: 'I have read and accept the',
+    privacyLink: 'Privacy Policy',
+    submit: 'Send message',
+    maps: 'View on Google Maps →',
+  },
+  fr: {
+    title: 'Prendre Rendez-vous',
+    contactTitle: 'Horaires et Contact',
+    scheduleLabel: 'Horaires',
+    schedule1: 'Lundi et mercredi : 15h00 – 21h00',
+    schedule2: 'Mardi, jeudi et vendredi : 9h00 – 15h00',
+    phoneLabel: 'Téléphone',
+    emailLabel: 'E-mail',
+    addressLabel: 'Adresse',
+    address1: 'Calle Patricio Ferrándiz 86, local 2',
+    address2: 'Dénia, 03700, Alicante',
+    formTitle: 'Formulaire de Contact',
+    nameLabel: 'Nom', namePlaceholder: 'Votre nom',
+    phoneFormLabel: 'Téléphone', phonePlaceholder: 'Numéro de téléphone',
+    emailFormLabel: 'E-mail', emailPlaceholder: 'Votre adresse e-mail',
+    messageLabel: 'Message', messagePlaceholder: 'Comment pouvons-nous vous aider ?',
+    privacyText: 'J\'ai lu et j\'accepte la',
+    privacyLink: 'Politique de Confidentialité',
+    submit: 'Envoyer le message',
+    maps: 'Voir sur Google Maps →',
+  },
+  de: {
+    title: 'Termin vereinbaren',
+    contactTitle: 'Öffnungszeiten und Kontakt',
+    scheduleLabel: 'Öffnungszeiten',
+    schedule1: 'Montag und Mittwoch: 15:00 – 21:00 Uhr',
+    schedule2: 'Dienstag, Donnerstag und Freitag: 9:00 – 15:00 Uhr',
+    phoneLabel: 'Telefon',
+    emailLabel: 'E-Mail',
+    addressLabel: 'Adresse',
+    address1: 'Calle Patricio Ferrándiz 86, local 2',
+    address2: 'Dénia, 03700, Alicante',
+    formTitle: 'Kontaktformular',
+    nameLabel: 'Name', namePlaceholder: 'Ihr Name',
+    phoneFormLabel: 'Telefon', phonePlaceholder: 'Telefonnummer',
+    emailFormLabel: 'E-Mail', emailPlaceholder: 'Ihre E-Mail-Adresse',
+    messageLabel: 'Nachricht', messagePlaceholder: 'Wie können wir Ihnen helfen?',
+    privacyText: 'Ich habe die',
+    privacyLink: 'Datenschutzrichtlinie gelesen und akzeptiere sie',
+    submit: 'Nachricht senden',
+    maps: 'Auf Google Maps anzeigen →',
+  },
+}[lang as 'es'|'en'|'fr'|'de'] ?? {} as any;
+
+const privacyHref = lang === 'en' ? '/en/info-legal' : lang === 'fr' ? '/fr/info-legal' : lang === 'de' ? '/de/info-legal' : '/info-legal';
+---
+
+<h1 class="text-3xl lg:text-5xl font-bold text-center py-16 text-zeniaMarronOscuro">{c.title}</h1>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
+  <div>
+    <h2 class="text-2xl font-bold text-zeniaMarronOscuro mb-6">{c.contactTitle}</h2>
+    <div class="text-lg leading-relaxed text-zeniaMarronOscuro space-y-4">
+      <div>
+        <p class="font-semibold">{c.scheduleLabel}</p>
+        <p>{c.schedule1}</p>
+        <p>{c.schedule2}</p>
+      </div>
+      <div>
+        <p class="font-semibold">{c.phoneLabel}</p>
+        <a href="tel:663274378" class="text-zeniaRosaOscuro text-2xl font-bold hover:underline">663 274 378</a>
+      </div>
+      <div>
+        <p class="font-semibold">{c.emailLabel}</p>
+        <a href="mailto:info@clinicafloresdeapodaca.com" class="text-zeniaRosaOscuro hover:underline">info@clinicafloresdeapodaca.com</a>
+      </div>
+      <div>
+        <p class="font-semibold">{c.addressLabel}</p>
+        <p>{c.address1}</p>
+        <p>{c.address2}</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-zeniaMarronOscuro mb-6">{c.formTitle}</h2>
+    <form action="mailto:info@clinicafloresdeapodaca.com" method="post" enctype="text/plain" class="space-y-4">
+      <div>
+        <label for="nombre" class="block text-sm font-semibold text-zeniaMarronOscuro mb-1">{c.nameLabel}</label>
+        <input type="text" id="nombre" name="nombre" placeholder={c.namePlaceholder} class="w-full border border-zeniaMarronClaro rounded-lg px-4 py-3 text-zeniaMarronOscuro bg-zeniaBlanco focus:outline-none focus:border-zeniaRosaOscuro" />
+      </div>
+      <div>
+        <label for="telefono" class="block text-sm font-semibold text-zeniaMarronOscuro mb-1">{c.phoneFormLabel}</label>
+        <input type="tel" id="telefono" name="telefono" placeholder={c.phonePlaceholder} class="w-full border border-zeniaMarronClaro rounded-lg px-4 py-3 text-zeniaMarronOscuro bg-zeniaBlanco focus:outline-none focus:border-zeniaRosaOscuro" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-semibold text-zeniaMarronOscuro mb-1">{c.emailFormLabel}</label>
+        <input type="email" id="email" name="email" placeholder={c.emailPlaceholder} class="w-full border border-zeniaMarronClaro rounded-lg px-4 py-3 text-zeniaMarronOscuro bg-zeniaBlanco focus:outline-none focus:border-zeniaRosaOscuro" />
+      </div>
+      <div>
+        <label for="comentario" class="block text-sm font-semibold text-zeniaMarronOscuro mb-1">{c.messageLabel}</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder={c.messagePlaceholder} class="w-full border border-zeniaMarronClaro rounded-lg px-4 py-3 text-zeniaMarronOscuro bg-zeniaBlanco focus:outline-none focus:border-zeniaRosaOscuro resize-none"></textarea>
+      </div>
+      <div class="flex items-start gap-2">
+        <input type="checkbox" id="privacidad" name="privacidad" class="mt-1" required />
+        <label for="privacidad" class="text-sm text-zeniaMarronOscuro">
+          {c.privacyText} <a href={privacyHref} class="text-zeniaRosaOscuro underline hover:text-zeniaMarronOscuro">{c.privacyLink}</a>.
+        </label>
+      </div>
+      <button type="submit" class="w-full bg-zeniaRosaOscuro text-white font-semibold py-3 px-8 rounded-lg hover:bg-zeniaMarronOscuro transition-colors duration-200">{c.submit}</button>
+    </form>
+  </div>
+</div>
+
+<div class="mt-16">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3107.6908106749947!2d0.11331293963963485!3d38.83954130278992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3Af57a7d6724ea5d73!2sCl%C3%ADnica%20Est%C3%A9tica%20Dra.%20Flores%20de%20Apodaca!5e0!3m2!1sen!2ses!4v1658423876569!5m2!1sen!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+  <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Est%C3%A9tica+Dra.+Flores+de+Apodaca/@38.8382715,0.1107168,16.82z" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-zeniaRosaOscuro hover:underline">{c.maps}</a>
+</div>

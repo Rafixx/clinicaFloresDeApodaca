@@ -1,41 +1,39 @@
 ---
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../../i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
 
-const logo = "/logo/logo_dark_Rosa.webp";
+// const logo = "/logo/logo_dark_Rosa.webp";
+const logo = "/logo/logo_dark_sinFondo.webp";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const { currentLocale } = Astro;
+const translatePath = useTranslatedPath(lang);
 
 const navItems = [
   {
     title: t("nav.home"),
     label: "home",
-    url: currentLocale === "en" ? "/en/#home" : "/#home",
+    url: translatePath("/#home"),
   },
   {
     title: t("nav.treatments"),
     label: "treatment",
-    url:
-      currentLocale === "en"
-        ? "/en/tratamientos/tratamientos"
-        : "/tratamientos/tratamientos",
+    url: translatePath("/tratamientos/tratamientos"),
   },
   {
     title: t("nav.clinic"),
     label: "clinic",
-    url: currentLocale === "en" ? "/en/#clinic" : "/#clinic",
+    url: translatePath("/clinica"),
   },
   {
     title: t("nav.location"),
     label: "location",
-    url: currentLocale === "en" ? "/en/#location" : "/#location",
+    url: "https://www.google.com/maps/place/Cl%C3%ADnica+Est%C3%A9tica+Dra.+Flores+de+Apodaca/@38.8382715,0.1107168,16.82z/data=!4m6!3m5!1s0x129e1b11fbcbbb81:0xf57a7d6724ea5d73!8m2!3d38.8395998!4d0.1105449!16s%2Fg%2F11h5twq928?entry=ttu&g_ep=EgoyMDI2MDQyNi4wIKXMDSoASAFQAw%3D%3D",
+    external: true,
   },
   {
     title: t("nav.appointment"),
     label: "appointment",
-    url: currentLocale === "en" ? "/en/#appointment" : "/#appointment",
+    url: translatePath("/reservas"),
   },
 ];
 ---
@@ -53,6 +51,8 @@ const navItems = [
           class="relative block px-2 py-2 transition hover:text-zeniaMarronClaro"
           aria-label={link.label}
           href={link.url}
+          target={link.external ? "_blank" : undefined}
+          rel={link.external ? "noopener noreferrer" : undefined}
         >
           {link.title}
         </a>

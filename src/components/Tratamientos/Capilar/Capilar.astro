@@ -1,0 +1,140 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Medicina Estética Capilar',
+    intro: 'Estrés, déficit de vitaminas o minerales, enfermedades autoinmunes, agresiones externas, son algunos de los factores que, unidos a la genética individual, pueden provocar la <strong class="font-bold underline text-zeniaRosaOscuro">pérdida de cabello</strong>.<br /><br />En nuestra clínica hacemos un <strong class="font-bold underline text-zeniaRosaOscuro">estudio pormenorizado</strong> de cada caso para determinar el tipo de alopecia y ofrecer diferentes protocolos de tratamiento específicos para cada paciente. Estudiamos a pacientes con alopecia que pueden tener alteraciones del sistema inmunitario, como la <strong class="font-bold underline text-zeniaRosaOscuro">alopecia areata</strong> o el <strong class="font-bold underline text-zeniaRosaOscuro">liquen plano pilar</strong>, solicitando en estos casos un estudio inmunológico y test genético para diseñar la terapia más adecuada.<br /><br />Nuestros tratamientos capilares los desarrollamos en coordinación con el <strong class="font-bold underline text-zeniaRosaOscuro">Instituto Medec – Clínica de Injerto Capilar de Valencia</strong>, ofreciendo procedimientos integrales donde, llegado el caso, también derivaremos a los pacientes que necesiten de un trasplante capilar.',
+    treatments: [
+      {
+        summary: 'PRP Capilar',
+        title: 'PRP CAPILAR',
+        body: '<p>La <strong class="font-bold underline text-zeniaRosaOscuro">terapia capilar con plasma rico en plaquetas (PRP)</strong> resulta muy efectiva en la pérdida de cabello tanto en hombres como en mujeres. Se utiliza a modo de <strong class="font-bold underline text-zeniaRosaOscuro">prevención</strong> y también para <strong class="font-bold underline text-zeniaRosaOscuro">potenciar el crecimiento</strong> de nuevo cabello. Resulta ideal como coadyuvante tras los tratamientos de injerto capilar.</p><p>Los tratamientos con PRP son <strong class="font-bold underline text-zeniaRosaOscuro">muy seguros</strong> porque se inyecta el propio plasma del paciente y permiten retomar la rutina diaria con plena normalidad.</p><p>Individualizamos las sesiones de acuerdo al tipo de alopecia y al estado en que esté al iniciar la terapia. Es efectivo tanto para el <strong class="font-bold underline text-zeniaRosaOscuro">cabello</strong>, como para la <strong class="font-bold underline text-zeniaRosaOscuro">alopecia de cejas</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">barba</strong>. En nuestra clínica te asesoramos sobre las terapias más adecuadas para detener la caída del cabello.</p>',
+      },
+      {
+        summary: 'Microneedling Capilar',
+        title: 'MICRONEEDLING CAPILAR',
+        body: '<p>También conocido como <strong class="font-bold underline text-zeniaRosaOscuro">Dermapen</strong> por el instrumental con el que se realiza este tratamiento, el microneedling consiste en la multipunción con pequeñas agujas. Las microagujas van abriendo unos <strong class="font-bold underline text-zeniaRosaOscuro">pequeños canales en el cuero cabelludo</strong>, por los que se introducen sustancias inductoras del crecimiento folicular.</p><ul class="space-y-1 list-none"><li>&#9679; Tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">indoloro</strong>.</li><li>&#9679; Se utiliza como tratamiento de <strong class="font-bold underline text-zeniaRosaOscuro">choque y preventivo</strong> de la alopecia.</li></ul><p>La cantidad de sesiones las aconseja el médico después de la valoración del paciente.</p>',
+      },
+      {
+        summary: 'Mesoterapia Capilar',
+        title: 'MESOTERAPIA CAPILAR',
+        body: '<p>Según el tipo de alopecia que se presente, la <strong class="font-bold underline text-zeniaRosaOscuro">mesoterapia</strong> con diferentes fármacos y vitaminas, además de con el PRP, puede ser un excelente tratamiento.</p><p>En pacientes con <strong class="font-bold underline text-zeniaRosaOscuro">alopecia androgenética</strong>, con componente genético y hormonal, los folículos pilosos predispuestos genéticamente se afectan por los cambios hormonales y se produce una atrofia de los mismos. La mesoterapia con <strong class="font-bold underline text-zeniaRosaOscuro">dutasteride</strong> está dando muy buenos resultados en este tipo de alopecia. El dutasteride es un fármaco y, por tanto, solo puede ser manejado por médicos acreditados.</p><p>Por otro lado, <strong class="font-bold underline text-zeniaRosaOscuro">la biotina</strong> (vitamina B7) y el <strong class="font-bold underline text-zeniaRosaOscuro">pantenol</strong> (vitamina B5) fortalecen el cabello existente y <strong class="font-bold underline text-zeniaRosaOscuro">potencian el crecimiento capilar</strong>.</p><p>En nuestra clínica analizamos cada caso y, tras un estudio detallado, recomendamos el tratamiento más conveniente así como el número de sesiones a realizar.</p>',
+      },
+    ],
+  },
+  en: {
+    title: 'Hair Aesthetic Medicine',
+    intro: 'Stress, vitamin or mineral deficiencies, autoimmune diseases, external aggressions are some of the factors that, combined with individual genetics, can cause <strong class="font-bold underline text-zeniaRosaOscuro">hair loss</strong>.<br /><br />At our clinic we carry out a <strong class="font-bold underline text-zeniaRosaOscuro">detailed study</strong> of each case to determine the type of alopecia and offer different treatment protocols specific to each patient. We study patients with alopecia who may have immune system alterations, such as <strong class="font-bold underline text-zeniaRosaOscuro">alopecia areata</strong> or <strong class="font-bold underline text-zeniaRosaOscuro">lichen planopilaris</strong>, requesting in these cases an immunological study and genetic test to design the most appropriate therapy.<br /><br />Our hair treatments are developed in coordination with the <strong class="font-bold underline text-zeniaRosaOscuro">Medec Institute – Hair Transplant Clinic of Valencia</strong>, offering comprehensive procedures where, when necessary, we will also refer patients who need a hair transplant.',
+    treatments: [
+      {
+        summary: 'Hair PRP',
+        title: 'HAIR PRP',
+        body: '<p><strong class="font-bold underline text-zeniaRosaOscuro">Platelet-rich plasma (PRP) hair therapy</strong> is very effective for hair loss in both men and women. It is used as a <strong class="font-bold underline text-zeniaRosaOscuro">preventive</strong> measure and also to <strong class="font-bold underline text-zeniaRosaOscuro">stimulate new hair growth</strong>. It is ideal as an adjuvant after hair transplant treatments.</p><p>PRP treatments are <strong class="font-bold underline text-zeniaRosaOscuro">very safe</strong> because the patient\'s own plasma is injected and they allow resuming the daily routine with complete normality.</p><p>We individualise sessions according to the type of alopecia and its state when therapy begins. It is effective for <strong class="font-bold underline text-zeniaRosaOscuro">hair</strong>, as well as for <strong class="font-bold underline text-zeniaRosaOscuro">eyebrow alopecia</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">beard</strong>. At our clinic we advise you on the most appropriate therapies to stop hair loss.</p>',
+      },
+      {
+        summary: 'Hair Microneedling',
+        title: 'HAIR MICRONEEDLING',
+        body: '<p>Also known as <strong class="font-bold underline text-zeniaRosaOscuro">Dermapen</strong> after the instrument used for this treatment, microneedling consists of multiple punctures with small needles. The microneedles open <strong class="font-bold underline text-zeniaRosaOscuro">small channels in the scalp</strong> through which follicular growth-inducing substances are introduced.</p><ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Painless</strong> treatment.</li><li>&#9679; Used as a <strong class="font-bold underline text-zeniaRosaOscuro">shock and preventive</strong> alopecia treatment.</li></ul><p>The number of sessions is advised by the doctor after patient evaluation.</p>',
+      },
+      {
+        summary: 'Hair Mesotherapy',
+        title: 'HAIR MESOTHERAPY',
+        body: '<p>Depending on the type of alopecia presented, <strong class="font-bold underline text-zeniaRosaOscuro">mesotherapy</strong> with different drugs and vitamins, in addition to PRP, can be an excellent treatment.</p><p>In patients with <strong class="font-bold underline text-zeniaRosaOscuro">androgenetic alopecia</strong>, with genetic and hormonal components, genetically predisposed hair follicles are affected by hormonal changes and atrophy occurs. Mesotherapy with <strong class="font-bold underline text-zeniaRosaOscuro">dutasteride</strong> is giving very good results in this type of alopecia. Dutasteride is a drug and, therefore, can only be handled by accredited doctors.</p><p>On the other hand, <strong class="font-bold underline text-zeniaRosaOscuro">biotin</strong> (vitamin B7) and <strong class="font-bold underline text-zeniaRosaOscuro">panthenol</strong> (vitamin B5) strengthen existing hair and <strong class="font-bold underline text-zeniaRosaOscuro">stimulate hair growth</strong>.</p><p>At our clinic we analyse each case and, after a detailed study, recommend the most appropriate treatment and the number of sessions to perform.</p>',
+      },
+    ],
+  },
+  fr: {
+    title: 'Médecine Esthétique Capillaire',
+    intro: 'Le stress, le déficit en vitamines ou minéraux, les maladies auto-immunes, les agressions externes sont quelques-uns des facteurs qui, associés à la génétique individuelle, peuvent provoquer la <strong class="font-bold underline text-zeniaRosaOscuro">perte de cheveux</strong>.<br /><br />Dans notre clinique, nous effectuons une <strong class="font-bold underline text-zeniaRosaOscuro">étude détaillée</strong> de chaque cas pour déterminer le type d\'alopécie et proposer différents protocoles de traitement spécifiques à chaque patient. Nous étudions les patients atteints d\'alopécie qui peuvent avoir des altérations du système immunitaire, comme l\'<strong class="font-bold underline text-zeniaRosaOscuro">alopécie areata</strong> ou le <strong class="font-bold underline text-zeniaRosaOscuro">lichen plan pilaire</strong>, en demandant dans ces cas une étude immunologique et un test génétique pour concevoir la thérapie la plus appropriée.<br /><br />Nos traitements capillaires sont développés en coordination avec l\'<strong class="font-bold underline text-zeniaRosaOscuro">Institut Medec – Clinique de Greffe Capillaire de Valence</strong>, offrant des procédures intégrales où, le cas échéant, nous orienterons également les patients nécessitant une greffe capillaire.',
+    treatments: [
+      {
+        summary: 'PRP Capillaire',
+        title: 'PRP CAPILLAIRE',
+        body: '<p>La <strong class="font-bold underline text-zeniaRosaOscuro">thérapie capillaire au plasma riche en plaquettes (PRP)</strong> est très efficace contre la perte de cheveux chez les hommes comme chez les femmes. Elle est utilisée à titre <strong class="font-bold underline text-zeniaRosaOscuro">préventif</strong> et également pour <strong class="font-bold underline text-zeniaRosaOscuro">stimuler la croissance</strong> de nouveaux cheveux. Elle est idéale comme adjuvant après les traitements de greffe capillaire.</p><p>Les traitements au PRP sont <strong class="font-bold underline text-zeniaRosaOscuro">très sûrs</strong> car c\'est le propre plasma du patient qui est injecté et ils permettent de reprendre la routine quotidienne normalement.</p><p>Nous individualisons les séances en fonction du type d\'alopécie et de son état au début de la thérapie. Il est efficace pour les <strong class="font-bold underline text-zeniaRosaOscuro">cheveux</strong>, ainsi que pour l\'<strong class="font-bold underline text-zeniaRosaOscuro">alopécie des sourcils</strong> et de la <strong class="font-bold underline text-zeniaRosaOscuro">barbe</strong>. Dans notre clinique, nous vous conseillons sur les thérapies les plus appropriées pour stopper la chute des cheveux.</p>',
+      },
+      {
+        summary: 'Microneedling Capillaire',
+        title: 'MICRONEEDLING CAPILLAIRE',
+        body: '<p>Également connu sous le nom de <strong class="font-bold underline text-zeniaRosaOscuro">Dermapen</strong> d\'après l\'instrument utilisé pour ce traitement, le microneedling consiste en une multipuncture avec de petites aiguilles. Les microaiguilles ouvrent de <strong class="font-bold underline text-zeniaRosaOscuro">petits canaux dans le cuir chevelu</strong> par lesquels sont introduites des substances inductrices de croissance folliculaire.</p><ul class="space-y-1 list-none"><li>&#9679; Traitement <strong class="font-bold underline text-zeniaRosaOscuro">indolore</strong>.</li><li>&#9679; Utilisé comme traitement de <strong class="font-bold underline text-zeniaRosaOscuro">choc et préventif</strong> de l\'alopécie.</li></ul><p>Le nombre de séances est conseillé par le médecin après évaluation du patient.</p>',
+      },
+      {
+        summary: 'Mésothérapie Capillaire',
+        title: 'MÉSOTHÉRAPIE CAPILLAIRE',
+        body: '<p>Selon le type d\'alopécie présenté, la <strong class="font-bold underline text-zeniaRosaOscuro">mésothérapie</strong> avec différents médicaments et vitamines, en plus du PRP, peut être un excellent traitement.</p><p>Chez les patients atteints d\'<strong class="font-bold underline text-zeniaRosaOscuro">alopécie androgénétique</strong>, avec une composante génétique et hormonale, les follicules pileux génétiquement prédisposés sont affectés par les changements hormonaux et une atrophie se produit. La mésothérapie au <strong class="font-bold underline text-zeniaRosaOscuro">dutastéride</strong> donne de très bons résultats dans ce type d\'alopécie. Le dutastéride est un médicament et ne peut donc être manipulé que par des médecins accrédités.</p><p>D\'autre part, la <strong class="font-bold underline text-zeniaRosaOscuro">biotine</strong> (vitamine B7) et le <strong class="font-bold underline text-zeniaRosaOscuro">panthénol</strong> (vitamine B5) renforcent les cheveux existants et <strong class="font-bold underline text-zeniaRosaOscuro">stimulent la croissance capillaire</strong>.</p><p>Dans notre clinique, nous analysons chaque cas et, après une étude détaillée, recommandons le traitement le plus approprié ainsi que le nombre de séances à effectuer.</p>',
+      },
+    ],
+  },
+  de: {
+    title: 'Ästhetische Haarmedizin',
+    intro: 'Stress, Vitamin- oder Mineralstoffmangel, Autoimmunerkrankungen, externe Einwirkungen sind einige der Faktoren, die in Verbindung mit individueller Genetik zu <strong class="font-bold underline text-zeniaRosaOscuro">Haarausfall</strong> führen können.<br /><br />In unserer Klinik führen wir eine <strong class="font-bold underline text-zeniaRosaOscuro">detaillierte Untersuchung</strong> jedes Falles durch, um die Art der Alopezie zu bestimmen und verschiedene spezifische Behandlungsprotokolle für jeden Patienten anzubieten. Wir untersuchen Patienten mit Alopezie, die Immunsystemstörungen aufweisen können, wie <strong class="font-bold underline text-zeniaRosaOscuro">Alopecia areata</strong> oder <strong class="font-bold underline text-zeniaRosaOscuro">Lichen planopilaris</strong>, und fordern in diesen Fällen eine immunologische Studie und einen Gentest an, um die geeignetste Therapie zu entwickeln.<br /><br />Unsere Haarbehandlungen werden in Zusammenarbeit mit dem <strong class="font-bold underline text-zeniaRosaOscuro">Medec-Institut – Haartransplantationsklinik Valencia</strong> entwickelt und bieten umfassende Verfahren, bei denen wir bei Bedarf auch Patienten überweisen, die eine Haartransplantation benötigen.',
+    treatments: [
+      {
+        summary: 'Haar-PRP',
+        title: 'HAAR-PRP',
+        body: '<p>Die <strong class="font-bold underline text-zeniaRosaOscuro">Haar-Therapie mit thrombozytenreichem Plasma (PRP)</strong> ist sehr effektiv bei Haarausfall sowohl bei Männern als auch bei Frauen. Sie wird zur <strong class="font-bold underline text-zeniaRosaOscuro">Vorbeugung</strong> und auch zur <strong class="font-bold underline text-zeniaRosaOscuro">Stimulierung des neuen Haarwachstums</strong> eingesetzt. Sie ist ideal als Begleittherapie nach Haartransplantationsbehandlungen.</p><p>PRP-Behandlungen sind <strong class="font-bold underline text-zeniaRosaOscuro">sehr sicher</strong>, da das eigene Plasma des Patienten injiziert wird und es ermöglicht, die tägliche Routine vollständig wieder aufzunehmen.</p><p>Wir individualisieren die Sitzungen je nach Art der Alopezie und ihrem Zustand zu Beginn der Therapie. Sie ist wirksam für <strong class="font-bold underline text-zeniaRosaOscuro">Haare</strong>, sowie für <strong class="font-bold underline text-zeniaRosaOscuro">Augenbrauenalopezie</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Bart</strong>. In unserer Klinik beraten wir Sie über die geeignetsten Therapien zur Bekämpfung des Haarausfalls.</p>',
+      },
+      {
+        summary: 'Haar-Microneedling',
+        title: 'HAAR-MICRONEEDLING',
+        body: '<p>Auch bekannt als <strong class="font-bold underline text-zeniaRosaOscuro">Dermapen</strong> nach dem Instrument, mit dem diese Behandlung durchgeführt wird, besteht Microneedling aus Mehrfachpunktionen mit kleinen Nadeln. Die Mikronadeln öffnen <strong class="font-bold underline text-zeniaRosaOscuro">kleine Kanäle in der Kopfhaut</strong>, durch die follikuläres Wachstum induzierende Substanzen eingeführt werden.</p><ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Schmerzlose</strong> Behandlung.</li><li>&#9679; Wird als <strong class="font-bold underline text-zeniaRosaOscuro">Schock- und Präventivbehandlung</strong> der Alopezie eingesetzt.</li></ul><p>Die Anzahl der Sitzungen wird vom Arzt nach der Patientenbewertung empfohlen.</p>',
+      },
+      {
+        summary: 'Haar-Mesotherapie',
+        title: 'HAAR-MESOTHERAPIE',
+        body: '<p>Je nach Art der vorliegenden Alopezie kann die <strong class="font-bold underline text-zeniaRosaOscuro">Mesotherapie</strong> mit verschiedenen Medikamenten und Vitaminen, zusätzlich zum PRP, eine ausgezeichnete Behandlung sein.</p><p>Bei Patienten mit <strong class="font-bold underline text-zeniaRosaOscuro">androgenetischer Alopezie</strong>, mit genetischer und hormoneller Komponente, werden genetisch prädisponierte Haarfollikel durch hormonelle Veränderungen beeinflusst und es kommt zu einer Atrophie dieser. Die Mesotherapie mit <strong class="font-bold underline text-zeniaRosaOscuro">Dutasterid</strong> zeigt sehr gute Ergebnisse bei dieser Art von Alopezie. Dutasterid ist ein Medikament und kann daher nur von zugelassenen Ärzten gehandhabt werden.</p><p>Andererseits stärken <strong class="font-bold underline text-zeniaRosaOscuro">Biotin</strong> (Vitamin B7) und <strong class="font-bold underline text-zeniaRosaOscuro">Panthenol</strong> (Vitamin B5) das vorhandene Haar und <strong class="font-bold underline text-zeniaRosaOscuro">fördern das Haarwachstum</strong>.</p><p>In unserer Klinik analysieren wir jeden Fall und empfehlen nach einer detaillierten Studie die geeignetste Behandlung sowie die Anzahl der durchzuführenden Sitzungen.</p>',
+      },
+    ],
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<p class="text-base leading-relaxed text-zeniaMarronOscuro/80 mb-8 text-center max-w-2xl mx-auto pt-4" set:html={c.intro} />
+
+<div>
+  {c.treatments.map((t) => (
+    <details class="border-b border-zeniaMarronClaro/30">
+      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+        {t.summary}
+      </summary>
+      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-4 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
+        <div set:html={t.body} />
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .tratamiento-summary::after {
+    content: '';
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f68ea2' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  details[open] .tratamiento-summary::after {
+    transform: rotate(180deg);
+  }
+  details[open] .tratamiento-body {
+    animation: revealPanel 0.25s ease-out;
+  }
+  @keyframes revealPanel {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

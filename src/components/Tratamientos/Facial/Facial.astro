@@ -1,0 +1,425 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Medicina Estética Facial',
+    treatments: [
+      {
+        summary: 'Tto. de Arrugas Dinámicas con Neuromoduladores',
+        title: 'LÍNEAS DE EXPRESIÓN',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">neuromodulación</strong> consiste en utilizar una sustancia que trabaja a nivel de las terminaciones nerviosas, produciendo una <strong class="font-bold underline text-zeniaRosaOscuro">relajación del musculo</strong>, haciendo que este disminuya su fuerza y por lo tanto evita que las líneas de expresión se marquen.</p>
+<p>Esta sustancia tiene efectos probados, ya que hace más de 20 años se utiliza en la medicina estética para el tratamiento de las <strong class="font-bold underline text-zeniaRosaOscuro">arrugas dinámicas</strong> o de expresión.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Cómo se aplica?</strong><br/>Se infiltra mediante una aguja muy fina en el <strong class="font-bold underline text-zeniaRosaOscuro">músculo</strong> de la zona que se quiera tratar, principalmente en la <strong class="font-bold underline text-zeniaRosaOscuro">frente, glabela (entrecejo), contorno de ojos (patas de gallo)</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Cuánto duran los efectos?</strong><br/>La <strong class="font-bold underline text-zeniaRosaOscuro">duración</strong> de los efectos varía dependiendo de cada paciente. Aun así, la práctica clínica ha demostrado una media de visibilidad del tratamiento de unos <strong class="font-bold underline text-zeniaRosaOscuro">4 a 6 meses</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Cuáles son sus ventajas?</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Tratamiento que se puede realizar en <strong class="font-bold underline text-zeniaRosaOscuro">cualquier época del año</strong>.</li><li>&#9679; Su aplicación es muy <strong class="font-bold underline text-zeniaRosaOscuro">rápida</strong>, prácticamente <strong class="font-bold underline text-zeniaRosaOscuro">indolora</strong>.</li><li>&#9679; Tiene una gran capacidad para <strong class="font-bold underline text-zeniaRosaOscuro">prevenir y reducir</strong> las líneas de expresión.</li></ul>`,
+      },
+      {
+        summary: 'Rejuvenecimiento de la Mirada',
+        title: 'LIFTING DE PÁRPADOS SIN CIRUGÍA',
+        body: `<p>En la clínica de la Dra. Flores de Apodaca, contamos con dos técnicas para el <strong class="font-bold underline text-zeniaRosaOscuro">rejuvenecimiento de párpados</strong> sin cirugía: elevación de párpados con el equipo <strong class="font-bold underline text-zeniaRosaOscuro">Ultracel Q+</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">Blefarolaser</strong> con el equipo <strong class="font-bold underline text-zeniaRosaOscuro">Plasma BT</strong>.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">ELEVACIÓN DE PÁRPADOS CON ULTRACEL Q+</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> es un dispositivo de alta tecnología que aplica <strong class="font-bold underline text-zeniaRosaOscuro">ultrasonidos focalizados de alta intensidad</strong> para lograr una mayor firmeza y elasticidad de la piel.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LIFTING DE PÁRPADOS CON EL EQUIPO PLASMA BT</h4>
+<p>Procedimiento <strong class="font-bold underline text-zeniaRosaOscuro">médico-estético</strong> destinado a reducir o eliminar la piel flácida de los párpados mediante la aplicación del láser. Tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">mínimamente invasivo</strong>, con rápida recuperación (entre 7 y 10 días).</p>`,
+      },
+      {
+        summary: 'Tratamiento de Ojeras',
+        title: 'TRATAMIENTO DE OJERAS',
+        body: `<p>En la Clínica de la Dra. Flores de Apodaca solemos aplicar dos tratamientos para las ojeras: la <strong class="font-bold underline text-zeniaRosaOscuro">carboxiterapia</strong> junto con el <strong class="font-bold underline text-zeniaRosaOscuro">PRP (plasma rico en plaquetas)</strong>, con muy buenos resultados en las ojeras pigmentadas y vasculares.</p>
+<p>Por otro lado, en la clínica también podemos tratar las ojeras con <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico (AH)</strong> para elevar el declive y recuperar la calidad de la piel.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CARBOXITERAPIA + PRP</h4>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">carboxiterapia</strong> consigue aumentar el flujo sanguíneo gracias a la dilatación y la formación de pequeños vasos. El <strong class="font-bold underline text-zeniaRosaOscuro">plasma rico en plaquetas</strong> favorece la formación de colágeno rejuveneciendo la piel. Para unos resultados notorios serán necesarias entre cuatro o seis sesiones.</p>`,
+      },
+      {
+        summary: 'Rellenos y Voluminizaciones',
+        title: 'RELLENOS Y VOLUMINIZADORES',
+        body: `<p>Los <strong class="font-bold underline text-zeniaRosaOscuro">rellenos y voluminizadores</strong> se presentan como un excelente tratamiento para recuperar la belleza natural del rostro, cumpliendo con tres objetivos principales: <strong class="font-bold underline text-zeniaRosaOscuro">efecto tensor</strong>, voluminizar áreas y reponer <strong class="font-bold underline text-zeniaRosaOscuro">volúmenes perdidos</strong>, y corregir <strong class="font-bold underline text-zeniaRosaOscuro">arrugas</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Principales sustancias:</strong></p>
+<ul class="space-y-1 list-none"><li><strong class="font-bold underline text-zeniaRosaOscuro">Ácido hialurónico (AH)</strong></li><li><strong class="font-bold underline text-zeniaRosaOscuro">Hidroxiapatita cálcica</strong></li><li>Polidoxanona líquida (<strong class="font-bold underline text-zeniaRosaOscuro">ULTRACOL</strong>)</li><li><strong class="font-bold underline text-zeniaRosaOscuro">Ácido poliláctico</strong></li></ul>`,
+      },
+      {
+        summary: 'Rinomodelación',
+        title: 'RINOMODELACIÓN O BIOPLASTIA DE NARIZ',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">rinomodelación</strong> se presenta como una técnica <strong class="font-bold underline text-zeniaRosaOscuro">no invasiva</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">no quirúrgica</strong>, que ofrece una solución con resultado inmediato, para corregir perfil curvo o aguileño, la doble curva o la punta caída.</p>
+<p>Es un procedimiento totalmente <strong class="font-bold underline text-zeniaRosaOscuro">ambulatorio</strong>, que solo precisa de anestesia local en crema. La <strong class="font-bold underline text-zeniaRosaOscuro">rinomodelación</strong> no reduce el tamaño de la nariz sino que la <strong class="font-bold underline text-zeniaRosaOscuro">moldea</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">corrige</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">afina</strong>. La duración del tratamiento es de una media de <strong class="font-bold underline text-zeniaRosaOscuro">12 a 24 meses</strong>.</p>`,
+      },
+      {
+        summary: 'Tratamiento de Labios',
+        title: 'EMBELLECIMIENTO DE LABIOS',
+        body: `<p>En la clínica de la Dra. Flores de Apodaca tenemos definido un tratamiento específico para embellecer los labios que consiste principalmente en: <strong class="font-bold underline text-zeniaRosaOscuro">hidratar, dar volumen y perfilar</strong>.</p>
+<p>El <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico (AH)</strong> es el material empleado para embellecer los labios a través de una técnica mínimamente invasiva. Así se consigue hidratar, dar volumen, y marcar perfiles como el conocido <strong class="font-bold underline text-zeniaRosaOscuro">"arco de cupido"</strong>.</p>
+<p>El AH es un producto <strong class="font-bold underline text-zeniaRosaOscuro">biocompatible</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">biodegradable</strong>, por lo que pasados unos ocho meses será necesario hacer un retoque del tratamiento.</p>`,
+      },
+      {
+        summary: 'Remodelación de Área Peribucal y Líneas de Marioneta',
+        title: 'CORRECCIÓN DE LA SONRISA GINGIVAL',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">sonrisa gingival</strong> se puede tratar mediante la aplicación de <strong class="font-bold underline text-zeniaRosaOscuro">neuromoduladores</strong> y complementándolo con <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">BIOPLASTIA DE MENTÓN</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">bioplastia</strong> consiste en las infiltraciones de ácido hialurónico en la zona del ángulo del mentón para armonizar el rostro de manera ambulatoria. Solo es necesaria anestesia local y la sesión suele durar entre 30 y 40 minutos.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">REMODELACIÓN DE LAS LÍNEAS DE MARIONETA Y DEL ÁREA PERIBUCAL</h3>
+<p>Las <strong class="font-bold underline text-zeniaRosaOscuro">líneas de marioneta</strong> son los pliegues que se marcan desde las comisuras de los labios hasta ambos lados de la barbilla. Se tratan con <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico</strong> o <strong class="font-bold underline text-zeniaRosaOscuro">radiesse</strong>.</p>`,
+      },
+      {
+        summary: 'Redensificación y Remodelación Facial',
+        title: 'REDENSIFICACIÓN FACIAL',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">redensificación</strong> es un innovador tratamiento de rejuvenecimiento sin cirugía. Se realiza mediante microinyecciones en <strong class="font-bold underline text-zeniaRosaOscuro">ROSTRO, CUELLO Y ESCOTE</strong>, de diferentes formulaciones con <strong class="font-bold underline text-zeniaRosaOscuro">inductores de colágeno</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Beneficios:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Resultados <strong class="font-bold underline text-zeniaRosaOscuro">duraderos</strong> entre 12-18 meses.</li><li>&#9679; Tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">ambulatorio</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Indoloro</strong>, se realiza con anestesia local.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Previene</strong> arrugas en el rostro, cuello y escote.</li></ul>`,
+      },
+      {
+        summary: 'Lifting Facial no Quirúrgico',
+        title: 'LIFTING FACIAL NO QUIRÚRGICO CON ULTRACEL Q+',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> aplica <strong class="font-bold underline text-zeniaRosaOscuro">ultrasonidos focalizados de alta intensidad</strong> capaces de alcanzar la misma profundidad dérmica que un lifting quirúrgico.</p>
+<p>Ventajas: efecto <strong class="font-bold underline text-zeniaRosaOscuro">inmediato</strong>, combate la flacidez, apto para cualquier tipo de piel, tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">ambulatorio</strong> no invasivo.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">LIFTING FACIAL SIN CIRUGÍA CON HILOS TENSORES</h3>
+<p>Los <strong class="font-bold underline text-zeniaRosaOscuro">hilos tensores</strong> son hilos finos, fabricados con materiales <strong class="font-bold underline text-zeniaRosaOscuro">reabsorbibles</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">antialérgicos</strong>, que se insertan bajo la zona a tratar proporcionando un efecto lifting inmediato. Sus efectos duran entre 12 y 18 meses. Promueven la creación de colágeno.</p>`,
+      },
+      {
+        summary: 'Rejuvenecimiento Facial',
+        title: 'MESOTERAPIA FACIAL',
+        body: `<p>La mesoterapia facial es un tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">preventivo y de choque</strong> para la piel deshidratada, seca, con manchas y arrugas finas. Consiste en <strong class="font-bold underline text-zeniaRosaOscuro">microinyecciones</strong> de sustancias revitalizantes (ácido hialurónico, oligoelementos, péptidos, aminoácidos, etc.).</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FOTORREJUVENECIMIENTO FACIAL CON FOTOBIODINAMICA</h3>
+<p>La terapia <strong class="font-bold underline text-zeniaRosaOscuro">fotobiodinámica</strong> combina la luz High Density Diodes de la máscara <strong class="font-bold underline text-zeniaRosaOscuro">Fotoage</strong> con los productos fotosensibles <strong class="font-bold underline text-zeniaRosaOscuro">Skinox</strong>. Técnica <strong class="font-bold underline text-zeniaRosaOscuro">no invasiva</strong> que trata pigmentaciones, rojeces, unifica el tono y aporta luminosidad.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">MICRONEEDLING</h3>
+<p>El <strong class="font-bold underline text-zeniaRosaOscuro">microneedling</strong> consiste en practicar <strong class="font-bold underline text-zeniaRosaOscuro">microperforaciones</strong> en una zona determinada con un dispositivo de agujas que provoca micro-lesiones en la piel con el propósito de rejuvenecerla. El <strong class="font-bold underline text-zeniaRosaOscuro">SkinPen® Precision</strong> es la tecnología de microneedling más avanzada — único dispositivo con aprobación de la FDA.</p>`,
+      },
+      {
+        summary: 'Peeling Facial',
+        title: 'PEELING QUÍMICO MÉDICO',
+        body: `<p>El <strong class="font-bold underline text-zeniaRosaOscuro">peeling químico médico</strong> sirve para <strong class="font-bold underline text-zeniaRosaOscuro">regenerar</strong> la piel mediante el desprendimiento de sus capas más superficiales. Consiste en la aplicación de una formulación de ácidos combinados para exfoliar las capas más externas y estimular su renovación.</p>
+<p>Utilizamos desde los <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peel de Naqua</strong> (para acné, pigmentaciones y arrugas finas), hasta los peeling <strong class="font-bold underline text-zeniaRosaOscuro">profundos</strong> como el <strong class="font-bold underline text-zeniaRosaOscuro">N-Fenol</strong>, con una potente capacidad regeneradora.</p>`,
+      },
+      {
+        summary: 'Mascu-Look',
+        title: 'EN BUSCA DEL ATRACTIVO MASCULINO',
+        body: `<p>Con mascu-look se remarcan los <strong class="font-bold underline text-zeniaRosaOscuro">rasgos masculinos</strong>, prestando especial atención a la mandíbula y al mentón, otorgándoles una apariencia más angulosa y atractiva.</p>
+<p>La doctora Flores de Apodaca elegirá infiltrar diferentes tipos de productos, destacando sobre todo el <strong class="font-bold underline text-zeniaRosaOscuro">ácido hialurónico</strong> y la <strong class="font-bold underline text-zeniaRosaOscuro">hidroxiapatita cálcica</strong>. Los efectos duran entre 10 y 18 meses.</p>`,
+      },
+    ],
+  },
+  en: {
+    title: 'Facial Aesthetic Medicine',
+    treatments: [
+      {
+        summary: 'Dynamic Wrinkle Treatment with Neuromodulators',
+        title: 'EXPRESSION LINES',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Neuromodulation</strong> involves using a substance that works at the nerve endings, producing a <strong class="font-bold underline text-zeniaRosaOscuro">muscle relaxation</strong>, reducing its strength and preventing expression lines from forming.</p>
+<p>This substance has proven effects — for over 20 years it has been used in aesthetic medicine for the treatment of <strong class="font-bold underline text-zeniaRosaOscuro">dynamic or expression wrinkles</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">How long do the effects last?</strong><br/>The <strong class="font-bold underline text-zeniaRosaOscuro">duration</strong> of effects varies by patient. Clinical practice has demonstrated an average treatment visibility of <strong class="font-bold underline text-zeniaRosaOscuro">4 to 6 months</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Advantages:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Treatment that can be performed <strong class="font-bold underline text-zeniaRosaOscuro">at any time of year</strong>.</li><li>&#9679; Very <strong class="font-bold underline text-zeniaRosaOscuro">fast</strong>, practically <strong class="font-bold underline text-zeniaRosaOscuro">painless</strong> application.</li><li>&#9679; Great ability to <strong class="font-bold underline text-zeniaRosaOscuro">prevent and reduce</strong> expression lines.</li></ul>`,
+      },
+      {
+        summary: 'Eye Area Rejuvenation',
+        title: 'NON-SURGICAL EYELID LIFTING',
+        body: `<p>At Dr. Flores de Apodaca's clinic, we have two techniques for non-surgical <strong class="font-bold underline text-zeniaRosaOscuro">eyelid rejuvenation</strong>: eyelid lifting with the <strong class="font-bold underline text-zeniaRosaOscuro">Ultracel Q+</strong> device and <strong class="font-bold underline text-zeniaRosaOscuro">Blefarolaser</strong> with the <strong class="font-bold underline text-zeniaRosaOscuro">Plasma BT</strong> device.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">EYELID LIFTING WITH ULTRACEL Q+</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> applies <strong class="font-bold underline text-zeniaRosaOscuro">high-intensity focused ultrasound</strong> to achieve greater skin firmness and elasticity.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">EYELID LIFTING WITH PLASMA BT</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Minimally invasive</strong> medical-aesthetic procedure to reduce or eliminate sagging eyelid skin using laser. Quick recovery (7 to 10 days).</p>`,
+      },
+      {
+        summary: 'Under-Eye Treatment',
+        title: 'UNDER-EYE TREATMENT',
+        body: `<p>We apply two treatments for dark circles: <strong class="font-bold underline text-zeniaRosaOscuro">carboxytherapy</strong> combined with <strong class="font-bold underline text-zeniaRosaOscuro">PRP (platelet-rich plasma)</strong>, with very good results for pigmented and vascular dark circles.</p>
+<p>We can also treat dark circles with <strong class="font-bold underline text-zeniaRosaOscuro">hyaluronic acid (HA)</strong> to lift the tear trough and recover skin quality.</p>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CARBOXYTHERAPY + PRP</h4>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Carboxytherapy</strong> increases blood flow by dilating and forming small vessels. <strong class="font-bold underline text-zeniaRosaOscuro">Platelet-rich plasma</strong> promotes collagen formation rejuvenating the skin. Four to six sessions are typically needed.</p>`,
+      },
+      {
+        summary: 'Fillers and Volumisers',
+        title: 'FILLERS AND VOLUMISERS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Fillers and volumisers</strong> are an excellent treatment to restore the natural beauty of the face, with three main objectives: <strong class="font-bold underline text-zeniaRosaOscuro">tensioning effect</strong>, volumising areas and restoring <strong class="font-bold underline text-zeniaRosaOscuro">lost volumes</strong>, and correcting <strong class="font-bold underline text-zeniaRosaOscuro">wrinkles</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Main substances:</strong></p>
+<ul class="space-y-1 list-none"><li><strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronic acid (HA)</strong></li><li><strong class="font-bold underline text-zeniaRosaOscuro">Calcium hydroxyapatite</strong></li><li>Liquid polydioxanone (<strong class="font-bold underline text-zeniaRosaOscuro">ULTRACOL</strong>)</li><li><strong class="font-bold underline text-zeniaRosaOscuro">Polylactic acid</strong></li></ul>`,
+      },
+      {
+        summary: 'Rhinomodelling',
+        title: 'RHINOMODELLING OR NOSE BIOPLASTY',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Rhinomodelling</strong> is a <strong class="font-bold underline text-zeniaRosaOscuro">non-invasive</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">non-surgical</strong> technique offering immediate results to correct curved or aquiline profiles, double curves or drooping tips.</p>
+<p>It is a fully <strong class="font-bold underline text-zeniaRosaOscuro">outpatient</strong> procedure requiring only topical anaesthesia. Rhinomodelling does not reduce the size of the nose but <strong class="font-bold underline text-zeniaRosaOscuro">moulds</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">corrects</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">refines</strong> it. Average treatment duration: <strong class="font-bold underline text-zeniaRosaOscuro">12 to 24 months</strong>.</p>`,
+      },
+      {
+        summary: 'Lip Treatment',
+        title: 'LIP ENHANCEMENT',
+        body: `<p>At Dr. Flores de Apodaca's clinic we have a specific lip enhancement treatment consisting mainly of: <strong class="font-bold underline text-zeniaRosaOscuro">hydrating, adding volume and contouring</strong>.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronic acid (HA)</strong> is the material used to enhance lips through a minimally invasive injection technique, achieving hydration, volume and defining contours like the well-known <strong class="font-bold underline text-zeniaRosaOscuro">"Cupid's bow"</strong>.</p>
+<p>HA is <strong class="font-bold underline text-zeniaRosaOscuro">biocompatible</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">biodegradable</strong>, so a touch-up will be needed after approximately eight months.</p>`,
+      },
+      {
+        summary: 'Perioral Area Remodelling and Marionette Lines',
+        title: 'GUMMY SMILE CORRECTION',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Gummy smile</strong> can be treated by applying <strong class="font-bold underline text-zeniaRosaOscuro">neuromodulators</strong> complemented with <strong class="font-bold underline text-zeniaRosaOscuro">hyaluronic acid</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">CHIN BIOPLASTY</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Bioplasty</strong> consists of hyaluronic acid injections at the chin angle to harmonise the face in an outpatient procedure. Only local anaesthesia is needed and the session takes 30 to 40 minutes.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">MARIONETTE LINES AND PERIORAL AREA REMODELLING</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Marionette lines</strong> are the folds running from the lip corners to the chin. They are treated with <strong class="font-bold underline text-zeniaRosaOscuro">hyaluronic acid</strong> or <strong class="font-bold underline text-zeniaRosaOscuro">radiesse</strong>.</p>`,
+      },
+      {
+        summary: 'Facial Redensification and Remodelling',
+        title: 'FACIAL REDENSIFICATION',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Redensification</strong> is an innovative non-surgical rejuvenation treatment using microinjections of <strong class="font-bold underline text-zeniaRosaOscuro">collagen inducers</strong> into the <strong class="font-bold underline text-zeniaRosaOscuro">FACE, NECK AND DÉCOLLETÉ</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Benefits:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Long-lasting</strong> results of 12-18 months.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Outpatient</strong> treatment.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Painless</strong>, performed with local anaesthesia.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Prevents</strong> wrinkles on face, neck and décolleté.</li></ul>`,
+      },
+      {
+        summary: 'Non-Surgical Facial Lifting',
+        title: 'NON-SURGICAL FACIAL LIFTING WITH ULTRACEL Q+',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> applies <strong class="font-bold underline text-zeniaRosaOscuro">high-intensity focused ultrasound</strong> capable of reaching the same dermal depth as a surgical facelift.</p>
+<p>Benefits: <strong class="font-bold underline text-zeniaRosaOscuro">immediate</strong> effect, combats sagging, suitable for any skin type, <strong class="font-bold underline text-zeniaRosaOscuro">outpatient</strong> non-invasive treatment.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">NON-SURGICAL FACIAL LIFTING WITH THREAD LIFTS</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Thread lifts</strong> are fine threads made of <strong class="font-bold underline text-zeniaRosaOscuro">resorbable</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">hypoallergenic</strong> materials inserted under the skin to provide an immediate lifting effect. Effects last 12 to 18 months and promote collagen production.</p>`,
+      },
+      {
+        summary: 'Facial Rejuvenation',
+        title: 'FACIAL MESOTHERAPY',
+        body: `<p>Facial mesotherapy is a <strong class="font-bold underline text-zeniaRosaOscuro">preventive and corrective treatment</strong> for dehydrated, dry skin with spots and fine lines. Consists of <strong class="font-bold underline text-zeniaRosaOscuro">microinjections</strong> of revitalising substances (hyaluronic acid, oligoelements, peptides, amino acids, etc.).</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FACIAL PHOTO-REJUVENATION WITH PHOTOBIODYNAMICS</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Photobiodynamic</strong> therapy combines High Density Diodes light from the <strong class="font-bold underline text-zeniaRosaOscuro">Fotoage</strong> mask with <strong class="font-bold underline text-zeniaRosaOscuro">Skinox</strong> photosensitive products. A <strong class="font-bold underline text-zeniaRosaOscuro">non-invasive</strong> technique treating pigmentation, redness and unifying skin tone.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">MICRONEEDLING</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Microneedling</strong> creates <strong class="font-bold underline text-zeniaRosaOscuro">micro-perforations</strong> to rejuvenate the skin. The <strong class="font-bold underline text-zeniaRosaOscuro">SkinPen® Precision</strong> is the most advanced microneedling technology — the only FDA-approved device of its kind.</p>`,
+      },
+      {
+        summary: 'Facial Peeling',
+        title: 'MEDICAL CHEMICAL PEELING',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Medical chemical peeling</strong> serves to <strong class="font-bold underline text-zeniaRosaOscuro">regenerate</strong> the skin by detaching its most superficial layers. It consists of applying a formulation of combined acids to exfoliate the outer layers and stimulate natural renewal.</p>
+<p>We use from the <strong class="font-bold underline text-zeniaRosaOscuro">Naqua Smart Peels</strong> (for acne, pigmentation and fine lines) to <strong class="font-bold underline text-zeniaRosaOscuro">deep peels</strong> like <strong class="font-bold underline text-zeniaRosaOscuro">N-Phenol</strong> with powerful regenerative capacity.</p>`,
+      },
+      {
+        summary: 'Mascu-Look',
+        title: 'THE MASCULINE LOOK',
+        body: `<p>With mascu-look, <strong class="font-bold underline text-zeniaRosaOscuro">masculine features</strong> are accentuated, with special attention to the jawline and chin, giving them a more angular and attractive appearance.</p>
+<p>Dr. Flores de Apodaca will choose to infiltrate different products, highlighting <strong class="font-bold underline text-zeniaRosaOscuro">hyaluronic acid</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">calcium hydroxyapatite</strong>. Effects last 10 to 18 months.</p>`,
+      },
+    ],
+  },
+  fr: {
+    title: 'Médecine Esthétique Faciale',
+    treatments: [
+      {
+        summary: 'Traitement des Rides Dynamiques avec Neuromodulateurs',
+        title: 'LIGNES D\'EXPRESSION',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">neuromodulation</strong> consiste à utiliser une substance qui agit au niveau des terminaisons nerveuses, produisant une <strong class="font-bold underline text-zeniaRosaOscuro">relaxation musculaire</strong>, réduisant sa force et empêchant ainsi les lignes d'expression de se marquer.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Quelle est la durée des effets ?</strong><br/>La durée des effets varie selon le patient. La pratique clinique a démontré une visibilité moyenne du traitement d'environ <strong class="font-bold underline text-zeniaRosaOscuro">4 à 6 mois</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Avantages :</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Traitement réalisable <strong class="font-bold underline text-zeniaRosaOscuro">en toute saison</strong>.</li><li>&#9679; Application très <strong class="font-bold underline text-zeniaRosaOscuro">rapide</strong>, pratiquement <strong class="font-bold underline text-zeniaRosaOscuro">indolore</strong>.</li><li>&#9679; Grande capacité à <strong class="font-bold underline text-zeniaRosaOscuro">prévenir et réduire</strong> les lignes d'expression.</li></ul>`,
+      },
+      {
+        summary: 'Rajeunissement du Regard',
+        title: 'LIFTING DES PAUPIÈRES SANS CHIRURGIE',
+        body: `<p>À la clinique de la Dra. Flores de Apodaca, nous disposons de deux techniques pour le <strong class="font-bold underline text-zeniaRosaOscuro">rajeunissement des paupières</strong> sans chirurgie : élévation des paupières avec l'appareil <strong class="font-bold underline text-zeniaRosaOscuro">Ultracel Q+</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">Blépharolaser</strong> avec l'appareil <strong class="font-bold underline text-zeniaRosaOscuro">Plasma BT</strong>.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> applique des <strong class="font-bold underline text-zeniaRosaOscuro">ultrasons focalisés haute intensité</strong> pour une plus grande fermeté et élasticité de la peau. Le Plasma BT est un procédé <strong class="font-bold underline text-zeniaRosaOscuro">mini-invasif</strong> avec récupération rapide (7 à 10 jours).</p>`,
+      },
+      {
+        summary: 'Traitement des Cernes',
+        title: 'TRAITEMENT DES CERNES',
+        body: `<p>Nous utilisons deux traitements pour les cernes : la <strong class="font-bold underline text-zeniaRosaOscuro">carbothérapie</strong> combinée au <strong class="font-bold underline text-zeniaRosaOscuro">PRP (plasma riche en plaquettes)</strong>, avec de très bons résultats pour les cernes pigmentés et vasculaires.</p>
+<p>Nous pouvons également traiter les cernes avec de l'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique (AH)</strong> pour soulever le creux et récupérer la qualité de la peau.</p>`,
+      },
+      {
+        summary: 'Remplissages et Volumisations',
+        title: 'REMPLISSAGES ET VOLUMISATEURS',
+        body: `<p>Les <strong class="font-bold underline text-zeniaRosaOscuro">remplissages et volumisateurs</strong> sont un excellent traitement pour restaurer la beauté naturelle du visage avec trois objectifs : <strong class="font-bold underline text-zeniaRosaOscuro">effet tenseur</strong>, volumisation et restauration des <strong class="font-bold underline text-zeniaRosaOscuro">volumes perdus</strong>, et correction des <strong class="font-bold underline text-zeniaRosaOscuro">rides</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Principales substances :</strong></p>
+<ul class="space-y-1 list-none"><li><strong class="font-bold underline text-zeniaRosaOscuro">Acide hyaluronique (AH)</strong></li><li><strong class="font-bold underline text-zeniaRosaOscuro">Hydroxyapatite calcique</strong></li><li>Polydioxanone liquide (<strong class="font-bold underline text-zeniaRosaOscuro">ULTRACOL</strong>)</li><li><strong class="font-bold underline text-zeniaRosaOscuro">Acide polylactique</strong></li></ul>`,
+      },
+      {
+        summary: 'Rhinomodélisation',
+        title: 'RHINOMODÉLISATION OU BIOPLASTIE DU NEZ',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">rhinomodélisation</strong> est une technique <strong class="font-bold underline text-zeniaRosaOscuro">non invasive</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">non chirurgicale</strong>, offrant une solution à résultat immédiat pour corriger le profil courbé ou aquilin, la double courbe ou la pointe tombante.</p>
+<p>C'est un procédé entièrement <strong class="font-bold underline text-zeniaRosaOscuro">ambulatoire</strong>. La rhinomodélisation ne réduit pas la taille du nez mais le <strong class="font-bold underline text-zeniaRosaOscuro">modèle</strong>, le <strong class="font-bold underline text-zeniaRosaOscuro">corrige</strong> et l'<strong class="font-bold underline text-zeniaRosaOscuro">affine</strong>. Durée moyenne du traitement : <strong class="font-bold underline text-zeniaRosaOscuro">12 à 24 mois</strong>.</p>`,
+      },
+      {
+        summary: 'Traitement des Lèvres',
+        title: 'EMBELLISSEMENT DES LÈVRES',
+        body: `<p>À la clinique de la Dra. Flores de Apodaca, le traitement d'embellissement des lèvres consiste principalement à : <strong class="font-bold underline text-zeniaRosaOscuro">hydrater, donner du volume et définir</strong>.</p>
+<p>L'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique (AH)</strong> est utilisé pour embellir les lèvres via une technique mini-invasive. Il permet d'hydrater, d'ajouter du volume et de définir des contours comme le bien connu <strong class="font-bold underline text-zeniaRosaOscuro">"arc de Cupidon"</strong>.</p>`,
+      },
+      {
+        summary: 'Remodelage de la Zone Péribuccale et Plis d\'Amertume',
+        title: 'CORRECTION DU SOURIRE GINGIVAL',
+        body: `<p>Le <strong class="font-bold underline text-zeniaRosaOscuro">sourire gingival</strong> peut être traité par l'application de <strong class="font-bold underline text-zeniaRosaOscuro">neuromodulateurs</strong> et complémentairement d'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique</strong>.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">BIOPLASTIE DU MENTON</h3>
+<p>La <strong class="font-bold underline text-zeniaRosaOscuro">bioplastie</strong> consiste en des infiltrations d'acide hyaluronique au niveau de l'angle du menton pour harmoniser le visage de manière ambulatoire. Durée de 30 à 40 minutes.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">REMODELAGE DES PLIS D'AMERTUME ET DE LA ZONE PÉRIBUCCALE</h3>
+<p>Les <strong class="font-bold underline text-zeniaRosaOscuro">plis d'amertume</strong> sont traités avec de l'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique</strong> ou du <strong class="font-bold underline text-zeniaRosaOscuro">Radiesse</strong>.</p>`,
+      },
+      {
+        summary: 'Redensification et Remodelage Facial',
+        title: 'REDENSIFICATION FACIALE',
+        body: `<p>La <strong class="font-bold underline text-zeniaRosaOscuro">redensification</strong> est un traitement de rajeunissement innovant sans chirurgie par microinjections d'<strong class="font-bold underline text-zeniaRosaOscuro">inducteurs de collagène</strong> dans le <strong class="font-bold underline text-zeniaRosaOscuro">VISAGE, COU ET DÉCOLLETÉ</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Avantages :</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Résultats <strong class="font-bold underline text-zeniaRosaOscuro">durables</strong> de 12-18 mois.</li><li>&#9679; Traitement <strong class="font-bold underline text-zeniaRosaOscuro">ambulatoire</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Indolore</strong>, réalisé sous anesthésie locale.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Prévient</strong> les rides du visage, du cou et du décolleté.</li></ul>`,
+      },
+      {
+        summary: 'Lifting Facial Non Chirurgical',
+        title: 'LIFTING FACIAL NON CHIRURGICAL AVEC ULTRACEL Q+',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> applique des <strong class="font-bold underline text-zeniaRosaOscuro">ultrasons focalisés haute intensité</strong> capables d'atteindre la même profondeur dermique qu'un lifting chirurgical.</p>
+<p>Avantages : effet <strong class="font-bold underline text-zeniaRosaOscuro">immédiat</strong>, combat le relâchement, convient à tous types de peau, traitement <strong class="font-bold underline text-zeniaRosaOscuro">ambulatoire</strong> non invasif.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">LIFTING FACIAL SANS CHIRURGIE AVEC FILS TENSEURS</h3>
+<p>Les <strong class="font-bold underline text-zeniaRosaOscuro">fils tenseurs</strong> sont des fils fins en matériaux <strong class="font-bold underline text-zeniaRosaOscuro">résorbables</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">anti-allergiques</strong> insérés sous la peau pour un effet lifting immédiat. Les effets durent 12 à 18 mois et promeuvent la création de collagène.</p>`,
+      },
+      {
+        summary: 'Rajeunissement Facial',
+        title: 'MÉSOTHÉRAPIE FACIALE',
+        body: `<p>La mésothérapie faciale est un traitement <strong class="font-bold underline text-zeniaRosaOscuro">préventif et de choc</strong> pour les peaux déshydratées avec taches et rides fines. Consiste en des <strong class="font-bold underline text-zeniaRosaOscuro">micro-injections</strong> de substances revitalisantes (acide hyaluronique, oligoéléments, peptides, acides aminés, etc.).</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">PHOTO-RAJEUNISSEMENT FACIAL AVEC PHOTOBIODYNAMIQUE</h3>
+<p>La thérapie <strong class="font-bold underline text-zeniaRosaOscuro">photobiodynamique</strong> combine la lumière High Density Diodes du masque <strong class="font-bold underline text-zeniaRosaOscuro">Fotoage</strong> avec les produits photosensibles <strong class="font-bold underline text-zeniaRosaOscuro">Skinox</strong>. Technique <strong class="font-bold underline text-zeniaRosaOscuro">non invasive</strong> traitant les pigmentations, rougeurs et unifiant le teint.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">MICRONEEDLING</h3>
+<p>Le <strong class="font-bold underline text-zeniaRosaOscuro">microneedling</strong> crée des <strong class="font-bold underline text-zeniaRosaOscuro">micro-perforations</strong> pour rajeunir la peau. Le <strong class="font-bold underline text-zeniaRosaOscuro">SkinPen® Precision</strong> est la technologie de microneedling la plus avancée — seul appareil approuvé par la FDA.</p>`,
+      },
+      {
+        summary: 'Peeling Facial',
+        title: 'PEELING CHIMIQUE MÉDICAL',
+        body: `<p>Le <strong class="font-bold underline text-zeniaRosaOscuro">peeling chimique médical</strong> sert à <strong class="font-bold underline text-zeniaRosaOscuro">régénérer</strong> la peau en décollant ses couches les plus superficielles. Il consiste en l'application d'une formulation d'acides combinés.</p>
+<p>Nous utilisons depuis les <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peels de Naqua</strong> jusqu'aux peelings <strong class="font-bold underline text-zeniaRosaOscuro">profonds</strong> comme le <strong class="font-bold underline text-zeniaRosaOscuro">N-Phénol</strong> avec une puissante capacité régénératrice.</p>`,
+      },
+      {
+        summary: 'Mascu-Look',
+        title: 'À LA RECHERCHE DE L\'ATTRAIT MASCULIN',
+        body: `<p>Avec mascu-look, les <strong class="font-bold underline text-zeniaRosaOscuro">traits masculins</strong> sont accentués, en accordant une attention particulière à la mâchoire et au menton, leur donnant un aspect plus anguleux et attrayant.</p>
+<p>La Dra. Flores de Apodaca choisit d'infiltrer différents produits, notamment l'<strong class="font-bold underline text-zeniaRosaOscuro">acide hyaluronique</strong> et l'<strong class="font-bold underline text-zeniaRosaOscuro">hydroxyapatite calcique</strong>. Les effets durent 10 à 18 mois.</p>`,
+      },
+    ],
+  },
+  de: {
+    title: 'Gesichtsästhetische Medizin',
+    treatments: [
+      {
+        summary: 'Behandlung Dynamischer Falten mit Neuromodulatoren',
+        title: 'AUSDRUCKSLINIEN',
+        body: `<p>Die <strong class="font-bold underline text-zeniaRosaOscuro">Neuromodulation</strong> verwendet eine Substanz, die an den Nervenenden wirkt und eine <strong class="font-bold underline text-zeniaRosaOscuro">Muskelentspannung</strong> bewirkt, seine Kraft reduziert und so verhindert, dass sich Ausdruckslinien einprägen.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Wie lange halten die Effekte an?</strong><br/>Die durchschnittliche Sichtbarkeit des Behandlung liegt bei <strong class="font-bold underline text-zeniaRosaOscuro">4 bis 6 Monaten</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Vorteile:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Behandlung <strong class="font-bold underline text-zeniaRosaOscuro">zu jeder Jahreszeit</strong> möglich.</li><li>&#9679; Sehr <strong class="font-bold underline text-zeniaRosaOscuro">schnelle</strong>, praktisch <strong class="font-bold underline text-zeniaRosaOscuro">schmerzlose</strong> Anwendung.</li><li>&#9679; Große Fähigkeit, Ausdruckslinien zu <strong class="font-bold underline text-zeniaRosaOscuro">verhindern und reduzieren</strong>.</li></ul>`,
+      },
+      {
+        summary: 'Augenbereich-Verjüngung',
+        title: 'LIDLIFTING OHNE CHIRURGIE',
+        body: `<p>In der Klinik von Dr. Flores de Apodaca haben wir zwei Techniken für das chirurgiefreie <strong class="font-bold underline text-zeniaRosaOscuro">Lidverjüngung</strong>: Lidlifting mit dem <strong class="font-bold underline text-zeniaRosaOscuro">Ultracel Q+</strong>-Gerät und <strong class="font-bold underline text-zeniaRosaOscuro">Blepharolaser</strong> mit dem <strong class="font-bold underline text-zeniaRosaOscuro">Plasma BT</strong>-Gerät.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> wendet <strong class="font-bold underline text-zeniaRosaOscuro">hochintensiven fokussierten Ultraschall</strong> an. Plasma BT ist ein <strong class="font-bold underline text-zeniaRosaOscuro">minimal-invasives</strong> Verfahren mit schneller Erholung (7 bis 10 Tage).</p>`,
+      },
+      {
+        summary: 'Behandlung von Augenringen',
+        title: 'BEHANDLUNG VON AUGENRINGEN',
+        body: `<p>Wir wenden zwei Behandlungen für Augenringe an: <strong class="font-bold underline text-zeniaRosaOscuro">Karbotherapie</strong> kombiniert mit <strong class="font-bold underline text-zeniaRosaOscuro">PRP (Thrombozytenreiches Plasma)</strong>, mit sehr guten Ergebnissen bei pigmentierten und vaskulären Augenringen.</p>
+<p>Wir können Augenringe auch mit <strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure (HA)</strong> behandeln, um die Tränenrinne anzuheben und die Hautqualität wiederherzustellen.</p>`,
+      },
+      {
+        summary: 'Füller und Voluminisierungen',
+        title: 'FÜLLER UND VOLUMINISIERUNGSMITTEL',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Füller und Voluminisierungsmittel</strong> sind eine hervorragende Behandlung zur Wiederherstellung der natürlichen Gesichtsschönheit mit drei Hauptzielen: <strong class="font-bold underline text-zeniaRosaOscuro">Straffungseffekt</strong>, Voluminisierung und Wiederherstellung <strong class="font-bold underline text-zeniaRosaOscuro">verlorener Volumina</strong>, und Korrektur von <strong class="font-bold underline text-zeniaRosaOscuro">Falten</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Hauptsubstanzen:</strong></p>
+<ul class="space-y-1 list-none"><li><strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure (HA)</strong></li><li><strong class="font-bold underline text-zeniaRosaOscuro">Kalziumhydroxyapatit</strong></li><li>Flüssiges Polydioxanon (<strong class="font-bold underline text-zeniaRosaOscuro">ULTRACOL</strong>)</li><li><strong class="font-bold underline text-zeniaRosaOscuro">Polymilchsäure</strong></li></ul>`,
+      },
+      {
+        summary: 'Rhinomodellierung',
+        title: 'RHINOMODELLIERUNG ODER NASENBIOPLASTIK',
+        body: `<p>Die <strong class="font-bold underline text-zeniaRosaOscuro">Rhinomodellierung</strong> ist eine <strong class="font-bold underline text-zeniaRosaOscuro">nicht-invasive</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">nicht-chirurgische</strong> Technik mit sofortigem Ergebnis zur Korrektur gebogener oder adlernasenförmiger Profile, Doppelkurven oder hängender Spitzen.</p>
+<p>Es ist ein vollständig <strong class="font-bold underline text-zeniaRosaOscuro">ambulantes</strong> Verfahren. Rhinomodellierung reduziert nicht die Nasengröße, sondern <strong class="font-bold underline text-zeniaRosaOscuro">formt</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">korrigiert</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">verfeinert</strong> sie. Durchschnittliche Behandlungsdauer: <strong class="font-bold underline text-zeniaRosaOscuro">12 bis 24 Monate</strong>.</p>`,
+      },
+      {
+        summary: 'Lippenbehandlung',
+        title: 'LIPPENVERBESSERUNG',
+        body: `<p>In der Klinik von Dr. Flores de Apodaca haben wir eine spezifische Behandlung zur Lippenverbesserung, die hauptsächlich aus <strong class="font-bold underline text-zeniaRosaOscuro">Hydratation, Volumengebung und Konturierung</strong> besteht.</p>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure (HA)</strong> wird zur Lippenverbesserung eingesetzt, um Hydratation, Volumen und Konturierung des bekannten <strong class="font-bold underline text-zeniaRosaOscuro">"Amorbogen"</strong> zu erzielen. Ein Auffrischungsbehandlung ist nach etwa acht Monaten erforderlich.</p>`,
+      },
+      {
+        summary: 'Perioral-Bereich Umformung und Marionetten-Linien',
+        title: 'KORREKTUR DES GUMMY SMILE',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Gummy Smile</strong> kann durch die Anwendung von <strong class="font-bold underline text-zeniaRosaOscuro">Neuromodulatoren</strong> ergänzt mit <strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure</strong> behandelt werden.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">KINN-BIOPLASTIK</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Bioplastik</strong> besteht aus Hyaluronsäure-Injektionen am Kinnwinkel zur ambulanten Gesichtsharmonisierung. Dauer 30 bis 40 Minuten.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">UMFORMUNG DER MARIONETTEN-LINIEN UND DES PERIORAL-BEREICHS</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Marionetten-Linien</strong> werden mit <strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure</strong> oder <strong class="font-bold underline text-zeniaRosaOscuro">Radiesse</strong> behandelt.</p>`,
+      },
+      {
+        summary: 'Gesichts-Redensifikation und Umformung',
+        title: 'GESICHTS-REDENSIFIKATION',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Redensifikation</strong> ist eine innovative chirurgiefreie Verjüngungsbehandlung durch Mikroinjektionen von <strong class="font-bold underline text-zeniaRosaOscuro">Kollagen-Induktoren</strong> in <strong class="font-bold underline text-zeniaRosaOscuro">GESICHT, HALS UND DEKOLLETÉ</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Vorteile:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Langanhaltende</strong> Ergebnisse von 12-18 Monaten.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Ambulante</strong> Behandlung.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Schmerzlos</strong>, unter Lokalanästhesie.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Verhindert</strong> Falten im Gesicht, Hals und Dekolleté.</li></ul>`,
+      },
+      {
+        summary: 'Nicht-Chirurgisches Gesichtslifting',
+        title: 'NICHT-CHIRURGISCHES GESICHTSLIFTING MIT ULTRACEL Q+',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">Ultracell Q+</strong> wendet <strong class="font-bold underline text-zeniaRosaOscuro">hochintensiven fokussierten Ultraschall</strong> an, der die gleiche Dermistiefe wie ein chirurgisches Lifting erreicht.</p>
+<p>Vorteile: <strong class="font-bold underline text-zeniaRosaOscuro">sofortiger</strong> Effekt, bekämpft Schlaffheit, für jeden Hauttyp geeignet, <strong class="font-bold underline text-zeniaRosaOscuro">ambulante</strong> nicht-invasive Behandlung.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">GESICHTSLIFTING OHNE CHIRURGIE MIT FADENLIFTING</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Fäden</strong> sind dünne, aus <strong class="font-bold underline text-zeniaRosaOscuro">resorbierbaren</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">hypoallergenen</strong> Materialien gefertigte Fäden, die unter die Haut eingeführt werden und einen sofortigen Lifting-Effekt erzeugen. Wirkung hält 12 bis 18 Monate an und fördert die Kollagenbildung.</p>`,
+      },
+      {
+        summary: 'Gesichtsverjüngung',
+        title: 'GESICHTS-MESOTHERAPIE',
+        body: `<p>Gesichts-Mesotherapie ist eine <strong class="font-bold underline text-zeniaRosaOscuro">präventive und korrigierende Behandlung</strong> für dehydrierte, trockene Haut mit Flecken und feinen Linien durch <strong class="font-bold underline text-zeniaRosaOscuro">Mikroinjektionen</strong> revitalisierender Substanzen.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">GESICHTS-FOTO-VERJÜNGUNG MIT PHOTOBIODYNAMIK</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Photobiodynamische</strong> Therapie kombiniert High Density Diodes Licht der <strong class="font-bold underline text-zeniaRosaOscuro">Fotoage</strong>-Maske mit <strong class="font-bold underline text-zeniaRosaOscuro">Skinox</strong> Photosensibilisatoren. <strong class="font-bold underline text-zeniaRosaOscuro">Nicht-invasive</strong> Technik zur Behandlung von Pigmentierungen und Rötungen.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">MICRONEEDLING</h3>
+<p><strong class="font-bold underline text-zeniaRosaOscuro">Microneedling</strong> erzeugt <strong class="font-bold underline text-zeniaRosaOscuro">Mikro-Perforationen</strong> zur Hautverjüngung. Der <strong class="font-bold underline text-zeniaRosaOscuro">SkinPen® Precision</strong> ist die fortschrittlichste Microneedling-Technologie — einziges FDA-zugelassenes Gerät seiner Art.</p>`,
+      },
+      {
+        summary: 'Gesichtspeeling',
+        title: 'MEDIZINISCHES CHEMISCHES PEELING',
+        body: `<p>Das <strong class="font-bold underline text-zeniaRosaOscuro">medizinische chemische Peeling</strong> dient zur <strong class="font-bold underline text-zeniaRosaOscuro">Regeneration</strong> der Haut durch Ablösung ihrer oberflächlichsten Schichten mit kombinierten Säuren.</p>
+<p>Wir verwenden von den <strong class="font-bold underline text-zeniaRosaOscuro">Naqua Smart Peels</strong> bis zu <strong class="font-bold underline text-zeniaRosaOscuro">tiefen Peelings</strong> wie <strong class="font-bold underline text-zeniaRosaOscuro">N-Phenol</strong> mit starker Regenerationsfähigkeit.</p>`,
+      },
+      {
+        summary: 'Mascu-Look',
+        title: 'AUF DER SUCHE NACH MÄNNLICHER ATTRAKTIVITÄT',
+        body: `<p>Mit mascu-look werden <strong class="font-bold underline text-zeniaRosaOscuro">männliche Züge</strong> betont, mit besonderem Augenmerk auf Kiefer und Kinn und gibt ihnen ein eckigeres und attraktiveres Erscheinungsbild.</p>
+<p>Dr. Flores de Apodaca wählt die Infiltration verschiedener Produkte, insbesondere <strong class="font-bold underline text-zeniaRosaOscuro">Hyaluronsäure</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Kalziumhydroxyapatit</strong>. Wirkungsdauer 10 bis 18 Monate.</p>`,
+      },
+    ],
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<div>
+  {c.treatments.map((t) => (
+    <details class="border-b border-zeniaMarronClaro/30">
+      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+        {t.summary}
+      </summary>
+      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-4 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
+        <div set:html={t.body} />
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .tratamiento-summary::after {
+    content: '';
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f68ea2' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  details[open] .tratamiento-summary::after {
+    transform: rotate(180deg);
+  }
+  details[open] .tratamiento-body {
+    animation: revealPanel 0.25s ease-out;
+  }
+  @keyframes revealPanel {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

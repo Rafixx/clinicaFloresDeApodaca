@@ -1,1 +1,95 @@
-<h1>Integrativa</h1>
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Consulta de Medicina Integrativa',
+    p1: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Medicina Integrativa</strong> combina lo mejor de la medicina convencional con terapias complementarias, siempre basada en la evidencia científica. En Clínica Flores de Apodaca, realizamos un análisis pormenorizado de las causas que provocan la patología por la que acude el paciente y ponemos a su disposición tratamientos que engloban la medicina convencional y natural para su curación.',
+    p2: 'Analizamos los <strong class="font-bold underline text-zeniaRosaOscuro">factores ambientales</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">genética</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">nutrición</strong>, los <strong class="font-bold underline text-zeniaRosaOscuro">hábitos de vida</strong> y las patologías de base que pueda presentar cada paciente, evaluando su influencia en la estabilidad del sistema inmunitario y en la aparición de diferentes enfermedades.',
+    p3: 'Tratamos a pacientes que presentan fatiga o cansancio crónico, Long COVID, reactivaciones del virus de Epstein-Barr que provocan trastornos intestinales, infecciones recurrentes, dermatitis y afectaciones de la piel, entre otras.',
+    studiesTitle: 'Dentro de los diferentes estudios solicitados se encuentran:',
+    studies: [
+      'El análisis del estado del sistema inmunitario.',
+      'El estudio de la <strong class="font-bold underline text-zeniaRosaOscuro">Microbiota Intestinal</strong>, en coordinación con el Instituto de Microecología, lo que nos permite identificar si existe <strong class="font-bold underline text-zeniaRosaOscuro">permeabilidad de la membrana intestinal</strong>, así como evaluar la correcta composición de toda la microbiota del intestino para mantener un estado de salud adecuado.',
+      'El <strong class="font-bold underline text-zeniaRosaOscuro">control de peso y obesidad</strong>.',
+    ],
+    p4: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Medicina Integrativa</strong> está asociada a la restitución de la salud, valorando todos los aspectos que rodean al individuo para mantener el organismo desintoxicado y un sistema inmunitario fuerte.',
+    p5: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Flores de Apodaca</strong> pone a vuestra disposición una consulta en la que valora al paciente de forma integral, contando con métodos diagnósticos y terapéuticos para ayudar a recuperar y preservar tu salud.',
+    cta: 'Si tienes algún síntoma o signo de que tu salud puede estar alterada, consúltanos y te ayudaremos.',
+  },
+  en: {
+    title: 'Integrative Medicine Consultation',
+    p1: '<strong class="font-bold underline text-zeniaRosaOscuro">Integrative Medicine</strong> combines the best of conventional medicine with complementary therapies, always based on scientific evidence. At Clinica Flores de Apodaca, we carry out a detailed analysis of the causes of the patient\'s condition and offer treatments encompassing both conventional and natural medicine for their recovery.',
+    p2: 'We analyze <strong class="font-bold underline text-zeniaRosaOscuro">environmental factors</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">genetics</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">nutrition</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">lifestyle habits</strong> and underlying conditions each patient may present, evaluating their influence on immune system stability and the onset of different diseases.',
+    p3: 'We treat patients with chronic fatigue, Long COVID, Epstein-Barr virus reactivations causing intestinal disorders, recurrent infections, dermatitis and skin conditions, among others.',
+    studiesTitle: 'Among the different studies requested are:',
+    studies: [
+      'Analysis of the immune system status.',
+      'Study of the <strong class="font-bold underline text-zeniaRosaOscuro">Intestinal Microbiota</strong>, in coordination with the Institute of Microecology, which allows us to identify <strong class="font-bold underline text-zeniaRosaOscuro">intestinal membrane permeability</strong>, and to evaluate the correct composition of the entire intestinal microbiota to maintain an adequate state of health.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Weight and obesity control</strong>.',
+    ],
+    p4: '<strong class="font-bold underline text-zeniaRosaOscuro">Integrative Medicine</strong> is associated with the restoration of health, evaluating all aspects surrounding the individual to keep the body detoxified and the immune system strong.',
+    p5: '<strong class="font-bold underline text-zeniaRosaOscuro">Dr. Flores de Apodaca</strong> offers a consultation in which the patient is evaluated comprehensively, with diagnostic and therapeutic methods to help recover and preserve your health.',
+    cta: 'If you have any symptoms or signs that your health may be altered, consult us and we will help you.',
+  },
+  fr: {
+    title: 'Consultation de Médecine Intégrative',
+    p1: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Médecine Intégrative</strong> combine le meilleur de la médecine conventionnelle avec des thérapies complémentaires, toujours basée sur des preuves scientifiques. À la Clinica Flores de Apodaca, nous effectuons une analyse détaillée des causes de la pathologie pour laquelle le patient consulte et mettons à sa disposition des traitements englobant la médecine conventionnelle et naturelle pour sa guérison.',
+    p2: 'Nous analysons les <strong class="font-bold underline text-zeniaRosaOscuro">facteurs environnementaux</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">génétique</strong>, la <strong class="font-bold underline text-zeniaRosaOscuro">nutrition</strong>, les <strong class="font-bold underline text-zeniaRosaOscuro">habitudes de vie</strong> et les pathologies de base que chaque patient peut présenter, en évaluant leur influence sur la stabilité du système immunitaire et l\'apparition de différentes maladies.',
+    p3: 'Nous traitons des patients présentant de la fatigue ou un épuisement chronique, le Long COVID, des réactivations du virus Epstein-Barr provoquant des troubles intestinaux, des infections récurrentes, des dermatites et des affections cutanées, entre autres.',
+    studiesTitle: 'Parmi les différentes études demandées, on trouve :',
+    studies: [
+      "L'analyse de l'état du système immunitaire.",
+      'L\'étude du <strong class="font-bold underline text-zeniaRosaOscuro">Microbiote Intestinal</strong>, en coordination avec l\'Institut de Microécologie, ce qui nous permet d\'identifier s\'il existe une <strong class="font-bold underline text-zeniaRosaOscuro">perméabilité de la membrane intestinale</strong>, ainsi que d\'évaluer la composition correcte de tout le microbiote intestinal pour maintenir un état de santé adéquat.',
+      'Le <strong class="font-bold underline text-zeniaRosaOscuro">contrôle du poids et de l\'obésité</strong>.',
+    ],
+    p4: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Médecine Intégrative</strong> est associée à la restauration de la santé, en évaluant tous les aspects entourant l\'individu pour maintenir l\'organisme désintoxiqué et un système immunitaire fort.',
+    p5: 'La <strong class="font-bold underline text-zeniaRosaOscuro">Dra. Flores de Apodaca</strong> met à votre disposition une consultation dans laquelle le patient est évalué de manière globale, avec des méthodes diagnostiques et thérapeutiques pour aider à récupérer et préserver votre santé.',
+    cta: 'Si vous présentez des symptômes ou des signes que votre santé pourrait être altérée, consultez-nous et nous vous aiderons.',
+  },
+  de: {
+    title: 'Integrative Medizin Konsultation',
+    p1: 'Die <strong class="font-bold underline text-zeniaRosaOscuro">Integrative Medizin</strong> kombiniert das Beste der konventionellen Medizin mit komplementären Therapien, immer auf wissenschaftlicher Grundlage. In der Clinica Flores de Apodaca führen wir eine detaillierte Analyse der Ursachen der Erkrankung durch, derentwegen der Patient zu uns kommt, und stellen Behandlungen zur Verfügung, die konventionelle und natürliche Medizin für seine Genesung umfassen.',
+    p2: 'Wir analysieren <strong class="font-bold underline text-zeniaRosaOscuro">Umweltfaktoren</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">Genetik</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">Ernährung</strong>, <strong class="font-bold underline text-zeniaRosaOscuro">Lebensgewohnheiten</strong> und Grunderkrankungen, die jeder Patient aufweisen kann, und bewerten deren Einfluss auf die Stabilität des Immunsystems und das Auftreten verschiedener Krankheiten.',
+    p3: 'Wir behandeln Patienten mit chronischer Müdigkeit oder Erschöpfung, Long COVID, Reaktivierungen des Epstein-Barr-Virus, die Darmstörungen verursachen, wiederkehrende Infektionen, Dermatitis und Hauterkrankungen, unter anderem.',
+    studiesTitle: 'Zu den verschiedenen angeforderten Untersuchungen gehören:',
+    studies: [
+      'Die Analyse des Zustands des Immunsystems.',
+      'Die Untersuchung der <strong class="font-bold underline text-zeniaRosaOscuro">Darmmikrobiota</strong>, in Zusammenarbeit mit dem Institut für Mikroökologie, was uns ermöglicht, eine <strong class="font-bold underline text-zeniaRosaOscuro">Permeabilität der Darmmembran</strong> zu identifizieren sowie die korrekte Zusammensetzung der gesamten Darmmikrobiota zu bewerten, um einen angemessenen Gesundheitszustand zu erhalten.',
+      'Die <strong class="font-bold underline text-zeniaRosaOscuro">Gewichts- und Adipositaskontrolle</strong>.',
+    ],
+    p4: 'Die <strong class="font-bold underline text-zeniaRosaOscuro">Integrative Medizin</strong> ist mit der Wiederherstellung der Gesundheit verbunden und bewertet alle Aspekte rund um das Individuum, um den Körper entgiftet und das Immunsystem stark zu halten.',
+    p5: 'Die <strong class="font-bold underline text-zeniaRosaOscuro">Dr. Flores de Apodaca</strong> stellt Ihnen eine Konsultation zur Verfügung, bei der der Patient umfassend bewertet wird, mit diagnostischen und therapeutischen Methoden, um Ihre Gesundheit wiederherzustellen und zu erhalten.',
+    cta: 'Wenn Sie Symptome oder Anzeichen haben, dass Ihre Gesundheit beeinträchtigt sein könnte, konsultieren Sie uns und wir helfen Ihnen.',
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<div class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 space-y-5 mt-8 max-w-3xl mx-auto border-l-2 border-zeniaRosaOscuro/20 pl-6">
+
+  <p set:html={c.p1} />
+  <p set:html={c.p2} />
+  <p set:html={c.p3} />
+
+  <p class="font-semibold text-zeniaMarronOscuro">{c.studiesTitle}</p>
+  <ul class="list-none space-y-2">
+    {c.studies.map((study) => (
+      <li set:html={`&#9679; ${study}`} />
+    ))}
+  </ul>
+
+  <p set:html={c.p4} />
+  <p set:html={c.p5} />
+
+  <p class="font-semibold text-zeniaRosaOscuro">{c.cta}</p>
+
+</div>

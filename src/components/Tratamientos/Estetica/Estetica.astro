@@ -1,0 +1,226 @@
+---
+interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const content = {
+  es: {
+    title: 'Tratamientos de Estética',
+    treatments: [
+      {
+        summary: 'Estética Facial',
+        title: 'ESTÉTICA FACIAL',
+        body: `<p>En nuestra clínica también encontrarás tratamientos de <strong class="font-bold underline text-zeniaRosaOscuro">estética facial</strong> dirigidos a proporcionar un <strong class="font-bold underline text-zeniaRosaOscuro">mantenimiento</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">cuidado de la piel</strong> de forma continua y programada.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Los principales tratamientos que ofrecemos son:</strong></p>
+<ul class="list-none space-y-1"><li>&#9679; Limpieza facial profunda</li><li>&#9679; Tratamiento detoxificante, hidratante y nutritivo</li><li>&#9679; Radiofrecuencia facial + mascarilla de carboxiterapia</li><li>&#9679; Mascarilla de carboxiterapia</li><li>&#9679; Drenaje linfático facial</li><li>&#9679; Tratamiento de regeneración epidérmica</li><li>&#9679; Microblading y micropigmentación de cejas, eyeliner y labios</li><li>&#9679; Y muchos más</li></ul>
+<p>Ofrecemos cuidados y tratamientos personalizados tras un estudio pormenorizado de la piel. <strong class="font-bold text-zeniaRosaOscuro">Consúltanos.</strong></p>`,
+      },
+      {
+        summary: 'Mei Light Therapy',
+        title: 'MEI LIGHT THERAPY',
+        body: `<p>Es un <strong class="font-bold underline text-zeniaRosaOscuro">equipo multifuncional</strong> con la finalidad de avanzar en el tratamiento para la salud de la piel. Equipo de tres corrientes combinadas (galvánica, alta frecuencia y media frecuencia) superpuestas en una onda por micropulsos.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FUNCIONES</h3>
+<p><strong class="font-bold text-zeniaMarronOscuro">Ionización</strong> (microcorriente galvánica por pulsos): introduce sustancias en el organismo a través de la piel — <strong class="font-bold underline text-zeniaRosaOscuro">Mesoterapia Virtual</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Oxigenación</strong> (microcorriente de Alta Frecuencia): favorece una mayor irrigación sanguínea y <strong class="font-bold underline text-zeniaRosaOscuro">oxigenación de los tejidos</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Electro Lifting</strong> (microcorriente de media Frecuencia): produce un <strong class="font-bold underline text-zeniaRosaOscuro">efecto lifting</strong> que tonifica y proporciona firmeza a la piel.</p>`,
+      },
+      {
+        summary: 'Eliminación de Tatuajes con Picolaser',
+        title: 'ELIMINAR TATUAJES CON PICOLASER',
+        body: `<p>Quitar tatuajes con picoláser es una de las técnicas más <strong class="font-bold underline text-zeniaRosaOscuro">efectiva y segura</strong> para borrar tatuajes sin que quede rastro de tinta. El picoláser produce un incremento brusco de la temperatura que provoca un estallamiento de los pigmentos en diminutas partículas, las cuales son fácilmente metabolizadas por el organismo.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">¿Cuántas sesiones se necesitan?</strong><br/>Casi todos requieren <strong class="font-bold underline text-zeniaRosaOscuro">al menos 3-6 sesiones</strong>, con un período de 30-35 días entre cada sesión.</p>`,
+      },
+      {
+        summary: 'Fotodepilación E-LIGHT',
+        title: 'FOTODEPILACIÓN E-LIGHT',
+        body: `<p>Es un sistema de belleza que combina <strong class="font-bold underline text-zeniaRosaOscuro">IPL (luz pulsada intensa)</strong> y la <strong class="font-bold underline text-zeniaRosaOscuro">radiofrecuencia (RF)</strong>, reduciendo el riesgo de quemaduras después del tratamiento.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Indicaciones:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Eliminación del <strong class="font-bold underline text-zeniaRosaOscuro">vello facial y corporal</strong>.</li><li>&#9679; Foto rejuvenecimiento.</li><li>&#9679; Tratamiento de manchas o pigmentaciones.</li></ul>
+<p>Para una fotodepilación eficiente normalmente se requieren entre <strong class="font-bold underline text-zeniaRosaOscuro">6-8 sesiones anuales</strong> con periodicidad mensual.</p>`,
+      },
+      {
+        summary: 'OXYPLUS',
+        title: 'OXYPLUS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">OXYPLUS</strong> ofrece un innovador tratamiento <strong class="font-bold underline text-zeniaRosaOscuro">no invasivo, relajante e indoloro</strong>. Combina la eficacia de la oxigenación, el sistema de vacío (Vacumterapia) y el nuevo sistema de hidratación Aqua Fuse.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Aplicaciones:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Higiene profunda</strong> de la piel.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Hidratar</strong> los tejidos.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Reafirmar</strong> la piel mejorando su elasticidad.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Rejuvenecer</strong> la piel con efecto antiaging.</li></ul>`,
+      },
+    ],
+  },
+  en: {
+    title: 'Aesthetic Treatments',
+    treatments: [
+      {
+        summary: 'Facial Aesthetics',
+        title: 'FACIAL AESTHETICS',
+        body: `<p>At our clinic you will also find <strong class="font-bold underline text-zeniaRosaOscuro">facial aesthetic</strong> treatments aimed at providing continuous, scheduled <strong class="font-bold underline text-zeniaRosaOscuro">skin maintenance and care</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Main treatments we offer:</strong></p>
+<ul class="list-none space-y-1"><li>&#9679; Deep facial cleansing</li><li>&#9679; Detoxifying, moisturising and nourishing treatment</li><li>&#9679; Facial radiofrequency + carboxytherapy mask</li><li>&#9679; Carboxytherapy mask</li><li>&#9679; Facial lymphatic drainage</li><li>&#9679; Epidermal regeneration treatment</li><li>&#9679; Microblading and micropigmentation of eyebrows, eyeliner and lips</li><li>&#9679; And many more</li></ul>
+<p>We offer personalised care and treatments after a detailed skin study. <strong class="font-bold text-zeniaRosaOscuro">Contact us.</strong></p>`,
+      },
+      {
+        summary: 'Mei Light Therapy',
+        title: 'MEI LIGHT THERAPY',
+        body: `<p>A <strong class="font-bold underline text-zeniaRosaOscuro">multifunctional device</strong> designed to advance skin health treatment. Three combined currents (galvanic, high frequency and medium frequency) superimposed in a micropulse wave.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FUNCTIONS</h3>
+<p><strong class="font-bold text-zeniaMarronOscuro">Ionisation</strong> (pulsed galvanic microcurrent): introduces substances into the body through the skin — <strong class="font-bold underline text-zeniaRosaOscuro">Virtual Mesotherapy</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Oxygenation</strong> (High Frequency microcurrent): promotes greater blood irrigation and <strong class="font-bold underline text-zeniaRosaOscuro">tissue oxygenation</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Electro Lifting</strong> (medium frequency microcurrent): produces a <strong class="font-bold underline text-zeniaRosaOscuro">lifting effect</strong> that tones and firms the skin.</p>`,
+      },
+      {
+        summary: 'Tattoo Removal with Picolaser',
+        title: 'TATTOO REMOVAL WITH PICOLASER',
+        body: `<p>Tattoo removal with picolaser is one of the most <strong class="font-bold underline text-zeniaRosaOscuro">effective and safe</strong> techniques for erasing tattoos without leaving any ink trace. The picolaser produces a rapid temperature increase that causes pigments to burst into tiny particles, which are easily metabolised by the body.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">How many sessions are needed?</strong><br/>Most require <strong class="font-bold underline text-zeniaRosaOscuro">at least 3-6 sessions</strong> with a period of 30-35 days between each session.</p>`,
+      },
+      {
+        summary: 'E-LIGHT Photoepilation',
+        title: 'E-LIGHT PHOTOEPILATION',
+        body: `<p>A beauty system combining <strong class="font-bold underline text-zeniaRosaOscuro">IPL (intense pulsed light)</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">radiofrequency (RF)</strong>, reducing the risk of post-treatment burns.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Indications:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Removal of <strong class="font-bold underline text-zeniaRosaOscuro">facial and body hair</strong>.</li><li>&#9679; Photo-rejuvenation.</li><li>&#9679; Treatment of spots or pigmentation.</li></ul>
+<p>Effective photoepilation normally requires <strong class="font-bold underline text-zeniaRosaOscuro">6-8 annual sessions</strong> on a monthly basis.</p>`,
+      },
+      {
+        summary: 'OXYPLUS',
+        title: 'OXYPLUS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">OXYPLUS</strong> offers an innovative <strong class="font-bold underline text-zeniaRosaOscuro">non-invasive, relaxing and painless</strong> skin care treatment. It combines the efficacy of oxygenation, the vacuum system (Vacumtherapy) and the new Aqua Fuse hydration system.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Applications:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Deep skin cleansing</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Tissue hydration</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Firming</strong> the skin and improving elasticity.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Rejuvenating</strong> the skin with anti-ageing effect.</li></ul>`,
+      },
+    ],
+  },
+  fr: {
+    title: 'Traitements Esthétiques',
+    treatments: [
+      {
+        summary: 'Esthétique Faciale',
+        title: 'ESTHÉTIQUE FACIALE',
+        body: `<p>Dans notre clinique vous trouverez également des traitements d'<strong class="font-bold underline text-zeniaRosaOscuro">esthétique faciale</strong> visant à fournir un <strong class="font-bold underline text-zeniaRosaOscuro">entretien et soin de la peau</strong> continu et programmé.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Principaux traitements proposés :</strong></p>
+<ul class="list-none space-y-1"><li>&#9679; Nettoyage facial en profondeur</li><li>&#9679; Traitement détoxifiant, hydratant et nourrissant</li><li>&#9679; Radiofréquence faciale + masque carbothérapie</li><li>&#9679; Masque carbothérapie</li><li>&#9679; Drainage lymphatique facial</li><li>&#9679; Traitement de régénération épidermique</li><li>&#9679; Microblading et micropigmentation des sourcils, eye-liner et lèvres</li><li>&#9679; Et bien d'autres</li></ul>
+<p>Nous offrons des soins et traitements personnalisés après une étude détaillée de la peau. <strong class="font-bold text-zeniaRosaOscuro">Consultez-nous.</strong></p>`,
+      },
+      {
+        summary: 'Mei Light Therapy',
+        title: 'MEI LIGHT THERAPY',
+        body: `<p>Un <strong class="font-bold underline text-zeniaRosaOscuro">appareil multifonctionnel</strong> conçu pour améliorer les soins de santé de la peau. Trois courants combinés (galvanique, haute fréquence et moyenne fréquence) superposés en une onde par micropulsions.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FONCTIONS</h3>
+<p><strong class="font-bold text-zeniaMarronOscuro">Ionisation</strong> : introduit des substances dans l'organisme à travers la peau — <strong class="font-bold underline text-zeniaRosaOscuro">Mésothérapie Virtuelle</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Oxygénation</strong> : favorise une meilleure irrigation sanguine et l'<strong class="font-bold underline text-zeniaRosaOscuro">oxygénation des tissus</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Electro Lifting</strong> : produit un <strong class="font-bold underline text-zeniaRosaOscuro">effet lifting</strong> qui tonifie et raffermit la peau.</p>`,
+      },
+      {
+        summary: 'Suppression de Tatouages au Picolaser',
+        title: 'SUPPRESSION DE TATOUAGES AU PICOLASER',
+        body: `<p>L'élimination de tatouages au picolaser est l'une des techniques les plus <strong class="font-bold underline text-zeniaRosaOscuro">efficaces et sûres</strong> pour effacer les tatouages. Le picolaser provoque une explosion des pigments en infimes particules facilement métabolisées par l'organisme.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Combien de séances sont nécessaires ?</strong><br/>La plupart nécessitent <strong class="font-bold underline text-zeniaRosaOscuro">au moins 3-6 séances</strong> avec 30-35 jours entre chaque séance.</p>`,
+      },
+      {
+        summary: 'Photoépilation E-LIGHT',
+        title: 'PHOTOÉPILATION E-LIGHT',
+        body: `<p>Un système de beauté combinant <strong class="font-bold underline text-zeniaRosaOscuro">IPL (lumière pulsée intense)</strong> et la <strong class="font-bold underline text-zeniaRosaOscuro">radiofréquence (RF)</strong>, réduisant le risque de brûlures après le traitement.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Indications :</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Élimination des <strong class="font-bold underline text-zeniaRosaOscuro">poils du visage et du corps</strong>.</li><li>&#9679; Photo-rajeunissement.</li><li>&#9679; Traitement des taches ou pigmentations.</li></ul>
+<p>Une photoépilation efficace nécessite généralement <strong class="font-bold underline text-zeniaRosaOscuro">6-8 séances annuelles</strong> à intervalle mensuel.</p>`,
+      },
+      {
+        summary: 'OXYPLUS',
+        title: 'OXYPLUS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">OXYPLUS</strong> propose un traitement innovant <strong class="font-bold underline text-zeniaRosaOscuro">non invasif, relaxant et indolore</strong>. Il combine l'efficacité de l'oxygénation, le système d'aspiration (Vacumthérapie) et le nouveau système d'hydratation Aqua Fuse.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Applications :</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Nettoyage profond</strong> de la peau.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Hydratation</strong> des tissus.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Raffermissement</strong> de la peau.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Rajeunissement</strong> anti-âge de la peau.</li></ul>`,
+      },
+    ],
+  },
+  de: {
+    title: 'Ästhetische Behandlungen',
+    treatments: [
+      {
+        summary: 'Gesichtsästhetik',
+        title: 'GESICHTSÄSTHETIK',
+        body: `<p>In unserer Klinik finden Sie auch Behandlungen der <strong class="font-bold underline text-zeniaRosaOscuro">Gesichtsästhetik</strong>, die auf eine kontinuierliche und geplante <strong class="font-bold underline text-zeniaRosaOscuro">Hautpflege und -wartung</strong> ausgerichtet sind.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Hauptangebotene Behandlungen:</strong></p>
+<ul class="list-none space-y-1"><li>&#9679; Tiefe Gesichtsreinigung</li><li>&#9679; Entgiftende, feuchtigkeitsspendende und nährende Behandlung</li><li>&#9679; Gesichts-Radiofrequenz + Karbotherapie-Maske</li><li>&#9679; Karbotherapie-Maske</li><li>&#9679; Gesichtslymphdrainage</li><li>&#9679; Epidermale Regenerationsbehandlung</li><li>&#9679; Microblading und Mikropigmentierung der Augenbrauen, Eyeliner und Lippen</li><li>&#9679; Und viele mehr</li></ul>
+<p>Wir bieten personalisierte Pflege und Behandlungen nach einer detaillierten Hautuntersuchung an. <strong class="font-bold text-zeniaRosaOscuro">Fragen Sie uns.</strong></p>`,
+      },
+      {
+        summary: 'Mei Light Therapy',
+        title: 'MEI LIGHT THERAPY',
+        body: `<p>Ein <strong class="font-bold underline text-zeniaRosaOscuro">multifunktionales Gerät</strong> zur Verbesserung der Hautgesundheitsbehandlung. Drei kombinierte Ströme (galvanisch, hochfrequent und mittelfrequent) als Mikropulswelle überlagert.</p>
+<h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">FUNKTIONEN</h3>
+<p><strong class="font-bold text-zeniaMarronOscuro">Ionisation</strong> : führt Substanzen durch die Haut in den Körper ein — <strong class="font-bold underline text-zeniaRosaOscuro">Virtuelle Mesotherapie</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Sauerstoffversorgung</strong> : fördert bessere Blutversorgung und <strong class="font-bold underline text-zeniaRosaOscuro">Gewebeoxygenierung</strong>.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Elektro-Lifting</strong> : erzeugt einen <strong class="font-bold underline text-zeniaRosaOscuro">Lifting-Effekt</strong>, der die Haut strafft.</p>`,
+      },
+      {
+        summary: 'Tattooentfernung mit Pikolaser',
+        title: 'TATTOOENTFERNUNG MIT PIKOLASER',
+        body: `<p>Die Tattooentfernung mit Pikolaser ist eine der <strong class="font-bold underline text-zeniaRosaOscuro">effektivsten und sichersten</strong> Techniken zur restlosen Entfernung von Tätowierungen. Der Pikolaser erzeugt einen abrupten Temperaturanstieg, der die Pigmente in winzige Partikel zum Platzen bringt, die vom Körper leicht metabolisiert werden.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Wie viele Sitzungen werden benötigt?</strong><br/>Die meisten erfordern <strong class="font-bold underline text-zeniaRosaOscuro">mindestens 3-6 Sitzungen</strong> mit 30-35 Tagen Abstand zwischen jeder Sitzung.</p>`,
+      },
+      {
+        summary: 'E-LIGHT Photoepilation',
+        title: 'E-LIGHT PHOTOEPILATION',
+        body: `<p>Ein Schönheitssystem, das <strong class="font-bold underline text-zeniaRosaOscuro">IPL (intensive Pulslicht)</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">Radiofrequenz (RF)</strong> kombiniert und das Verbrennungsrisiko nach der Behandlung reduziert.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Indikationen:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; Entfernung von <strong class="font-bold underline text-zeniaRosaOscuro">Gesichts- und Körperhaar</strong>.</li><li>&#9679; Foto-Verjüngung.</li><li>&#9679; Behandlung von Flecken oder Pigmentierungen.</li></ul>
+<p>Für eine effektive Haarentfernung sind in der Regel <strong class="font-bold underline text-zeniaRosaOscuro">6-8 jährliche Sitzungen</strong> im monatlichen Rhythmus erforderlich.</p>`,
+      },
+      {
+        summary: 'OXYPLUS',
+        title: 'OXYPLUS',
+        body: `<p><strong class="font-bold underline text-zeniaRosaOscuro">OXYPLUS</strong> bietet eine innovative <strong class="font-bold underline text-zeniaRosaOscuro">nicht-invasive, entspannende und schmerzlose</strong> Hautpflegebehandlung. Es kombiniert die Wirksamkeit der Oxygenierung, des Vakuumsystems (Vakumtherapie) und des neuen Aqua Fuse Hydrationssystems.</p>
+<p><strong class="font-bold text-zeniaMarronOscuro">Anwendungen:</strong></p>
+<ul class="space-y-1 list-none"><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Tiefe Hautreinigung</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Gewebehydratation</strong>.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Straffung</strong> der Haut und Verbesserung der Elastizität.</li><li>&#9679; <strong class="font-bold underline text-zeniaRosaOscuro">Verjüngung</strong> der Haut mit Anti-Aging-Effekt.</li></ul>`,
+      },
+    ],
+  },
+};
+
+const c = content[lang as keyof typeof content] || content.es;
+---
+
+<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+  {c.title}
+</h1>
+
+<div>
+  {c.treatments.map((t) => (
+    <details class="border-b border-zeniaMarronClaro/30">
+      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+        {t.summary}
+      </summary>
+      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-4 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
+        <div set:html={t.body} />
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .tratamiento-summary::after {
+    content: '';
+    flex-shrink: 0;
+    margin-left: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f68ea2' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  details[open] .tratamiento-summary::after {
+    transform: rotate(180deg);
+  }
+  details[open] .tratamiento-body {
+    animation: revealPanel 0.25s ease-out;
+  }
+  @keyframes revealPanel {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

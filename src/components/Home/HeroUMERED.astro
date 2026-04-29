@@ -1,8 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <section class="bg-white shadow-lg rounded-lg">
@@ -21,7 +22,7 @@ const t = useTranslations(lang);
       class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
     >
       <a
-        href="#"
+        href={translatePath("/tratamientos/unidadMedicinaRegenerativa")}
         class="bg-zeniaBlanco py-3 px-4 rounded-xl border border-green-600 text-green-500 uppercase font-bold hover:text-zeniaBlanco hover:bg-green-600"
         >{t("heroUMERED.button")}</a
       >

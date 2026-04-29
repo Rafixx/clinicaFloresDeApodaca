@@ -4,36 +4,73 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+const legalBase = lang === "en" ? "/en/info-legal" : "/info-legal";
 ---
 
-<footer
-  class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex flex-col"
->
-  <div
-    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-1"
-  >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-    </span>
-    <!-- <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
-    >
-      <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6"
-          >{t("nav.about")}</a
-        >
-      </li>
-      <li>
-        <a
-          id="contacto"
-          href="mailto:serra.raf@gmail.com"
-          class="hover:underline">{t("nav.contact")}</a
-        >
-      </li>
-    </ul> -->
-  </div>
-  <div
-    class="flex mt-0 text-xs text-zinc-800/70 dark:text-zinc-200/70 text-left w-full"
-  >
+<footer class="bg-zeniaMarronOscuro text-zeniaBlanco/75 mt-20">
+  <div class="container mx-auto lg:max-w-4xl md:max-w-2xl px-6 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+
+      <div>
+        <p class="text-zeniaBlanco font-semibold text-base mb-3 tracking-wide">
+          Clínica Flores de Apodaca
+        </p>
+        <p class="text-sm leading-relaxed text-zeniaBlanco/50">
+          C/Patricio Ferrándiz, 86<br />
+          03700 Dénia, Alicante
+        </p>
+      </div>
+
+      <div>
+        <h6 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro mb-4">
+          {t("footer.legal")}
+        </h6>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={`${legalBase}#politica`} class="hover:text-zeniaRosaOscuro transition-colors duration-200">
+              {t("footer.privacy")}
+            </a>
+          </li>
+          <li>
+            <a href={`${legalBase}#aviso`} class="hover:text-zeniaRosaOscuro transition-colors duration-200">
+              {t("footer.legal_notice")}
+            </a>
+          </li>
+          <li>
+            <a href={`${legalBase}#condiciones`} class="hover:text-zeniaRosaOscuro transition-colors duration-200">
+              {t("footer.terms")}
+            </a>
+          </li>
+          <li>
+            <a href={`${legalBase}#cookies`} class="hover:text-zeniaRosaOscuro transition-colors duration-200">
+              {t("footer.cookies")}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro mb-4">
+          {t("footer.contact")}
+        </h6>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="tel:663274378" class="hover:text-zeniaRosaOscuro transition-colors duration-200">
+              663 27 43 78
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@clinicafloresdeapodaca.com" class="hover:text-zeniaRosaOscuro transition-colors duration-200 break-all">
+              info@clinicafloresdeapodaca.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-zeniaBlanco/10 mt-10 pt-6 text-xs text-zeniaBlanco/35 text-center">
+      © {currentYear} Clínica Flores de Apodaca. {t("footer.copyright")}
+    </div>
   </div>
 </footer>

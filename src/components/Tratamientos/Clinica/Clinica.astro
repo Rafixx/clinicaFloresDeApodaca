@@ -1,0 +1,204 @@
+---
+interface Props { lang?: string; }
+const { lang = 'es' } = Astro.props;
+
+const c = {
+  es: {
+    title: 'Clínica de Medicina Estética y Regenerativa Flores de Apodaca en Denia',
+    aboutTitle: 'Sobre Nosotros',
+    about: [
+      'Somos un equipo que trabajamos de forma armónica y coordinada para lograr la mayor satisfacción por parte de nuestros pacientes.',
+      'Nuestra filosofía está basada en que <strong class="font-bold underline text-zeniaRosaOscuro">cada paciente es único</strong> y los tratamientos que proponemos, tanto en el ámbito <strong class="font-bold underline text-zeniaRosaOscuro">estético</strong> como <strong class="font-bold underline text-zeniaRosaOscuro">médico</strong>, se personalizan al máximo.',
+      'En el ámbito estético orientamos al paciente con los tratamientos <strong class="font-bold underline text-zeniaRosaOscuro">menos invasivos</strong> y <strong class="font-bold underline text-zeniaRosaOscuro">más seguros</strong>, porque la naturalidad es lo principal.',
+      'Con nuestra consulta de <strong class="font-bold underline text-zeniaRosaOscuro">Medicina Integrativa</strong> valoramos de forma integral a nuestros pacientes, estudiamos su <strong class="font-bold underline text-zeniaRosaOscuro">sistema inmunitario</strong> e intentamos ayudarlo con diferentes terapias complementarias.',
+      'Contamos con la <strong class="font-bold underline text-zeniaRosaOscuro">Unidad de Medicina Regenerativa de Denia (UMERED)</strong> desde donde realizamos procedimientos médicos ecoguiados para aliviar el dolor en muchas patologías ostearticulares.',
+      'El <strong class="font-bold underline text-zeniaRosaOscuro">envejecimiento saludable</strong> es la clave de nuestra filosofía.',
+    ],
+    teamTitle: 'Nuestro Equipo',
+    dr: { name: 'Dra. Zenia Flores de Apodaca', role: 'Colegiada 03/039992-5 — Colegio de Médicos de Alicante', bio: 'Es una persona que ama la medicina y tiene pasión por su trabajo. Está especializada en tratamientos médicos estéticos no quirúrgicos que rejuvenecen sin alterar la apariencia natural y en Medicina Integrativa.', credentials: ['<strong class="font-bold underline text-zeniaRosaOscuro">Licenciada en Cirugía y Medicina</strong> — Universidad de la Habana, Cuba.', '<strong class="font-bold underline text-zeniaRosaOscuro">Especialista de Primer Grado en Microbiología.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Especialista en Medicina Familiar y Comunitaria.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Máster en Enfermedades Infecciosas</strong> — Universidad Autónoma de Barcelona (UAB).', '<strong class="font-bold underline text-zeniaRosaOscuro">Máster en Medicina Regenerativa y Antienvejecimiento</strong> — Universidad de Valencia.', '<strong class="font-bold underline text-zeniaRosaOscuro">Experta Universitaria en Nutrición y Dietética</strong> (UNIR).', 'Miembro de la <strong class="font-bold underline text-zeniaRosaOscuro">Asociación Española de Microinmunoterapia</strong> y de la <strong class="font-bold underline text-zeniaRosaOscuro">Asociación Española de Profesionales en Ozonoterapia</strong>.'], showSpec: 'Ver especialización', hideSpec: 'Ocultar especialización' },
+    lisandra: { name: 'Lisandra Gómez Naranjo', role: 'Auxiliar de clínica', bio: 'Graduada de Técnico en Enfermería con una amplia experiencia en tratamientos estéticos.' },
+    ricardo: { name: 'Ricardo Flores de Apodaca', role: 'Gerente', bio: 'Es el responsable de que <strong class="font-bold underline text-zeniaRosaOscuro">todo funcione bien en nuestra clínica</strong> y de que <strong class="font-bold underline text-zeniaRosaOscuro">nuestros pacientes se sientan como en casa</strong>.' },
+    sandra: { name: 'Sandra Mas', role: 'En colaboración con nuestra clínica' },
+    facilitiesTitle: 'Nuestras Instalaciones',
+    facilities: ['Nuestra clínica situada en la calle Patricio Ferrándiz de Denia cuenta con <strong class="font-bold underline text-zeniaRosaOscuro">90 metros cuadrados</strong> organizados estructuralmente de una forma cómoda, para ofrecer de manera segura y fácil todos los servicios.', 'Contamos con <strong class="font-bold underline text-zeniaRosaOscuro">tecnología de última generación</strong> que, sumado a la <strong class="font-bold underline text-zeniaRosaOscuro">experiencia profesional</strong>, permite ofrecer los más novedosos tratamientos médicos y estéticos, tanto facial, corporal, como capilar.', 'Con el fin de garantizar la seguridad de todos, la clínica cuenta con un sistema de ventilación y filtración del aire. Gracias a nuestro diseño minimalista y cómodo, así como al trato que ofrecemos, nuestros pacientes quedan muy satisfechos con nuestra atención.'],
+    addressTitle: 'Dirección', address1: 'Calle Patricio Ferrándiz 86, local 2', address2: 'Denia, 03700, Alicante', maps: 'Ver en Google Maps →',
+  },
+  en: {
+    title: 'Aesthetic and Regenerative Medicine Clinic Flores de Apodaca in Denia',
+    aboutTitle: 'About Us',
+    about: [
+      'We are a team that works harmoniously and in a coordinated manner to achieve the greatest satisfaction for our patients.',
+      'Our philosophy is based on the fact that <strong class="font-bold underline text-zeniaRosaOscuro">each patient is unique</strong> and the treatments we propose, both in the <strong class="font-bold underline text-zeniaRosaOscuro">aesthetic</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">medical</strong> fields, are personalised to the maximum.',
+      'In the aesthetic field we guide the patient with the <strong class="font-bold underline text-zeniaRosaOscuro">least invasive</strong> and <strong class="font-bold underline text-zeniaRosaOscuro">safest</strong> treatments, because naturalness is the priority.',
+      'With our <strong class="font-bold underline text-zeniaRosaOscuro">Integrative Medicine</strong> consultation we comprehensively assess our patients, study their <strong class="font-bold underline text-zeniaRosaOscuro">immune system</strong> and try to help them with different complementary therapies.',
+      'We have the <strong class="font-bold underline text-zeniaRosaOscuro">Regenerative Medicine Unit of Denia (UMERED)</strong> where we carry out ultrasound-guided medical procedures to relieve pain in many osteoarticular pathologies.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Healthy ageing</strong> is the key to our philosophy.',
+    ],
+    teamTitle: 'Our Team',
+    dr: { name: 'Dr. Zenia Flores de Apodaca', role: 'Registered 03/039992-5 — College of Physicians of Alicante', bio: 'She is a person who loves medicine and is passionate about her work. She specialises in non-surgical aesthetic medical treatments that rejuvenate without altering natural appearance and in Integrative Medicine.', credentials: ['<strong class="font-bold underline text-zeniaRosaOscuro">Degree in Surgery and Medicine</strong> — University of Havana, Cuba.', '<strong class="font-bold underline text-zeniaRosaOscuro">First Degree Specialist in Microbiology.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Specialist in Family and Community Medicine.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Master in Infectious Diseases</strong> — Autonomous University of Barcelona (UAB).', '<strong class="font-bold underline text-zeniaRosaOscuro">Master in Regenerative and Anti-Ageing Medicine</strong> — University of Valencia.', '<strong class="font-bold underline text-zeniaRosaOscuro">University Expert in Nutrition and Dietetics</strong> (UNIR).', 'Member of the <strong class="font-bold underline text-zeniaRosaOscuro">Spanish Association of Microimmunotherapy</strong> and the <strong class="font-bold underline text-zeniaRosaOscuro">Spanish Association of Ozone Therapy Professionals</strong>.'], showSpec: 'View specialisation', hideSpec: 'Hide specialisation' },
+    lisandra: { name: 'Lisandra Gómez Naranjo', role: 'Clinic assistant', bio: 'Qualified Nursing Technician with extensive experience in aesthetic treatments.' },
+    ricardo: { name: 'Ricardo Flores de Apodaca', role: 'Manager', bio: 'He is responsible for ensuring <strong class="font-bold underline text-zeniaRosaOscuro">everything runs smoothly at our clinic</strong> and that <strong class="font-bold underline text-zeniaRosaOscuro">our patients feel at home</strong>.' },
+    sandra: { name: 'Sandra Mas', role: 'In collaboration with our clinic' },
+    facilitiesTitle: 'Our Facilities',
+    facilities: ['Our clinic located on Calle Patricio Ferrándiz in Denia has <strong class="font-bold underline text-zeniaRosaOscuro">90 square metres</strong> structurally organised in a comfortable way, to offer all services safely and easily.', 'We have <strong class="font-bold underline text-zeniaRosaOscuro">state-of-the-art technology</strong> which, combined with <strong class="font-bold underline text-zeniaRosaOscuro">professional experience</strong>, allows us to offer the most innovative medical and aesthetic treatments, both facial, body and hair.', 'In order to guarantee everyone\'s safety, the clinic has a ventilation and air filtration system. Thanks to our minimalist and comfortable design, as well as the treatment we offer, our patients are very satisfied with our care.'],
+    addressTitle: 'Address', address1: 'Calle Patricio Ferrándiz 86, local 2', address2: 'Denia, 03700, Alicante', maps: 'View on Google Maps →',
+  },
+  fr: {
+    title: 'Clinique de Médecine Esthétique et Régénérative Flores de Apodaca à Dénia',
+    aboutTitle: 'À Propos de Nous',
+    about: [
+      'Nous sommes une équipe qui travaille de façon harmonieuse et coordonnée pour obtenir la plus grande satisfaction de nos patients.',
+      'Notre philosophie est basée sur le fait que <strong class="font-bold underline text-zeniaRosaOscuro">chaque patient est unique</strong> et les traitements que nous proposons, tant dans le domaine <strong class="font-bold underline text-zeniaRosaOscuro">esthétique</strong> que <strong class="font-bold underline text-zeniaRosaOscuro">médical</strong>, sont personnalisés au maximum.',
+      'Dans le domaine esthétique, nous guidons le patient avec les traitements <strong class="font-bold underline text-zeniaRosaOscuro">les moins invasifs</strong> et <strong class="font-bold underline text-zeniaRosaOscuro">les plus sûrs</strong>, car la naturalité est la priorité.',
+      'Avec notre consultation de <strong class="font-bold underline text-zeniaRosaOscuro">Médecine Intégrative</strong>, nous évaluons nos patients de manière globale, étudions leur <strong class="font-bold underline text-zeniaRosaOscuro">système immunitaire</strong> et essayons de les aider avec différentes thérapies complémentaires.',
+      'Nous disposons de l\'<strong class="font-bold underline text-zeniaRosaOscuro">Unité de Médecine Régénérative de Dénia (UMERED)</strong> depuis laquelle nous réalisons des procédures médicales écho-guidées pour soulager la douleur dans de nombreuses pathologies ostéo-articulaires.',
+      'Le <strong class="font-bold underline text-zeniaRosaOscuro">vieillissement sain</strong> est la clé de notre philosophie.',
+    ],
+    teamTitle: 'Notre Équipe',
+    dr: { name: 'Dr. Zenia Flores de Apodaca', role: 'Inscrite 03/039992-5 — Conseil des Médecins d\'Alicante', bio: 'Elle est une personne qui aime la médecine et est passionnée par son travail. Elle est spécialisée dans les traitements médicaux esthétiques non chirurgicaux qui rajeunissent sans altérer l\'apparence naturelle et en Médecine Intégrative.', credentials: ['<strong class="font-bold underline text-zeniaRosaOscuro">Diplôme en Chirurgie et Médecine</strong> — Université de La Havane, Cuba.', '<strong class="font-bold underline text-zeniaRosaOscuro">Spécialiste de Premier Degré en Microbiologie.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Spécialiste en Médecine Familiale et Communautaire.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Master en Maladies Infectieuses</strong> — Université Autonome de Barcelone (UAB).', '<strong class="font-bold underline text-zeniaRosaOscuro">Master en Médecine Régénérative et Anti-Âge</strong> — Université de Valence.', '<strong class="font-bold underline text-zeniaRosaOscuro">Expert Universitaire en Nutrition et Diététique</strong> (UNIR).', 'Membre de l\'<strong class="font-bold underline text-zeniaRosaOscuro">Association Espagnole de Microimmunothérapie</strong> et de l\'<strong class="font-bold underline text-zeniaRosaOscuro">Association Espagnole des Professionnels en Ozonothérapie</strong>.'], showSpec: 'Voir la spécialisation', hideSpec: 'Masquer la spécialisation' },
+    lisandra: { name: 'Lisandra Gómez Naranjo', role: 'Assistante de clinique', bio: 'Technicienne en soins infirmiers diplômée avec une grande expérience dans les traitements esthétiques.' },
+    ricardo: { name: 'Ricardo Flores de Apodaca', role: 'Directeur', bio: 'Il est responsable de s\'assurer que <strong class="font-bold underline text-zeniaRosaOscuro">tout fonctionne bien dans notre clinique</strong> et que <strong class="font-bold underline text-zeniaRosaOscuro">nos patients se sentent comme chez eux</strong>.' },
+    sandra: { name: 'Sandra Mas', role: 'En collaboration avec notre clinique' },
+    facilitiesTitle: 'Nos Installations',
+    facilities: ['Notre clinique située rue Patricio Ferrándiz à Dénia dispose de <strong class="font-bold underline text-zeniaRosaOscuro">90 mètres carrés</strong> organisés structurellement de façon confortable, pour offrir tous les services en toute sécurité.', 'Nous disposons de <strong class="font-bold underline text-zeniaRosaOscuro">technologies de dernière génération</strong> qui, combinées à l\'<strong class="font-bold underline text-zeniaRosaOscuro">expérience professionnelle</strong>, permettent d\'offrir les traitements médicaux et esthétiques les plus innovants, faciaux, corporels et capillaires.', 'Afin de garantir la sécurité de tous, la clinique dispose d\'un système de ventilation et de filtration de l\'air. Grâce à notre design minimaliste et confortable, ainsi qu\'au traitement que nous offrons, nos patients sont très satisfaits de notre prise en charge.'],
+    addressTitle: 'Adresse', address1: 'Calle Patricio Ferrándiz 86, local 2', address2: 'Dénia, 03700, Alicante', maps: 'Voir sur Google Maps →',
+  },
+  de: {
+    title: 'Klinik für Ästhetische und Regenerative Medizin Flores de Apodaca in Dénia',
+    aboutTitle: 'Über Uns',
+    about: [
+      'Wir sind ein Team, das harmonisch und koordiniert zusammenarbeitet, um die größtmögliche Zufriedenheit unserer Patienten zu erreichen.',
+      'Unsere Philosophie basiert darauf, dass <strong class="font-bold underline text-zeniaRosaOscuro">jeder Patient einzigartig ist</strong> und die von uns vorgeschlagenen Behandlungen, sowohl im <strong class="font-bold underline text-zeniaRosaOscuro">ästhetischen</strong> als auch im <strong class="font-bold underline text-zeniaRosaOscuro">medizinischen</strong> Bereich, maximal personalisiert werden.',
+      'Im ästhetischen Bereich beraten wir den Patienten mit den <strong class="font-bold underline text-zeniaRosaOscuro">am wenigsten invasiven</strong> und <strong class="font-bold underline text-zeniaRosaOscuro">sichersten</strong> Behandlungen, denn Natürlichkeit hat Priorität.',
+      'Mit unserer <strong class="font-bold underline text-zeniaRosaOscuro">Integrativen Medizin</strong> Sprechstunde bewerten wir unsere Patienten umfassend, untersuchen ihr <strong class="font-bold underline text-zeniaRosaOscuro">Immunsystem</strong> und versuchen, ihnen mit verschiedenen komplementären Therapien zu helfen.',
+      'Wir verfügen über die <strong class="font-bold underline text-zeniaRosaOscuro">Einheit für Regenerative Medizin in Dénia (UMERED)</strong>, von der aus wir ultraschallgeführte medizinische Verfahren durchführen, um Schmerzen bei vielen osteoartikulären Erkrankungen zu lindern.',
+      '<strong class="font-bold underline text-zeniaRosaOscuro">Gesundes Altern</strong> ist der Schlüssel unserer Philosophie.',
+    ],
+    teamTitle: 'Unser Team',
+    dr: { name: 'Dr. Zenia Flores de Apodaca', role: 'Zugelassen 03/039992-5 — Ärztekammer Alicante', bio: 'Sie ist eine Person, die die Medizin liebt und leidenschaftlich für ihre Arbeit ist. Sie ist spezialisiert auf nicht-chirurgische ästhetische Medizinbehandlungen, die verjüngen ohne das natürliche Erscheinungsbild zu verändern, sowie auf Integrative Medizin.', credentials: ['<strong class="font-bold underline text-zeniaRosaOscuro">Abschluss in Chirurgie und Medizin</strong> — Universität Havanna, Kuba.', '<strong class="font-bold underline text-zeniaRosaOscuro">Fachärztin ersten Grades für Mikrobiologie.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Fachärztin für Familien- und Gemeinschaftsmedizin.</strong>', '<strong class="font-bold underline text-zeniaRosaOscuro">Master in Infektionskrankheiten</strong> — Autonome Universität Barcelona (UAB).', '<strong class="font-bold underline text-zeniaRosaOscuro">Master in Regenerativer und Anti-Aging-Medizin</strong> — Universität Valencia.', '<strong class="font-bold underline text-zeniaRosaOscuro">Universitätsexpertin für Ernährung und Diätetik</strong> (UNIR).', 'Mitglied der <strong class="font-bold underline text-zeniaRosaOscuro">Spanischen Gesellschaft für Mikroimmuntherapie</strong> und der <strong class="font-bold underline text-zeniaRosaOscuro">Spanischen Vereinigung der Ozontherapie-Fachleute</strong>.'], showSpec: 'Spezialisierung anzeigen', hideSpec: 'Spezialisierung ausblenden' },
+    lisandra: { name: 'Lisandra Gómez Naranjo', role: 'Klinikassistentin', bio: 'Diplomierte Pflegetechnikerin mit umfangreicher Erfahrung in ästhetischen Behandlungen.' },
+    ricardo: { name: 'Ricardo Flores de Apodaca', role: 'Geschäftsführer', bio: 'Er ist dafür verantwortlich, dass <strong class="font-bold underline text-zeniaRosaOscuro">alles in unserer Klinik reibungslos läuft</strong> und dass <strong class="font-bold underline text-zeniaRosaOscuro">unsere Patienten sich wie zu Hause fühlen</strong>.' },
+    sandra: { name: 'Sandra Mas', role: 'In Zusammenarbeit mit unserer Klinik' },
+    facilitiesTitle: 'Unsere Einrichtungen',
+    facilities: ['Unsere Klinik in der Calle Patricio Ferrándiz in Dénia verfügt über <strong class="font-bold underline text-zeniaRosaOscuro">90 Quadratmeter</strong>, die strukturell komfortabel organisiert sind, um alle Dienstleistungen sicher und einfach anzubieten.', 'Wir verfügen über <strong class="font-bold underline text-zeniaRosaOscuro">modernste Technologie</strong>, die in Kombination mit <strong class="font-bold underline text-zeniaRosaOscuro">professioneller Erfahrung</strong> die innovativsten medizinischen und ästhetischen Behandlungen ermöglicht, sowohl facial, körperlich als auch für die Haare.', 'Um die Sicherheit aller zu gewährleisten, verfügt die Klinik über ein Be- und Entlüftungs- und Luftfiltersystem. Dank unseres minimalistischen und komfortablen Designs sowie der Betreuung, die wir anbieten, sind unsere Patienten sehr zufrieden mit unserer Pflege.'],
+    addressTitle: 'Adresse', address1: 'Calle Patricio Ferrándiz 86, local 2', address2: 'Dénia, 03700, Alicante', maps: 'Auf Google Maps anzeigen →',
+  },
+}[lang as 'es'|'en'|'fr'|'de'] ?? {
+  title: '', aboutTitle: '', about: [], teamTitle: '', dr: { name: '', role: '', bio: '', credentials: [], showSpec: '', hideSpec: '' },
+  lisandra: { name: '', role: '', bio: '' }, ricardo: { name: '', role: '', bio: '' }, sandra: { name: '', role: '' },
+  facilitiesTitle: '', facilities: [], addressTitle: '', address1: '', address2: '', maps: '',
+};
+---
+
+<h1 class="text-3xl lg:text-5xl font-bold text-center py-16 text-zeniaMarronOscuro">{c.title}</h1>
+
+<section class="mb-20">
+  <h2 class="text-2xl lg:text-3xl font-bold text-zeniaMarronOscuro mb-6 border-b border-zeniaMarronClaro pb-3">{c.aboutTitle}</h2>
+  <div class="text-lg leading-relaxed text-zeniaMarronOscuro space-y-4">
+    {c.about.map((p) => <p set:html={p} />)}
+  </div>
+</section>
+
+<section class="mb-20">
+  <h2 class="text-2xl lg:text-3xl font-bold text-zeniaMarronOscuro mb-10 border-b border-zeniaMarronClaro pb-3">{c.teamTitle}</h2>
+
+  <div class="mb-14">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <img src="/clinica/equipo/02.webp" alt={c.dr.name} class="w-48 h-64 object-cover rounded-xl shadow-md flex-shrink-0 mx-auto md:mx-0" />
+      <div class="flex-1">
+        <h3 class="text-2xl font-bold text-zeniaMarronOscuro">{c.dr.name}</h3>
+        <p class="text-sm text-zeniaMarronClaro mb-3">{c.dr.role}</p>
+        <p class="text-base leading-relaxed text-zeniaMarronOscuro mb-4">{c.dr.bio}</p>
+        <ul class="list-none space-y-1 text-base text-zeniaMarronOscuro mb-6">
+          {c.dr.credentials.map((cr) => <li set:html={`• ${cr}`} />)}
+        </ul>
+        <details class="group">
+          <summary class="cursor-pointer inline-flex items-center gap-2 font-bold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro list-none mb-3">
+            <span class="text-zeniaRosaOscuro">▸</span>
+            <span class="group-open:hidden">{c.dr.showSpec}</span>
+            <span class="hidden group-open:inline">{c.dr.hideSpec}</span>
+          </summary>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Toxina botulínica</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Peeling químicos médicos</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Bioestimulación y rellenos con AH</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Radiesse, Ellansé</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Silhouette Soft e hilos PDO</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Plasma BT</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Ultracel Q+</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Hibrid Filler</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Microneedling</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Intralipoterapia (Aqualix)</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">PRP y células madre</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Ozonoterapia</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Microinmunoterapia</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Medicina ortomolecular</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Pronokal PnK</span>
+            <span class="px-3 py-1.5 bg-zeniaRosaClaro text-zeniaMarronOscuro rounded-full text-sm font-medium">Terapias capilares regenerativas</span>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-14">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <img src="/clinica/equipo/05.webp" alt={c.lisandra.name} class="w-48 h-64 object-cover rounded-xl shadow-md flex-shrink-0 mx-auto md:mx-0" />
+      <div class="flex-1 pt-4">
+        <h3 class="text-2xl font-bold text-zeniaMarronOscuro">{c.lisandra.name}</h3>
+        <p class="text-zeniaRosaOscuro font-semibold mb-3">{c.lisandra.role}</p>
+        <p class="text-base leading-relaxed text-zeniaMarronOscuro">{c.lisandra.bio}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-14">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <img src="/clinica/equipo/04.webp" alt={c.ricardo.name} class="w-48 h-64 object-cover rounded-xl shadow-md flex-shrink-0 mx-auto md:mx-0" />
+      <div class="flex-1 pt-4">
+        <h3 class="text-2xl font-bold text-zeniaMarronOscuro">{c.ricardo.name}</h3>
+        <p class="text-zeniaRosaOscuro font-semibold mb-3">{c.ricardo.role}</p>
+        <p class="text-base leading-relaxed text-zeniaMarronOscuro" set:html={c.ricardo.bio} />
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <img src="/clinica/equipo/01.webp" alt={c.sandra.name} class="w-48 h-64 object-cover rounded-xl shadow-md flex-shrink-0 mx-auto md:mx-0" />
+      <div class="flex-1 pt-4">
+        <h3 class="text-2xl font-bold text-zeniaMarronOscuro">{c.sandra.name}</h3>
+        <p class="text-zeniaRosaOscuro font-semibold mb-3">{c.sandra.role}</p>
+        <ul class="list-none space-y-1 text-base text-zeniaMarronOscuro">
+          <li>• Micropigmentación de Cejas</li>
+          <li>• Eyes Lines</li>
+          <li>• Micropigmentación de Labios</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-20">
+  <h2 class="text-2xl lg:text-3xl font-bold text-zeniaMarronOscuro mb-6 border-b border-zeniaMarronClaro pb-3">{c.facilitiesTitle}</h2>
+  <div class="text-lg leading-relaxed text-zeniaMarronOscuro space-y-4 mb-10">
+    {c.facilities.map((p) => <p set:html={p} />)}
+    <div class="bg-zeniaBlanco border border-zeniaMarronClaro rounded-xl p-6 mt-4 inline-block">
+      <p class="font-bold text-zeniaMarronOscuro mb-1">{c.addressTitle}</p>
+      <p>{c.address1}</p>
+      <p>{c.address2}</p>
+      <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Est%C3%A9tica+Dra.+Flores+de+Apodaca/@38.8395998,0.1105449,15z" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-zeniaRosaOscuro font-semibold underline hover:text-zeniaMarronOscuro">{c.maps}</a>
+    </div>
+  </div>
+  <div class="columns-2 md:columns-3 gap-3 space-y-3">
+    <img src="/clinica/galeria/01.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/08.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/03.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/04.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/05.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/06.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/07.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/02.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+    <img src="/clinica/galeria/09.webp" alt="Clínica Flores de Apodaca" class="w-full rounded-lg break-inside-avoid" />
+  </div>
+</section>

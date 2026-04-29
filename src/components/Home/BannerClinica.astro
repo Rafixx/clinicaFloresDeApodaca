@@ -1,9 +1,10 @@
 ---
 import Lotus from "../icons/Lotus.astro";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div class="flex flex-row w-full bg-zeniaMarronClaro/25">
@@ -38,7 +39,7 @@ const t = useTranslations(lang);
       </p>
       <div class="flex w-full justify-end">
         <a
-          href="#"
+          href={translatePath("/reservas")}
           class="bg-zeniaBlanco py-3 px-4 rounded-xl border border-zeniaMarronOscuro uppercase font-bold hover:text-zeniaRosaOscuro"
           >{t("bannerClinica.badge")}</a
         >
