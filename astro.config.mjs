@@ -10,7 +10,7 @@ export default defineConfig({
   // base: '/dist/',
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en', 'fr', 'de'],
+    locales: ['es', 'en', 'fr', 'de', 'nl', 'ru'],
     routing: {
       prefixDefaultLocale: false
     },
@@ -18,6 +18,8 @@ export default defineConfig({
       en: 'es',
       fr: 'es',
       de: 'es',
+      nl: 'es',
+      ru: 'es',
     }
   }
 })

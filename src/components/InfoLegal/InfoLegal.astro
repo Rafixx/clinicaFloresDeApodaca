@@ -159,7 +159,7 @@ const c = {
     degreeVal: 'Studium der Medizin',
     stateVal: 'Spanien',
   },
-}[lang as 'es'|'en'|'fr'|'de'] ?? {} as any;
+}[(['es','en','fr','de'].includes(lang) ? lang : 'es') as 'es'|'en'|'fr'|'de'];
 ---
 
 <div class="space-y-20">

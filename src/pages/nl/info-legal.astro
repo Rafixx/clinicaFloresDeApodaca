@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/Home/SectionContainer.astro";
+import InfoLegalContent from "@/components/InfoLegal/InfoLegal.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+type tLang = (str: any) => any;
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+---
+
+<Layout title={t("layout.title")} description={t("layout.description")}>
+  <main>
+    <SectionContainer class="pt-28 pb-16 md:pb-24">
+      <InfoLegalContent lang={lang} />
+    </SectionContainer>
+  </main>
+</Layout>
