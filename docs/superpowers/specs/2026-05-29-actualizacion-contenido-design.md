@@ -66,8 +66,8 @@ Las traducciones serán coherentes con el registro médico/estético del resto d
 
 - Sustituir párrafo de medicina integrativa por el texto literal del spec (microbiota, sistema inmunitario, test genéticos)
 - Añadir bloque de credenciales de la Dra. Flores de Apodaca:
-  - Diplomada en ozonoterapia por AEPROMO
-  - Profesora del máster universitario de láser del CEU Cardenal
+  - Experto en ozonoterapia y Medicina Regenerativa - Experta en Medicina Integrativa por AEPROMO
+  - Profesora del máster universitario de técnicas avanzadas, estética y láser del CEU Cardenal
   - Formadora de medicina estética de los laboratorios Top Medical
   - Formadora de AEMI, Asociación Española de Micriomunoterapia
 - Traducido a 6 idiomas
