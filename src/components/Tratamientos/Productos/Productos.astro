@@ -2,216 +2,222 @@
 interface Props {
   lang?: string;
 }
-const { lang = 'es' } = Astro.props;
+const { lang = "es" } = Astro.props;
 
 const content = {
   es: {
-    title: 'Nuestros Productos',
-    intro: 'En <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> trabajamos con productos de belleza que solo puedes obtener en las <strong class="font-bold underline text-zeniaRosaOscuro">clínicas médicas</strong>, ya que son recomendados por personal muy cualificado, después de analizar lo mejor y más adecuado para tu piel.',
+    title: "Nuestros Productos",
+    intro:
+      'En <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> trabajamos con productos de belleza que solo puedes obtener en las <strong class="font-bold underline text-zeniaRosaOscuro">clínicas médicas</strong>, ya que son recomendados por personal muy cualificado, después de analizar lo mejor y más adecuado para tu piel.',
     treatments: [
       {
-        summary: 'Productos de Cosmética Avanzada',
-        title: 'PRODUCTOS DE COSMÉTICA AVANZADA',
+        summary: "Productos de Cosmética Avanzada",
+        title: "PRODUCTOS DE COSMÉTICA AVANZADA",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CREMA PROTECCIÓN SOLAR FPS 50 CON COLOR — The Next Aesthetic Medical</h4>
 <p>Crema de textura ligera para todo tipo de pieles. Su innovadora fórmula ofrece defensa contra los rayos <strong class="font-bold underline text-zeniaRosaOscuro">UVA y UVB</strong> y repara los daños causados por la exposición prolongada al sol. Es resistente al agua y adecuada para <strong class="font-bold underline text-zeniaRosaOscuro">pieles con tendencia acneica</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Productos especialmente diseñados para aportar a la piel una <strong class="font-bold underline text-zeniaRosaOscuro">hidratación en profundidad</strong>. Cuenta con una amplia gama desde los <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peel</strong> para manchas, acné y rejuvenecimiento, hasta mascarillas, <strong class="font-bold underline text-zeniaRosaOscuro">serums</strong> y cremas específicas.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM COSMÉTICA — Ingredientes de lujo del mar</h4>
 <p>Las plantas marinas son la fuente más pura de potentes ingredientes activos. YAM incluye <strong class="font-bold underline text-zeniaRosaOscuro">Sales del Mar Muerto, Perlas, Oro 24K, Algas marinas, Caviar negro y Minerales marinos</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Línea especializada en el tratamiento de <strong class="font-bold underline text-zeniaRosaOscuro">patologías cutáneas</strong>: pigmentaciones, acné y daños de la piel. Formulaciones de alta eficacia diseñadas para corregir alteraciones dérmicas específicas bajo supervisión médica.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p>Productos <strong class="font-bold underline text-zeniaRosaOscuro">cosmecéuticos</strong> de uso domiciliario con ingredientes activos de grado médico para potenciar y mantener los resultados de los tratamientos realizados en clínica.</p>
 <p class="font-semibold text-zeniaRosaOscuro">¡Consúltanos y te recomendamos lo más apropiado para ti!</p>`,
       },
       {
-        summary: 'Micronutrición',
-        title: 'MICRONUTRICIÓN',
+        summary: "Micronutrición",
+        title: "MICRONUTRICIÓN",
         body: `<p>Para la <strong class="font-bold underline text-zeniaRosaOscuro">Micronutrición</strong> utilizamos fórmulas patentadas por laboratorios con estudios serios que avalan todos los protocolos de tratamiento. Coordinados con el <strong class="font-bold underline text-zeniaRosaOscuro">Instituto de Microecología</strong>, ofrecemos diagnóstico de <strong class="font-bold underline text-zeniaRosaOscuro">microbiota intestinal</strong> y recomendamos productos innovadores avalados científicamente.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Laboratorio de Complementos Nutricionales</h4>
 <p>Laboratorio de referencia que ofrece complementos nutricionales para corregir los desequilibrios micronutricionales, ayudando a <strong class="font-bold underline text-zeniaRosaOscuro">mejorar el estrés oxidativo</strong> del proceso de envejecimiento y a recuperar el equilibrio metabólico.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Laboratorio especializado en productos de <strong class="font-bold underline text-zeniaRosaOscuro">Macro y Micronutrición</strong>. La línea <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong> fortalece la esfera digestiva, el sistema nervioso, la piel y el sistema cardiovascular.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>Laboratorio de alta precisión diagnóstica que complementa nuestros protocolos de micronutrición con <strong class="font-bold underline text-zeniaRosaOscuro">análisis avanzados</strong> que permiten personalizar los tratamientos nutricionales de cada paciente.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Laboratorio especializado en <strong class="font-bold underline text-zeniaRosaOscuro">probióticos de nueva generación</strong>, con formulaciones de alta concentración y viabilidad, orientadas a la restauración del equilibrio de la microbiota intestinal.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Laboratorio que desarrolla productos innovadores en el área de los <strong class="font-bold underline text-zeniaRosaOscuro">probióticos y prebióticos</strong>, con formulaciones avaladas científicamente para el cuidado del sistema digestivo, inmunitario y metabólico.</p>`,
+<p>Laboratorio que desarrolla productos innovadores en el área de los <strong class="font-bold underline text-zeniaRosaOscuro">probióticos y prebióticos</strong>, productos derivados de hongos medicinales con formulaciones avaladas científicamente para el cuidado del sistema digestivo, inmunitario y metabólico.</p>`,
       },
     ],
   },
   en: {
-    title: 'Our Products',
-    intro: 'At <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong> we work with beauty products that you can only obtain at <strong class="font-bold underline text-zeniaRosaOscuro">medical clinics</strong>, as they are recommended by highly qualified staff after analysing what is best and most suitable for your skin.',
+    title: "Our Products",
+    intro:
+      'At <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong> we work with beauty products that you can only obtain at <strong class="font-bold underline text-zeniaRosaOscuro">medical clinics</strong>, as they are recommended by highly qualified staff after analysing what is best and most suitable for your skin.',
     treatments: [
       {
-        summary: 'Advanced Cosmetic Products',
-        title: 'ADVANCED COSMETIC PRODUCTS',
+        summary: "Advanced Cosmetic Products",
+        title: "ADVANCED COSMETIC PRODUCTS",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SPF 50 TINTED SUN PROTECTION CREAM — The Next Aesthetic Medical</h4>
 <p>Lightweight texture cream for all skin types. Its innovative formula offers protection against <strong class="font-bold underline text-zeniaRosaOscuro">UVA and UVB</strong> rays and repairs damage from prolonged sun exposure. Water-resistant and suitable for <strong class="font-bold underline text-zeniaRosaOscuro">acne-prone skin</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Products specially designed to provide the skin with <strong class="font-bold underline text-zeniaRosaOscuro">deep hydration</strong>. Wide range from <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peels</strong> for spots, acne and rejuvenation, to masks, <strong class="font-bold underline text-zeniaRosaOscuro">serums</strong> and specific creams.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM COSMETICS — Luxury Ingredients from the Sea</h4>
 <p>Marine plants are the purest source of powerful active ingredients. YAM includes <strong class="font-bold underline text-zeniaRosaOscuro">Dead Sea Salts, Pearls, 24K Gold, Marine Algae, Black Caviar and Marine Minerals</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Specialised line for the treatment of <strong class="font-bold underline text-zeniaRosaOscuro">skin pathologies</strong>: pigmentation, acne and skin damage. High-efficacy formulations designed to correct specific dermal alterations under medical supervision.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p><strong class="font-bold underline text-zeniaRosaOscuro">Cosmeceutical</strong> products for home use with medical-grade active ingredients to enhance and maintain the results of clinical treatments.</p>
 <p class="font-semibold text-zeniaRosaOscuro">Ask us and we will recommend what is most appropriate for you!</p>`,
       },
       {
-        summary: 'Micronutrition',
-        title: 'MICRONUTRITION',
+        summary: "Micronutrition",
+        title: "MICRONUTRITION",
         body: `<p>For <strong class="font-bold underline text-zeniaRosaOscuro">Micronutrition</strong> we use patented formulas from laboratories with rigorous studies supporting all treatment protocols. In coordination with the <strong class="font-bold underline text-zeniaRosaOscuro">Institute of Microecology</strong>, we offer <strong class="font-bold underline text-zeniaRosaOscuro">intestinal microbiota</strong> diagnosis and recommend scientifically validated innovative products.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Nutritional Supplements Laboratory</h4>
 <p>Leading laboratory offering nutritional supplements to correct micronutritional imbalances, helping to <strong class="font-bold underline text-zeniaRosaOscuro">improve oxidative stress</strong> from the ageing process and restore metabolic balance.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Laboratory specialising in <strong class="font-bold underline text-zeniaRosaOscuro">Macro and Micronutrition</strong> products. The <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong> line strengthens the digestive sphere, nervous system, skin and cardiovascular system.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>High-precision diagnostic laboratory that complements our micronutrition protocols with <strong class="font-bold underline text-zeniaRosaOscuro">advanced analyses</strong> to personalise nutritional treatments for each patient.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Laboratory specialising in <strong class="font-bold underline text-zeniaRosaOscuro">next-generation probiotics</strong> with high-concentration formulations aimed at restoring intestinal microbiota balance.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Laboratory developing innovative products in the area of <strong class="font-bold underline text-zeniaRosaOscuro">probiotics and prebiotics</strong>, with scientifically validated formulations for digestive, immune and metabolic health.</p>`,
+<p>Laboratory developing innovative products in the area of <strong class="font-bold underline text-zeniaRosaOscuro">probiotics and prebiotics</strong>, products derived from medicinal mushrooms with scientifically validated formulations for digestive, immune and metabolic health.</p>`,
       },
     ],
   },
   fr: {
-    title: 'Nos Produits',
-    intro: 'À la <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong>, nous travaillons avec des produits de beauté que vous ne pouvez obtenir que dans les <strong class="font-bold underline text-zeniaRosaOscuro">cliniques médicales</strong>, car ils sont recommandés par un personnel très qualifié, après analyse de ce qui convient le mieux à votre peau.',
+    title: "Nos Produits",
+    intro:
+      'À la <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong>, nous travaillons avec des produits de beauté que vous ne pouvez obtenir que dans les <strong class="font-bold underline text-zeniaRosaOscuro">cliniques médicales</strong>, car ils sont recommandés par un personnel très qualifié, après analyse de ce qui convient le mieux à votre peau.',
     treatments: [
       {
-        summary: 'Produits de Cosmétique Avancée',
-        title: 'PRODUITS DE COSMÉTIQUE AVANCÉE',
+        summary: "Produits de Cosmétique Avancée",
+        title: "PRODUITS DE COSMÉTIQUE AVANCÉE",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">CRÈME PROTECTION SOLAIRE SPF 50 TEINTÉE — The Next Aesthetic Medical</h4>
 <p>Crème à texture légère pour tous types de peaux. Sa formule innovante offre une protection contre les rayons <strong class="font-bold underline text-zeniaRosaOscuro">UVA et UVB</strong>. Résistante à l'eau et adaptée aux <strong class="font-bold underline text-zeniaRosaOscuro">peaux à tendance acnéique</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Produits spécialement conçus pour apporter à la peau une <strong class="font-bold underline text-zeniaRosaOscuro">hydratation en profondeur</strong>. Large gamme depuis les <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peels</strong> jusqu'aux masques, <strong class="font-bold underline text-zeniaRosaOscuro">sérums</strong> et crèmes spécifiques.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM COSMÉTIQUE — Ingrédients de luxe de la mer</h4>
 <p>Les plantes marines sont la source la plus pure d'ingrédients actifs puissants. YAM inclut les <strong class="font-bold underline text-zeniaRosaOscuro">Sels de la Mer Morte, Perles, Or 24K, Algues marines, Caviar noir et Minéraux marins</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Ligne spécialisée dans le traitement des <strong class="font-bold underline text-zeniaRosaOscuro">pathologies cutanées</strong> : pigmentations, acné et dommages cutanés. Formulations à haute efficacité pour corriger des altérations dermiques spécifiques sous supervision médicale.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p>Produits <strong class="font-bold underline text-zeniaRosaOscuro">cosméceutiques</strong> à usage domiciliaire avec des principes actifs de grade médical pour potentialiser et maintenir les résultats des traitements en clinique.</p>
 <p class="font-semibold text-zeniaRosaOscuro">Consultez-nous et nous vous recommanderons ce qui convient le mieux !</p>`,
       },
       {
-        summary: 'Micronutrition',
-        title: 'MICRONUTRITION',
+        summary: "Micronutrition",
+        title: "MICRONUTRITION",
         body: `<p>Pour la <strong class="font-bold underline text-zeniaRosaOscuro">Micronutrition</strong>, nous utilisons des formules brevetées par des laboratoires avec des études sérieuses. En coordination avec l'<strong class="font-bold underline text-zeniaRosaOscuro">Institut de Microécologie</strong>, nous proposons un diagnostic du <strong class="font-bold underline text-zeniaRosaOscuro">microbiote intestinal</strong> et recommandons des produits innovants validés scientifiquement.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Laboratoire de Compléments Nutritionnels</h4>
 <p>Laboratoire de référence proposant des compléments nutritionnels pour corriger les déséquilibres micronutritionnels et aider à <strong class="font-bold underline text-zeniaRosaOscuro">améliorer le stress oxydatif</strong> du vieillissement.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Laboratoire spécialisé en produits de <strong class="font-bold underline text-zeniaRosaOscuro">Macro et Micronutrition</strong>. La ligne <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong> renforce la sphère digestive, le système nerveux, la peau et le système cardiovasculaire.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>Laboratoire de haute précision diagnostique qui complète nos protocoles de micronutrition avec des <strong class="font-bold underline text-zeniaRosaOscuro">analyses avancées</strong> pour personnaliser les traitements nutritionnels.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Laboratoire spécialisé dans les <strong class="font-bold underline text-zeniaRosaOscuro">probiotiques de nouvelle génération</strong> à haute concentration pour restaurer l'équilibre du microbiote intestinal.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Laboratoire développant des produits innovants en matière de <strong class="font-bold underline text-zeniaRosaOscuro">probiotiques et prébiotiques</strong>, avec des formulations validées scientifiquement pour la santé digestive, immunitaire et métabolique.</p>`,
+<p>Laboratoire développant des produits innovants en matière de <strong class="font-bold underline text-zeniaRosaOscuro">probiotiques et prébiotiques</strong>, produits dérivés de champignons médicinaux avec des formulations validées scientifiquement pour la santé digestive, immunitaire et métabolique.</p>`,
       },
     ],
   },
   de: {
-    title: 'Unsere Produkte',
-    intro: 'Bei der <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong> arbeiten wir mit Schönheitsprodukten, die nur in <strong class="font-bold underline text-zeniaRosaOscuro">medizinischen Kliniken</strong> erhältlich sind, da sie von hochqualifiziertem Personal nach Analyse der besten und am besten geeigneten Produkte für Ihre Haut empfohlen werden.',
+    title: "Unsere Produkte",
+    intro:
+      'Bei der <strong class="font-bold underline text-zeniaRosaOscuro">Clinica Flores de Apodaca</strong> arbeiten wir mit Schönheitsprodukten, die nur in <strong class="font-bold underline text-zeniaRosaOscuro">medizinischen Kliniken</strong> erhältlich sind, da sie von hochqualifiziertem Personal nach Analyse der besten und am besten geeigneten Produkte für Ihre Haut empfohlen werden.',
     treatments: [
       {
-        summary: 'Fortgeschrittene Kosmetikprodukte',
-        title: 'FORTGESCHRITTENE KOSMETIKPRODUKTE',
+        summary: "Fortgeschrittene Kosmetikprodukte",
+        title: "FORTGESCHRITTENE KOSMETIKPRODUKTE",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">GETÖNTE SONNENSCHUTZCREME LSF 50 — The Next Aesthetic Medical</h4>
 <p>Leichte Creme für alle Hauttypen. Ihre innovative Formel bietet Schutz vor <strong class="font-bold underline text-zeniaRosaOscuro">UVA- und UVB-Strahlen</strong>. Wasserbeständig und geeignet für <strong class="font-bold underline text-zeniaRosaOscuro">zu Akne neigende Haut</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Produkte speziell entwickelt, um der Haut eine <strong class="font-bold underline text-zeniaRosaOscuro">Tiefenhydratation</strong> zu verleihen. Breites Sortiment von <strong class="font-bold underline text-zeniaRosaOscuro">Smart Peels</strong> bis hin zu Masken, <strong class="font-bold underline text-zeniaRosaOscuro">Seren</strong> und spezifischen Cremes.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM KOSMETIK — Luxusinhaltsstoffe aus dem Meer</h4>
 <p>Meerespflanzen sind die reinste Quelle leistungsstarker Wirkstoffe. YAM enthält <strong class="font-bold underline text-zeniaRosaOscuro">Totes Meer Salze, Perlen, 24-karätiges Gold, Meeresalgen, Schwarzen Kaviar und Meeresmineralien</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Speziallinie für die Behandlung von <strong class="font-bold underline text-zeniaRosaOscuro">Hauterkrankungen</strong>: Pigmentierungen, Akne und Hautschäden. Hocheffiziente Formulierungen zur Korrektur spezifischer Dermaländ unter medizinischer Aufsicht.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p><strong class="font-bold underline text-zeniaRosaOscuro">Kosmetisch-pharmazeutische</strong> Produkte für den Heimgebrauch mit medizinischen Wirkstoffen zur Verstärkung und Erhaltung der Behandlungsergebnisse.</p>
 <p class="font-semibold text-zeniaRosaOscuro">Fragen Sie uns und wir empfehlen Ihnen das Passende!</p>`,
       },
       {
-        summary: 'Mikroernährung',
-        title: 'MIKROERNÄHRUNG',
+        summary: "Mikroernährung",
+        title: "MIKROERNÄHRUNG",
         body: `<p>Für die <strong class="font-bold underline text-zeniaRosaOscuro">Mikroernährung</strong> verwenden wir patentierte Formeln von Laboratorien mit seriösen Studien. In Koordination mit dem <strong class="font-bold underline text-zeniaRosaOscuro">Institut für Mikroökologie</strong> bieten wir Diagnose der <strong class="font-bold underline text-zeniaRosaOscuro">Darmmikrobiota</strong> und empfehlen wissenschaftlich validierte innovative Produkte.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Labor für Nahrungsergänzungsmittel</h4>
 <p>Führendes Labor mit Nahrungsergänzungsmitteln zur Korrektur mikronutritioneller Ungleichgewichte und Verbesserung des <strong class="font-bold underline text-zeniaRosaOscuro">oxidativen Stresses</strong> des Alterungsprozesses.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Labor spezialisiert auf <strong class="font-bold underline text-zeniaRosaOscuro">Makro- und Mikroernährungsprodukte</strong>. Die <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong>-Linie stärkt Verdauungssphäre, Nervensystem, Haut und Herz-Kreislauf-System.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>Hochpräzises Diagnostiklabor, das unsere Mikroernährungsprotokolle mit <strong class="font-bold underline text-zeniaRosaOscuro">fortschrittlichen Analysen</strong> ergänzt, um Ernährungsbehandlungen zu personalisieren.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Labor spezialisiert auf <strong class="font-bold underline text-zeniaRosaOscuro">Probiotika der nächsten Generation</strong> mit hochkonzentrierten Formulierungen zur Wiederherstellung des Darmmikrobiota-Gleichgewichts.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Labor, das innovative Produkte im Bereich <strong class="font-bold underline text-zeniaRosaOscuro">Probiotika und Präbiotika</strong> entwickelt, mit wissenschaftlich validierten Formulierungen für die Verdauungs-, Immun- und Stoffwechselgesundheit.</p>`,
+<p>Labor, das innovative Produkte im Bereich <strong class="font-bold underline text-zeniaRosaOscuro">Probiotika und Präbiotika</strong> entwickelt, Produkte aus Heilpilzen mit wissenschaftlich validierten Formulierungen für die Verdauungs-, Immun- und Stoffwechselgesundheit.</p>`,
       },
     ],
   },
   nl: {
-    title: 'Onze Producten',
-    intro: 'Bij <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> werken we met schoonheidsproducten die alleen beschikbaar zijn in <strong class="font-bold underline text-zeniaRosaOscuro">medische klinieken</strong>, aanbevolen door hooggekwalificeerd personeel na analyse van wat het beste is voor uw huid.',
+    title: "Onze Producten",
+    intro:
+      'Bij <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> werken we met schoonheidsproducten die alleen beschikbaar zijn in <strong class="font-bold underline text-zeniaRosaOscuro">medische klinieken</strong>, aanbevolen door hooggekwalificeerd personeel na analyse van wat het beste is voor uw huid.',
     treatments: [
       {
-        summary: 'Geavanceerde Cosmetische Producten',
-        title: 'GEAVANCEERDE COSMETISCHE PRODUCTEN',
+        summary: "Geavanceerde Cosmetische Producten",
+        title: "GEAVANCEERDE COSMETISCHE PRODUCTEN",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Producten voor <strong class="font-bold underline text-zeniaRosaOscuro">diepe hydratatie</strong>. Breed assortiment van Smart Peels tot maskers en serums.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM COSMETICA — Luxe-ingrediënten uit de zee</h4>
 <p>Mariene planten als bron van krachtige actieve ingrediënten: <strong class="font-bold underline text-zeniaRosaOscuro">Dode Zee-zouten, Parels, 24K Goud, Zeealgen en Mariene Mineralen</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Gespecialiseerde lijn voor <strong class="font-bold underline text-zeniaRosaOscuro">huidpathologieën</strong>: pigmentaties, acne en huidbeschadiging, onder medisch toezicht.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p><strong class="font-bold underline text-zeniaRosaOscuro">Cosmeceutische</strong> thuisgebruikproducten met medische actieve ingrediënten voor behoud van klinische behandelingsresultaten.</p>`,
       },
       {
-        summary: 'Micronutritie',
-        title: 'MICRONUTRITIE',
+        summary: "Micronutritie",
+        title: "MICRONUTRITIE",
         body: `<p>Voor <strong class="font-bold underline text-zeniaRosaOscuro">Micronutritie</strong> gebruiken we gepatenteerde formules van gerenommeerde laboratoria. In samenwerking met het <strong class="font-bold underline text-zeniaRosaOscuro">Instituut voor Micro-ecologie</strong> bieden we diagnose van <strong class="font-bold underline text-zeniaRosaOscuro">darmicrobiota</strong> aan.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Laboratorium voor Voedingssupplementen</h4>
 <p>Referentielaboratorium voor correctie van micronutritionele onevenwichtigheden en verbetering van <strong class="font-bold underline text-zeniaRosaOscuro">oxidatieve stress</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Laboratorium gespecialiseerd in <strong class="font-bold underline text-zeniaRosaOscuro">Macro- en Micronutritie</strong>. De <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong>-lijn ondersteunt het spijsverteringsstelsel, zenuwstelsel, huid en hart.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>Diagnostisch laboratorium voor <strong class="font-bold underline text-zeniaRosaOscuro">gepersonaliseerde voedingsbehandelingen</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Laboratorium voor <strong class="font-bold underline text-zeniaRosaOscuro">next-generation probiotica</strong> ter herstel van het darmmicrobiota-evenwicht.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Innovatieve producten voor <strong class="font-bold underline text-zeniaRosaOscuro">probiotica en prebiotica</strong> voor spijsverteringsgezondheid, immuniteit en metabolisme.</p>`,
+<p>Innovatieve producten voor <strong class="font-bold underline text-zeniaRosaOscuro">probiotica en prebiotica</strong>, producten afgeleid van medicinale paddenstoelen met wetenschappelijk onderbouwde formuleringen voor spijsverteringsgezondheid, immuniteit en metabolisme.</p>`,
       },
     ],
   },
   ru: {
-    title: 'Наши Продукты',
-    intro: 'В <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> мы работаем с косметическими продуктами, доступными только в <strong class="font-bold underline text-zeniaRosaOscuro">медицинских клиниках</strong>, рекомендованными высококвалифицированным персоналом после анализа оптимального варианта для вашей кожи.',
+    title: "Наши Продукты",
+    intro:
+      'В <strong class="font-bold underline text-zeniaRosaOscuro">Clínica Flores de Apodaca</strong> мы работаем с косметическими продуктами, доступными только в <strong class="font-bold underline text-zeniaRosaOscuro">медицинских клиниках</strong>, рекомендованными высококвалифицированным персоналом после анализа оптимального варианта для вашей кожи.',
     treatments: [
       {
-        summary: 'Продукты передовой косметологии',
-        title: 'ПРОДУКТЫ ПЕРЕДОВОЙ КОСМЕТОЛОГИИ',
+        summary: "Продукты передовой косметологии",
+        title: "ПРОДУКТЫ ПЕРЕДОВОЙ КОСМЕТОЛОГИИ",
         body: `<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NAQUA</h4>
 <p>Продукты для <strong class="font-bold underline text-zeniaRosaOscuro">глубокого увлажнения</strong> кожи. Широкий ассортимент от Smart Peels до масок и сывороток.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YAM КОСМЕТИКА — Роскошные морские ингредиенты</h4>
 <p>Морские растения как источник мощных активных ингредиентов: <strong class="font-bold underline text-zeniaRosaOscuro">соли Мёртвого моря, жемчуг, золото 24К, морские водоросли и минералы</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMA CURAI</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">DERMACURAE</h4>
 <p>Специализированная линия для лечения <strong class="font-bold underline text-zeniaRosaOscuro">кожных патологий</strong>: пигментаций, акне и повреждений кожи под медицинским наблюдением.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">SKY MEDIC</h4>
 <p><strong class="font-bold underline text-zeniaRosaOscuro">Космецевтические</strong> продукты для домашнего использования с медицинскими активными компонентами для поддержания результатов клинических процедур.</p>`,
       },
       {
-        summary: 'Микронутрициология',
-        title: 'МИКРОНУТРИЦИОЛОГИЯ',
+        summary: "Микронутрициология",
+        title: "МИКРОНУТРИЦИОЛОГИЯ",
         body: `<p>Для <strong class="font-bold underline text-zeniaRosaOscuro">Микронутрициологии</strong> используем запатентованные формулы. В сотрудничестве с <strong class="font-bold underline text-zeniaRosaOscuro">Институтом Микроэкологии</strong> предлагаем диагностику <strong class="font-bold underline text-zeniaRosaOscuro">кишечной микробиоты</strong> и рекомендуем научно обоснованные продукты.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LCN — Лаборатория нутрицевтиков</h4>
 <p>Ведущая лаборатория пищевых добавок для коррекции дисбаланса микронутриентов и улучшения <strong class="font-bold underline text-zeniaRosaOscuro">окислительного стресса</strong>.</p>
-<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (Sonut)</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">YSONUT (INOVANCE)</h4>
 <p>Лаборатория <strong class="font-bold underline text-zeniaRosaOscuro">макро- и микронутриции</strong>. Линия <strong class="font-bold underline text-zeniaRosaOscuro">Inovance</strong> укрепляет пищеварительную, нервную, сердечно-сосудистую систему и кожу.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">LABORATORIOS COBAS</h4>
 <p>Диагностическая лаборатория высокой точности для <strong class="font-bold underline text-zeniaRosaOscuro">персонализированных нутриционных протоколов</strong>.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NPRO</h4>
 <p>Лаборатория <strong class="font-bold underline text-zeniaRosaOscuro">пробиотиков нового поколения</strong> высокой концентрации для восстановления баланса кишечной микробиоты.</p>
 <h4 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro/80 pt-1">NEOVITAL HEALTH</h4>
-<p>Инновационные продукты в области <strong class="font-bold underline text-zeniaRosaOscuro">пробиотиков и пребиотиков</strong> для здоровья пищеварительной, иммунной и метаболической системы.</p>`,
+<p>Инновационные продукты в области <strong class="font-bold underline text-zeniaRosaOscuro">пробиотиков и пребиотиков</strong>, продукты на основе лекарственных грибов с научно обоснованными формулами для здоровья пищеварительной, иммунной и метаболической системы.</p>`,
       },
     ],
   },
@@ -220,29 +226,38 @@ const content = {
 const c = content[lang as keyof typeof content] || content.es;
 ---
 
-<h1 class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro">
+<h1
+  class="text-2xl lg:text-4xl font-bold text-center pt-4 pb-2 text-zeniaMarronOscuro"
+>
   {c.title}
 </h1>
 
-<p class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 mb-8 text-center max-w-2xl mx-auto pt-4" set:html={c.intro} />
+<p
+  class="text-[15px] leading-relaxed text-zeniaMarronOscuro/80 mb-8 text-center max-w-2xl mx-auto pt-4"
+  set:html={c.intro}
+/>
 
 <div>
-  {c.treatments.map((t) => (
-    <details class="border-b border-zeniaMarronClaro/30">
-      <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
-        {t.summary}
-      </summary>
-      <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-6 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">{t.title}</h3>
-        <div set:html={t.body} />
-      </div>
-    </details>
-  ))}
+  {
+    c.treatments.map((t) => (
+      <details class="border-b border-zeniaMarronClaro/30">
+        <summary class="tratamiento-summary cursor-pointer py-5 flex items-center justify-between text-lg font-semibold text-zeniaMarronOscuro hover:text-zeniaRosaOscuro transition-colors duration-200 list-none select-none">
+          {t.summary}
+        </summary>
+        <div class="tratamiento-body pb-8 pt-2 text-[15px] leading-relaxed text-zeniaMarronOscuro space-y-6 border-l-2 border-zeniaRosaOscuro/20 pl-5 ml-1">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-zeniaRosaOscuro pt-2">
+            {t.title}
+          </h3>
+          <div set:html={t.body} />
+        </div>
+      </details>
+    ))
+  }
 </div>
 
 <style>
   .tratamiento-summary::after {
-    content: '';
+    content: "";
     flex-shrink: 0;
     margin-left: 1rem;
     width: 1.1rem;
@@ -260,7 +275,13 @@ const c = content[lang as keyof typeof content] || content.es;
     animation: revealPanel 0.25s ease-out;
   }
   @keyframes revealPanel {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
