@@ -69,8 +69,9 @@ const t = useTranslations(lang);
             <p class="text-gray-600">
               {review.review.length > MAXLENGTH ? (
                 <>
-                  {review.review.slice(0, MAXLENGTH)}
-                  <a id="myAnchor" class="mx-5 cursor-pointer text-blue-500"> [Más...]</a>
+                  <span class="review-short">{review.review.slice(0, MAXLENGTH)}</span>
+                  <span class="review-full hidden">{review.review}</span>
+                  <a class="review-toggle mx-5 cursor-pointer text-blue-500"> [Más...]</a>
                 </>
               ) : (
                 review.review
@@ -103,13 +104,16 @@ const t = useTranslations(lang);
     setInterval(autoSlide, 8000);
   });
   
-  // const myCard = document.getElementById("myAnchor");
-  // if (myCard) {
-  //   myCard.addEventListener("click", () => {
-  //     myCard.innerHTML = " [Menos]";
-  //     myCard.addEventListener("click", () => {
-  //       myCard.innerHTML = " [Más...]";
-  //     });
-  //   });
-  // }
+  document.querySelectorAll('.review-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const p = toggle.closest('p');
+      const short = p?.querySelector('.review-short');
+      const full = p?.querySelector('.review-full');
+      if (!short || !full) return;
+      const expanded = !full.classList.contains('hidden');
+      full.classList.toggle('hidden', expanded);
+      short.classList.toggle('hidden', !expanded);
+      toggle.textContent = expanded ? ' [Más...]' : ' [Menos]';
+    });
+  });
 </script>
